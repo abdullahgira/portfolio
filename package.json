@@ -13,7 +13,6 @@
     "autoprefixer": "^9.8.6",
     "gray-matter": "^4.0.2",
     "next": "10.0.3",
-    "postcss": "^7.0.35",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "remark": "^13.0.0",
