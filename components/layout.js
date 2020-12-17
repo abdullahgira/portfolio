@@ -1,17 +1,17 @@
-import Link from 'next/link';
-import Head from 'next/head';
-import { useState } from 'react';
+import Link from "next/link"
+import Head from "next/head"
+import {useState} from "react"
 
-export default function Layout({ children, meta: pageMeta }) {
-  const [theme, setTheme] = useState('okaidia');
+export default function Layout({children, meta: pageMeta}) {
+  const [theme, setTheme] = useState("okaidia")
   const meta = {
-    title: 'Prism with Next.js',
+    title: "Prism with Next.js",
     description:
-      'Example using Prism / Markdown with Next.js including switching syntax highlighting themes.',
+      "Example using Prism / Markdown with Next.js including switching syntax highlighting themes.",
     cardImage:
-      'https://og-image.now.sh/**Prism**%20with%20Next.js.png?theme=dark&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-white-logo.svg',
-    ...pageMeta
-  };
+      "https://og-image.now.sh/**Prism**%20with%20Next.js.png?theme=dark&md=1&fontSize=100px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-white-logo.svg",
+    ...pageMeta,
+  }
 
   return (
     <>
@@ -107,10 +107,10 @@ export default function Layout({ children, meta: pageMeta }) {
       </nav>
       <div id="skip">
         <article
-          className="prose lg:prose-xl px-8 m-auto my-4 sm:my-16"
-          dangerouslySetInnerHTML={{ __html: children }}
+          className="prose max-w-2xl px-8 m-auto my-4 sm:my-16"
+          dangerouslySetInnerHTML={{__html: children}}
         />
       </div>
     </>
-  );
+  )
 }

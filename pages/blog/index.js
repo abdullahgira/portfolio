@@ -1,6 +1,8 @@
 import DateFormatter from "components/date-formatter"
+import PostPreview from "components/post-preview"
+import {getAllPosts} from "lib/posts"
 
-export default function Blog() {
+export default function BlogPage({allPosts}) {
   return (
     <main className="container my-10 mx-auto">
       <section className="flex items-center">
@@ -13,13 +15,18 @@ export default function Blog() {
         </div>
       </section>
       <section className="mt-10">
-        <article className="rounded-md px-7 p-5 bg-white shadow-md">
-          <h4 className="text-2xl font-bold mb-2">Post title</h4>
-          <p className="text-gray-500 text-xs">
-            <DateFormatter dateString={new Date().toISOString()} />
-          </p>
-        </article>
+        {allPosts.length > 0
+          ? allPosts.map((post) => <PostPreview key={post.date} {...post} />)
+          : null}
       </section>
     </main>
   )
+}
+
+export async function getStaticProps() {
+  const allPosts = getAllPosts(["title", "date", "slug"])
+
+  return {
+    props: {allPosts},
+  }
 }
