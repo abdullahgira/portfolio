@@ -15,7 +15,7 @@ You need to know the difference between an Observable and an Observer to get the
 
 Subjects act both as an Observable and as an observer at the same time. Because it is an observer, it can subscribe to one or more Observables, and because it is an Observable, it can pass through the items it observes by reemitting them, and it can also emit new items. Subjects receive the next events and emit them to their subscribers.
 
-![Yoda sniffing the air. Caption: “I smell bacon.”](./code.png)
+![Yoda sniffing the air. Caption: “I smell bacon.”](/code.png)
 
 ## Types of Subjects in RxJava
 

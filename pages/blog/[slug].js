@@ -36,12 +36,9 @@ export async function getStaticPaths() {
 
 function mapImagesToPublicSlug(content, slug) {
   const re = /<img\s*src="([\w\W]+?)"/gm
-  const found = content.matchAll(re)
   let match
   while ((match = re.exec(content)) !== null) {
-    console.log(match[0])
-    let x = match[1].slice(1)
-    content = content.replace(match[1], "/" + slug + x)
+    content = content.replace(match[1], "/" + slug + match[1])
   }
   return content
 }
