@@ -21,11 +21,11 @@ export default function Home() {
         <PortfolioSectionContent>
           <PortfolioSectionTitle>About me</PortfolioSectionTitle>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only.
+            I graduated from college with a BSc in computer science. I started
+            programming in Node.js 3+ years ago and then jumped to React 2+
+            years ago to help me create user interfaces for my projects. I
+            usually do my projects using the MERN stack (MongoDB, Express,
+            React, Node.js).
           </p>
         </PortfolioSectionContent>
       </PortfolioSection>
