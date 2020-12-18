@@ -1,12 +1,12 @@
 module.exports = {
-  purge: ['./pages/**/*.js', './components/**/*.js'],
+  purge: ["./pages/**/*.js", "./components/**/*.js"],
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
-      xs: '320px',
-      sm: '480px',
-      md: '568px',
-      // lg: '1024px',
+      xs: "320px",
+      sm: "480px",
+      md: "568px",
+      lg: "1024px",
       // xl: '1145px',
     },
     extend: {},
@@ -14,5 +14,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [require("@tailwindcss/typography")],
 }
