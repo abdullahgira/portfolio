@@ -8,6 +8,7 @@ import {
 } from "components/protfolio-about-section"
 
 import SkillsSection from "components/skills-section"
+import WorkSection from "components/work-section"
 
 export default function Home() {
   return (
@@ -33,6 +34,7 @@ export default function Home() {
       </PortfolioSection>
 
       <SkillsSection />
+      <WorkSection />
     </div>
   )
 }

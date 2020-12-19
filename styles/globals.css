@@ -3,5 +3,5 @@ img {
 }
 
 .portfolio-section + .portfolio-section > img {
-  order: 2;
+  order: 1;
 }
