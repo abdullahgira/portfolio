@@ -16,7 +16,7 @@ function PortfolioSectionTitle({children}) {
 
 function PortfolioSectionImage({src, alt}) {
   return (
-    <div className="w-80 mx-auto md:ml-0 mb-10 md:mb-0 md:w-72 lg:w-1/3 mr-10">
+    <div className="w-80 mx-auto md:ml-0 mb-10 md:mb-0 md:w-72 lg:w-1/3 md:mr-10">
       <img src={src} alt={alt} className="rounded-lg shadow-lg" />
     </div>
   )

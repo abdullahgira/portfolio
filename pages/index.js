@@ -5,7 +5,9 @@ import {
   PortfolioSectionTitle,
   PortfolioSectionImage,
   PortfolioSectionContent,
-} from "components/protfolio-section"
+} from "components/protfolio-about-section"
+
+import SkillsSection from "components/skills-section"
 
 export default function Home() {
   return (
@@ -29,6 +31,8 @@ export default function Home() {
           </p>
         </PortfolioSectionContent>
       </PortfolioSection>
+
+      <SkillsSection />
     </div>
   )
 }

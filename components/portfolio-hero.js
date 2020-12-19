@@ -18,6 +18,11 @@ export default function PortfolioHero() {
         </button> */}
 
         <div className="flex justify-center md:justify-start">
+          <Link as="/blog" href="/blog">
+            <a className="py-2 px-3 rounded-lg mr-4 border border-black hover:bg-black hover:text-white font-semibold">
+              Blog
+            </a>
+          </Link>
           <Link
             as="https://www.linkedin.com/in/abdullah97/"
             href="https://www.linkedin.com/in/abdullah97/"
