@@ -45,9 +45,9 @@ export default function PostLayout({children, meta: pageMeta}) {
         <a href="#skip" className="sr-only focus:not-sr-only">
           Skip to content
         </a>
-        <div className="flex justify-around items-center mt-8 -mb-5">
+        <div className="flex justify-around items-center mt-8 mb-5 sm:-mb-5">
           <Link href="/blog">
-            <a className="no-underline font-semibold invisible sm:visible flex items-center justify-center">
+            <a className="no-underline font-semibold flex items-center justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -70,7 +70,7 @@ export default function PostLayout({children, meta: pageMeta}) {
       </nav>
       <div id="skip">
         <article
-          className="prose max-w-2xl px-8 m-auto my-4 sm:my-16"
+          className="prose max-w-2xl m-auto my-4 sm:my-16"
           dangerouslySetInnerHTML={{__html: children}}
         />
       </div>
