@@ -1,6 +1,6 @@
 ---
 title: Subjcts in RxJava
-date: "2017-08-19T22:40:32.169Z"
+date: "2020-12-19T16:50:21.999Z"
 description: Effects are a part of your data flow.
 socialImage: "/media/42-line-bible.jpg"
 ---

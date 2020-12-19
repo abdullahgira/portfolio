@@ -3,7 +3,7 @@ export default function SkillsSection() {
     <div className="my-20">
       <h2 className="text-2xl font-semibold text-center mb-10">Skills</h2>
       <div className="flex flex-wrap justify-around">
-        <div class="rounded-lg mb-8 p-5 flex flex-col items-center">
+        <div class="rounded-lg p-5 flex flex-col items-center">
           <img
             className="mb-5"
             src="portfolio/react.png"
@@ -14,7 +14,7 @@ export default function SkillsSection() {
           <h4>React</h4>
         </div>
 
-        <div class="rounded-lg mb-8 p-5 flex flex-col items-center">
+        <div class="rounded-lg p-5 flex flex-col items-center">
           <img
             className="mb-5"
             src="portfolio/nodejs.png"
@@ -25,7 +25,7 @@ export default function SkillsSection() {
           <h4>Node.js</h4>
         </div>
 
-        <div class="rounded-lg mb-8 p-5 flex flex-col items-center">
+        <div class="rounded-lg p-5 flex flex-col items-center">
           <img
             className="mb-5"
             src="portfolio/mongodb.png"
@@ -36,7 +36,7 @@ export default function SkillsSection() {
           <h4>MongoDB</h4>
         </div>
 
-        <div class="rounded-lg mb-8 p-5 flex flex-col items-center">
+        <div class="rounded-lg p-5 flex flex-col items-center">
           <img
             className="mb-5"
             src="portfolio/redux.png"
