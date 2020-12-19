@@ -1,13 +1,18 @@
-import Layout from "../../components/layout"
+import PostLayout from "../../components/post-layout"
 import markdownToHtml from "../../lib/markdown"
 import {getAllPosts, getPostBySlug} from "../../lib/posts"
 
 export default function Doc({content, ...meta}) {
-  return <Layout meta={meta}>{content}</Layout>
+  return <PostLayout meta={meta}>{content}</PostLayout>
 }
 
 export async function getStaticProps({params}) {
-  const doc = getPostBySlug(params.slug, ["title", "content"])
+  const doc = getPostBySlug(params.slug, [
+    "title",
+    "description",
+    "socialImage",
+    "content",
+  ])
   let content = await markdownToHtml(doc.content || "")
   content = mapImagesToPublicSlug(content, params.slug)
   return {

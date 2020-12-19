@@ -1,3 +1,4 @@
+import Head from "next/head"
 import Link from "next/link"
 import PostPreview from "components/post-preview"
 import {getAllPosts} from "lib/posts"
@@ -5,6 +6,9 @@ import {getAllPosts} from "lib/posts"
 export default function BlogPage({allPosts}) {
   return (
     <main className="max-w-2xl my-10 mx-auto">
+      <Head>
+        <title>Abdullah Osama blog</title>
+      </Head>
       <section className="flex items-center">
         <div className="h-16 w-16 bg-green-400 rounded-full mr-8"></div>
         <div>

@@ -2,7 +2,7 @@
 title: Subjcts in RxJava
 date: "2020-12-19T16:50:21.999Z"
 description: Effects are a part of your data flow.
-socialImage: "/media/42-line-bible.jpg"
+socialImage: "/media/42-line-bible.jpg" # you have to include the full path
 ---
 
 # Subjcts in RxJava
