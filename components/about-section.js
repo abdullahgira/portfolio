@@ -24,7 +24,7 @@ function PortfolioSectionImage({src, alt}) {
 
 function AboutSection() {
   return (
-    <div className="my-48">
+    <div className="my-28">
       <div className="relative mb-20">
         <img
           src="portfolio/triangle.svg"

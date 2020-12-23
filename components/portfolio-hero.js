@@ -5,7 +5,7 @@ export default function PortfolioHero() {
   const [showEmail, setShowEmail] = React.useState(false)
 
   return (
-    <div className="flex flex-col items-center lg:flex-row lg:justify-between mt-36 mb-48">
+    <div className="flex flex-col items-center lg:flex-row lg:justify-between my-28">
       <div className="order-2 lg:order-1 text-center lg:text-left mt-10 lg:mt-0">
         <h3 className="text-lg mb-2 text-indigo-700">Hello 👋️</h3>
         <h1 className="text-4xl font-bold mb-5">I'm Abdullah Osama</h1>
