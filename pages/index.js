@@ -1,11 +1,6 @@
 import Head from "next/head"
 import PortfolioHero from "components/portfolio-hero"
-import {
-  PortfolioSection,
-  PortfolioSectionTitle,
-  PortfolioSectionImage,
-  PortfolioSectionContent,
-} from "components/protfolio-about-section"
+import {AboutSection} from "components/protfolio-about-section"
 
 import SkillsSection from "components/skills-section"
 import WorkSection from "components/work-section"
@@ -21,22 +16,13 @@ export default function Home({lastThreePosts}) {
       </Head>
 
       <PortfolioHero />
-      <PortfolioSection>
-        <PortfolioSectionImage src="/portfolio/about.jpg" />
-        <PortfolioSectionContent>
-          <PortfolioSectionTitle>About me</PortfolioSectionTitle>
-          <p>
-            I graduated from college with a BSc in computer science. I started
-            programming in Node.js 3+ years ago and then jumped to React 2+
-            years ago to help me create user interfaces for my projects. I
-            usually do my projects using the MERN stack (MongoDB, Express,
-            React, Node.js).
-          </p>
-        </PortfolioSectionContent>
-      </PortfolioSection>
+
+      <AboutSection />
 
       <SkillsSection />
+
       <WorkSection />
+
       <BlogSection lastThreePosts={lastThreePosts} />
 
       <div className="flex flex-col items-center justify-center">
