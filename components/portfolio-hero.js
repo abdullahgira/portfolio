@@ -5,11 +5,11 @@ export default function PortfolioHero() {
   const [showEmail, setShowEmail] = React.useState(false)
 
   return (
-    <div className="flex flex-col items-center md:flex-row md:justify-between my-20">
-      <div className="order-2 md:order-1 text-center md:text-left mt-10 md:mt-0">
-        <h3 className="text-lg mb-2 text-blue-700">Hello 👋️</h3>
+    <div className="flex flex-col items-center lg:flex-row lg:justify-between mt-36 mb-48">
+      <div className="order-2 lg:order-1 text-center lg:text-left mt-10 lg:mt-0">
+        <h3 className="text-lg mb-2 text-indigo-700">Hello 👋️</h3>
         <h1 className="text-4xl font-bold mb-5">I'm Abdullah Osama</h1>
-        <h2 className="text-3xl mb-10 md:w-2/3">
+        <h2 className="text-2xl mb-10 lg:w-2/3">
           I create full stack web applications using React and Node.js
         </h2>
 
@@ -17,7 +17,7 @@ export default function PortfolioHero() {
           Contact me
         </button> */}
 
-        <div className="flex justify-center md:justify-start">
+        <div className="flex justify-center lg:justify-start">
           <Link as="/blog" href="/blog">
             <a className="py-2 px-3 rounded-lg mr-4 border border-black hover:bg-black hover:text-white font-semibold">
               Blog
@@ -59,9 +59,9 @@ export default function PortfolioHero() {
         ) : null}
       </div>
 
-      {/* <div className="order-1 md:order-2 ml-5">
-        <div className="h-72 w-56 bg-yellow-400 shadow-lg rounded-lg"></div>
-      </div> */}
+      <div className="order-1 lg:order-2 ml-5 md:min-w-max">
+        <img src="portfolio/developer.png" />
+      </div>
     </div>
   )
 }

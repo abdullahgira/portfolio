@@ -1,13 +1,13 @@
 function PortfolioSection({children}) {
   return (
-    <div className="my-28 portfolio-section flex flex-col md:flex-row justify-between">
+    <div className="my-28 portfolio-section flex flex-col lg:flex-row justify-between">
       {children}
     </div>
   )
 }
 
 function PortfolioSectionContent({children}) {
-  return <div className="md:w-1/2 text-lg">{children}</div>
+  return <div className="lg:w-1/2 text-lg">{children}</div>
 }
 
 function PortfolioSectionTitle({children}) {
@@ -16,18 +16,18 @@ function PortfolioSectionTitle({children}) {
 
 function PortfolioSectionImage({src, alt}) {
   return (
-    <div className="w-80 mx-auto md:ml-0 mb-10 md:mb-0 md:w-72 lg:w-1/3 md:mr-10">
-      <img src={src} alt={alt} className="rounded-lg shadow-lg" />
+    <div className="min-w-max mx-auto lg:ml-0 mb-10 lg:mb-0 xl:w-1/3 lg:mr-10">
+      <img src={src} alt={alt} />
     </div>
   )
 }
 
 function AboutSection() {
   return (
-    <div className="my-36">
+    <div className="my-48">
       <h2 className="text-3xl text-center font-semibold mb-14">About me</h2>
-      <div className="flex flex-col md:flex-row justify-between">
-        <PortfolioSectionImage src="/portfolio/about.jpg" />
+      <div className="flex flex-col lg:flex-row justify-between">
+        <PortfolioSectionImage src="/portfolio/about-2.png" />
         <PortfolioSectionContent>
           <h3 className="text-3xl mb-5">
             I create full stack applications using the MERN Stack
