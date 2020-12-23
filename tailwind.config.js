@@ -9,7 +9,13 @@ module.exports = {
       lg: "1024px",
       // xl: '1145px',
     },
-    extend: {},
+    extend: {
+      zIndex: {
+        "-10": "-10",
+        "-20": "-20",
+        "-30": "-30",
+      },
+    },
   },
   variants: {
     extend: {},

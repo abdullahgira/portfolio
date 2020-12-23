@@ -25,11 +25,24 @@ function PortfolioSectionImage({src, alt}) {
 function AboutSection() {
   return (
     <div className="my-48">
-      <h2 className="text-3xl text-center font-semibold mb-14">About me</h2>
+      <div className="relative mb-20">
+        <img
+          src="portfolio/triangle.svg"
+          className="absolute w-40 -top-20 left-1/2 -ml-8 -z-10"
+        />
+        <img
+          src="portfolio/fewer-circles.svg"
+          className="absolute w-16 -top-3 left-1/2 ml-10 -z-10"
+        />
+        <div className="w-20 h-1 bg-indigo-700 absolute -bottom-3 right-1/2 -mr-2"></div>
+        <h2 className="text-3xl text-center font-bold">About Me</h2>
+      </div>
+
       <div className="flex flex-col lg:flex-row justify-between">
         <PortfolioSectionImage src="/portfolio/about-2.png" />
         <PortfolioSectionContent>
-          <h3 className="text-3xl mb-5">
+          <h4 className="text-lg mb-2 text-indigo-700">Who am I?</h4>
+          <h3 className="text-3xl mb-5 uppercase font-bold">
             I create full stack applications using the MERN Stack
           </h3>
           <p>
