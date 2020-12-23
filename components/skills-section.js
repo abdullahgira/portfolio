@@ -1,7 +1,19 @@
 export default function SkillsSection() {
   return (
-    <div className="my-20">
-      <h2 className="text-2xl font-semibold text-center mb-10">Skills</h2>
+    <div>
+      <div className="relative z-0 mb-28">
+        <img
+          src="portfolio/elipse.svg"
+          className="absolute w-32 -top-12 right-1/2 -mr-2 -z-1"
+        />
+        <img
+          src="portfolio/fewer-circles.svg"
+          className="absolute w-16 -top-5 right-1/2 mr-20 -z-1"
+        />
+        <div className="w-20 h-1 bg-indigo-700 absolute -bottom-3 right-1/2 -mr-2"></div>
+        <h2 className="text-3xl text-center font-bold">My Skills</h2>
+      </div>
+
       <div className="flex flex-wrap justify-around">
         <div class="rounded-lg p-5 flex flex-col items-center">
           <img
