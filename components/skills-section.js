@@ -15,48 +15,57 @@ export default function SkillsSection() {
       </div>
 
       <div className="flex flex-wrap justify-around">
-        <div class="rounded-lg p-5 flex flex-col items-center">
+        <div class="rounded-lg border border-gray-200 mb-5 p-5 w-52 flex flex-col items-center">
           <img
-            className="mb-5"
+            className="mb-5 w-24"
             src="portfolio/react.png"
             alt="react logo"
             width="128px"
             height="128px"
           />
-          <h4>React</h4>
+          <h4 className="mb-4">React</h4>
+          <p>
+            I use react.js library for building high perfromance user interface.
+          </p>
         </div>
 
-        <div class="rounded-lg p-5 flex flex-col items-center">
+        <div class="rounded-lg border border-gray-200 mb-5 p-5 w-52 flex flex-col items-center">
           <img
-            className="mb-5"
+            className="mb-5 w-24"
             src="portfolio/nodejs.png"
             alt="nodejs logo"
             width="128px"
             height="128px"
           />
-          <h4>Node.js</h4>
+          <h4 className="mb-4">Node.js</h4>
+          <p>I use node.js for the backend for all of my projects.</p>
         </div>
 
-        <div class="rounded-lg p-5 flex flex-col items-center">
+        <div class="rounded-lg border border-gray-200 mb-5 p-5 w-52 flex flex-col items-center">
           <img
-            className="mb-5"
+            className="mb-5 w-24"
             src="portfolio/mongodb.png"
             alt="mongodb logo"
             width="128px"
             height="128px"
           />
-          <h4>MongoDB</h4>
+          <h4 className="mb-4">MongoDB</h4>
+          <p>Is my go to database without a second thought.</p>
         </div>
 
-        <div class="rounded-lg p-5 flex flex-col items-center">
+        <div class="rounded-lg border border-gray-200 mb-5 p-5 w-52 flex flex-col items-center">
           <img
-            className="mb-5"
+            className="mb-5 w-24"
             src="portfolio/redux.png"
             alt="redux logo"
             width="128px"
             height="128px"
           />
-          <h4>Redux</h4>
+          <h4 className="mb-4">Redux</h4>
+          <p>
+            I only use it when global state in react is a must to acheive the
+            goals of the app.
+          </p>
         </div>
       </div>
     </div>

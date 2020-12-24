@@ -8,18 +8,16 @@ export default function PortfolioHero() {
     <div className="flex flex-col items-center lg:flex-row lg:justify-between my-28">
       <div className="order-2 lg:order-1 text-center lg:text-left mt-10 lg:mt-0">
         <h3 className="text-lg mb-2 text-indigo-700">Hello 👋️</h3>
-        <h1 className="text-4xl font-bold mb-5">I'm Abdullah Osama</h1>
-        <h2 className="text-2xl mb-10 lg:w-2/3">
+        <h1 className="text-3xl md:text-4xl font-bold mb-5">
+          I'm Abdullah Osama
+        </h1>
+        <h2 className="text-1xl md:text-2xl mb-10 lg:w-2/3 text-gray-500">
           I create full stack web applications using React and Node.js
         </h2>
 
-        {/* <button className="py-2 px-3 rounded-xl bg-black hover:bg-gray-700 text-white font-semibold">
-          Contact me
-        </button> */}
-
-        <div className="flex justify-center lg:justify-start">
+        <div className="flex justify-center lg:justify-start flex-wrap">
           <Link as="/blog" href="/blog">
-            <a className="py-2 px-3 rounded-lg mr-4 border border-black hover:bg-black hover:text-white font-semibold">
+            <a className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-700 hover:bg-indigo-800 hover:text-white font-semibold">
               Blog
             </a>
           </Link>
@@ -28,7 +26,7 @@ export default function PortfolioHero() {
             href="https://www.linkedin.com/in/abdullah97/"
           >
             <a
-              className="py-2 px-3 rounded-lg mr-4 border border-black hover:bg-black hover:text-white font-semibold"
+              className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-700 hover:bg-indigo-800 hover:text-white font-semibold"
               target="_blank"
             >
               Linkedin
@@ -36,7 +34,7 @@ export default function PortfolioHero() {
           </Link>
           <Link as="https://github.com/xayden" href="https://github.com/xayden">
             <a
-              className="py-2 px-3 rounded-lg mr-4 border border-black hover:bg-black hover:text-white font-semibold"
+              className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-700 hover:bg-indigo-800 hover:text-white font-semibold"
               target="_blank"
             >
               Github
@@ -47,7 +45,7 @@ export default function PortfolioHero() {
             href="mailto:abdullah.osama.abdelmajeed@gmail.com"
           >
             <a
-              className="py-2 px-3 rounded-lg mr-4 border border-black hover:bg-black hover:text-white font-semibold"
+              className="py-2 px-3 rounded-lg mb-4 text-indigo-900 border border-indigo-700 hover:bg-indigo-800 hover:text-white font-semibold"
               onClick={() => setShowEmail(true)}
             >
               Email

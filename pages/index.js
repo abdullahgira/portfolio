@@ -23,7 +23,7 @@ export default function Home({lastThreePosts}) {
         <AboutSection />
       </div>
 
-      <div className="bg-gray-50 z-0">
+      <div className="bg-gray-50">
         <div className="max-w-5xl mx-auto py-28 px-2 md:px-8">
           <SkillsSection />
         </div>
