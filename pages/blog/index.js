@@ -10,17 +10,22 @@ export default function BlogPage({allPosts}) {
         <title>Abdullah Osama blog</title>
       </Head>
       <section className="flex items-center">
-        <div className="h-16 w-16 bg-green-400 rounded-full mr-8"></div>
+        <img
+          src="portfolio/me.jpg"
+          className="w-16 bg-indigo-400 rounded-full mr-8"
+        />
         <div>
           <h3 className="text-md">
             Personal blog by{" "}
             <strong>
               <Link as="/" href="/">
-                <a className="underline">Abdullah Osama</a>
+                <a className="underline text-indigo-800">Abdullah Osama</a>
               </Link>
             </strong>
           </h3>
-          <p className="text-sm mt-1 text-gray-700">I'm hooked to react.</p>
+          <p className="text-sm mt-1 text-gray-700">
+            I talk about the web, mostly about react.
+          </p>
         </div>
       </section>
       <section className="mt-10">
