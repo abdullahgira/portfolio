@@ -1,7 +1,7 @@
 import Link from "next/link"
 import DateFormatter from "./date-formatter"
 
-export default function PostPreview({title, date, slug}) {
+export default function PostPreview({title, date, slug, readTime}) {
   return (
     <article className="border-b border-gray-200 pb-5">
       <h4 className="text-2xl font-bold mb-2">
@@ -9,9 +9,15 @@ export default function PostPreview({title, date, slug}) {
           <a className="hover:underline">{title}</a>
         </Link>
       </h4>
-      <p className="text-gray-500 text-xs">
-        <DateFormatter dateString={date} />
-      </p>
+      <div className="flex gap-3 text-xs">
+        <p className="text-gray-500">
+          <DateFormatter dateString={date} />
+        </p>
+        <p>•</p>
+        <p className="text-indigo-500">
+          {readTime} {readTime > 1 ? "Minutes Read" : "Minute Read"}
+        </p>
+      </div>
     </article>
   )
 }

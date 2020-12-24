@@ -11,7 +11,7 @@ export default function PostLayout({children, meta: pageMeta}) {
     socialImage: "",
     ...pageMeta,
   }
-  console.log(meta)
+
   return (
     <>
       <Head>

@@ -31,16 +31,20 @@ export default function BlogSection({lastThreePosts = []}) {
         {lastThreePosts.map((post) => (
           <div
             key={post.date}
-            className="max-w-xs mb-10 p-8 rounded-lg border border-gray-100 relative"
+            className="max-w-sm mb-10 p-8 rounded-lg border border-gray-100 relative"
           >
             <Link as={`blog/${post.slug}`} href={`blog/${post.slug}`}>
               <a className="text-3xl font-extrabold tracking-tighter stretched-link hover:underline">
                 {post.title}
               </a>
             </Link>
-            <p className="mt-2">
-              <DateFormatter dateString={post.date} />
-            </p>
+            <div className="flex flex-wrap gap-3 mt-4">
+              <p className="text-gray-500">
+                <DateFormatter dateString={post.date} />
+              </p>
+              <p>•</p>
+              <p className="text-indigo-500">{post.readTime} Min Read</p>
+            </div>
           </div>
         ))}
       </div>

@@ -52,7 +52,12 @@ export default function Home({lastThreePosts}) {
 }
 
 export async function getStaticProps() {
-  const lastThreePosts = getAllPosts(["title", "date", "slug"]).slice(0, 3)
+  const lastThreePosts = getAllPosts([
+    "title",
+    "date",
+    "slug",
+    "readTime",
+  ]).slice(0, 3)
 
   return {
     props: {lastThreePosts},
