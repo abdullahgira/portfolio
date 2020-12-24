@@ -33,7 +33,7 @@ export default function Home({lastThreePosts}) {
         <WorkSection />
       </div>
 
-      <div className="max-w-5xl mx-auto px-2 md:px-8">
+      <div className="max-w-5xl mx-auto py-28 px-2 md:px-8">
         <BlogSection lastThreePosts={lastThreePosts} />
       </div>
 
