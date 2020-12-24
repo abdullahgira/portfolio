@@ -41,7 +41,7 @@ export default function SkillsSection() {
 
         <img
           src="portfolio/circles-colored.svg"
-          className="w-24 absolute -top-14 right-4 md:-right-8"
+          className="w-20 absolute -top-14 right-4 md:-right-8"
         />
       </div>
 
