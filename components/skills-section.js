@@ -10,7 +10,7 @@ export default function SkillsSection() {
           src="portfolio/fewer-circles.svg"
           className="absolute w-16 -top-5 right-1/2 mr-20 -z-1"
         />
-        <div className="w-20 h-1 bg-indigo-700 absolute -bottom-3 right-1/2 -mr-2"></div>
+        <div className="w-20 h-1 bg-indigo-700 absolute -bottom-3 right-1/2 -mr-4"></div>
         <h2 className="text-3xl text-center font-bold">My Skills</h2>
       </div>
 
