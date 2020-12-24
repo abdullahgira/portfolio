@@ -12,6 +12,8 @@ export async function getStaticProps({params}) {
     "description",
     "socialImage",
     "content",
+    "readTime",
+    "date",
   ])
   let content = await markdownToHtml(doc.content || "")
   content = mapImagesToPublicSlug(content, params.slug)

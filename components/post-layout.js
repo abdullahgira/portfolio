@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Head from "next/head"
 import {useState} from "react"
+import DateFormatter from "./date-formatter"
 
 export default function PostLayout({children, meta: pageMeta}) {
   const [theme, setTheme] = useState("okaidia")
@@ -10,7 +11,7 @@ export default function PostLayout({children, meta: pageMeta}) {
     socialImage: "",
     ...pageMeta,
   }
-
+  console.log(meta)
   return (
     <>
       <Head>
@@ -47,7 +48,7 @@ export default function PostLayout({children, meta: pageMeta}) {
         </a>
         <div className="flex justify-around items-center mt-8 mb-5 sm:-mb-5">
           <Link href="/blog">
-            <a className="no-underline font-semibold flex items-center justify-center">
+            <a className="no-underline font-semibold flex items-center justify-center ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -55,9 +56,9 @@ export default function PostLayout({children, meta: pageMeta}) {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 className="mr-2"
               >
                 <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -69,10 +70,26 @@ export default function PostLayout({children, meta: pageMeta}) {
         </div>
       </nav>
       <div id="skip">
-        <article
-          className="prose max-w-2xl m-auto my-4 sm:my-16"
-          dangerouslySetInnerHTML={{__html: children}}
-        />
+        <section className="max-w-2xl m-auto my-4 sm:my-16">
+          <div className="mb-10">
+            <h1 className="text-4xl font-extrabold mb-4">{meta.title}</h1>
+            <div className="flex gap-3 font-semibold">
+              <p>
+                <DateFormatter dateString={meta.date} />
+              </p>
+              <p>•</p>
+              <p className="text-indigo-500">
+                {meta.readTime}{" "}
+                {meta.readTime > 1 ? "Minutes Read" : "Minute Read"}
+              </p>
+            </div>
+          </div>
+
+          <article
+            className="prose"
+            dangerouslySetInnerHTML={{__html: children}}
+          />
+        </section>
       </div>
     </>
   )

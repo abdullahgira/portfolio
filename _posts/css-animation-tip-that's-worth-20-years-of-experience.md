@@ -5,8 +5,6 @@ description: Effects are a part of your data flow.
 socialImage: "/media/42-line-bible.jpg" # you have to include the full path
 ---
 
-# CSS animation tip that's worth 20 years of experience
-
 This post is a note-taking from Google Chrome Developers video {% youtube 9-6CKCz58A8 %} where Jake and Surma talks about Jake's journey with web animations.
 
 ## Table of content
