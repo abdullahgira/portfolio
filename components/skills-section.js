@@ -74,7 +74,7 @@ export default function SkillsSection() {
 
 function Skill({children}) {
   return (
-    <div class="rounded-lg border border-indigo-800 mb-5 p-5 w-56 flex flex-col items-center">
+    <div className="rounded-lg border border-indigo-800 mb-5 p-5 w-56 flex flex-col items-center">
       {children}
     </div>
   )
