@@ -1,6 +1,6 @@
 export default function SkillsSection() {
   return (
-    <div>
+    <div className="my-10">
       <div className="relative z-0 mb-28">
         <img
           src="portfolio/elipse.svg"
@@ -15,7 +15,7 @@ export default function SkillsSection() {
       </div>
 
       <div className="flex flex-wrap justify-around">
-        <div class="rounded-lg border border-gray-200 mb-5 p-5 w-52 flex flex-col items-center">
+        <Skill>
           <img
             className="mb-5 w-24"
             src="portfolio/react.png"
@@ -27,9 +27,9 @@ export default function SkillsSection() {
           <p>
             I use react.js library for building high perfromance user interface.
           </p>
-        </div>
+        </Skill>
 
-        <div class="rounded-lg border border-gray-200 mb-5 p-5 w-52 flex flex-col items-center">
+        <Skill>
           <img
             className="mb-5 w-24"
             src="portfolio/nodejs.png"
@@ -39,9 +39,9 @@ export default function SkillsSection() {
           />
           <h4 className="mb-4">Node.js</h4>
           <p>I use node.js for the backend for all of my projects.</p>
-        </div>
+        </Skill>
 
-        <div class="rounded-lg border border-gray-200 mb-5 p-5 w-52 flex flex-col items-center">
+        <Skill>
           <img
             className="mb-5 w-24"
             src="portfolio/mongodb.png"
@@ -51,9 +51,9 @@ export default function SkillsSection() {
           />
           <h4 className="mb-4">MongoDB</h4>
           <p>Is my go to database without a second thought.</p>
-        </div>
+        </Skill>
 
-        <div class="rounded-lg border border-gray-200 mb-5 p-5 w-52 flex flex-col items-center">
+        <Skill>
           <img
             className="mb-5 w-24"
             src="portfolio/redux.png"
@@ -66,8 +66,16 @@ export default function SkillsSection() {
             I only use it when global state in react is a must to acheive the
             goals of the app.
           </p>
-        </div>
+        </Skill>
       </div>
+    </div>
+  )
+}
+
+function Skill({children}) {
+  return (
+    <div class="rounded-lg border border-indigo-800 mb-5 p-5 w-56 flex flex-col items-center">
+      {children}
     </div>
   )
 }
