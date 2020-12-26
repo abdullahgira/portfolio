@@ -12,6 +12,10 @@ export default function Home({lastThreePosts}) {
     <div className="mb-10">
       <Head>
         <title>Abdullah Osama portfolio</title>
+        <meta
+          content="This portfolio shows my recent skills, projects and blog posts."
+          name="description"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

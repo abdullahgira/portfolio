@@ -28,10 +28,12 @@ function AboutSection() {
       <div className="relative mb-28">
         <img
           src="portfolio/triangle.svg"
+          alt="decorating triangle"
           className="absolute w-40 -top-20 left-1/2 -ml-8 -z-10"
         />
         <img
           src="portfolio/fewer-circles.svg"
+          alt="decorating small circles"
           className="absolute w-16 -top-3 left-1/2 ml-10 -z-10"
         />
         <div className="w-20 h-1 bg-indigo-700 absolute -bottom-3 right-1/2 -mr-2"></div>
@@ -44,7 +46,7 @@ function AboutSection() {
           alt="developer looking at code"
         />
         <PortfolioSectionContent>
-          <h4 className="text-lg mb-2 text-indigo-700">Who am I?</h4>
+          <p className="text-lg mb-2 text-indigo-700">Who am I?</p>
           <h3 className="text-3xl mb-5 uppercase font-bold">
             I create full stack applications using the MERN Stack
           </h3>

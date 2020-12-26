@@ -28,6 +28,7 @@ export default function PortfolioHero() {
             <a
               className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-700 hover:bg-indigo-800 hover:text-white font-semibold"
               target="_blank"
+              rel="noopener"
             >
               Linkedin
             </a>
@@ -36,6 +37,7 @@ export default function PortfolioHero() {
             <a
               className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-700 hover:bg-indigo-800 hover:text-white font-semibold"
               target="_blank"
+              rel="noopener"
             >
               Github
             </a>

@@ -6,10 +6,12 @@ export default function WorkSection() {
       <div className="relative z-0 mb-36">
         <img
           src="portfolio/elipse.svg"
+          alt="decorating elipse"
           className="absolute w-32 -top-12 left-1/2 -ml-12 -z-1"
         />
         <img
           src="portfolio/fewer-circles.svg"
+          alt="decorating small circles"
           className="absolute w-16 -top-5 left-1/2 ml-10 -z-1"
         />
         <div className="w-20 h-1 bg-indigo-700 absolute -bottom-3 right-1/2 -mr-4"></div>
@@ -32,7 +34,11 @@ export default function WorkSection() {
             as="https://itracker.netlify.app"
             href="https://itracker.netlify.app"
           >
-            <a className="underline hover:text-black" target="_blank">
+            <a
+              className="underline hover:text-black"
+              target="_blank"
+              rel="noopener"
+            >
               🔗️ Visit the project
             </a>
           </Link>
@@ -42,7 +48,7 @@ export default function WorkSection() {
           <h3 className="text-3xl font-bold tracking-tighter mb-8">
             7odor - Attendance tracking system
           </h3>
-          <h4 className="text-gray-400 font-bold tracking-widest mb-2">
+          <h4 className="text-gray-500 font-bold tracking-widest mb-2">
             Description
           </h4>
           <p className="mb-10 text-gray-800">
@@ -50,7 +56,11 @@ export default function WorkSection() {
             require the intervention of employees
           </p>
           <Link as="https://7odor.com" href="https://7odor.com">
-            <a className="underline hover:text-black" target="_blank">
+            <a
+              className="underline hover:text-black"
+              target="_blank"
+              rel="noopener"
+            >
               🔗️ Visit the project
             </a>
           </Link>

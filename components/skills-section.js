@@ -4,10 +4,12 @@ export default function SkillsSection() {
       <div className="relative z-0 mb-36">
         <img
           src="portfolio/elipse.svg"
+          alt="decorating elipse"
           className="absolute w-32 -top-12 right-1/2 -mr-2 -z-1"
         />
         <img
           src="portfolio/fewer-circles.svg"
+          alt="decorating small circles"
           className="absolute w-16 -top-5 right-1/2 mr-20 -z-1"
         />
         <div className="w-20 h-1 bg-indigo-700 absolute -bottom-3 right-1/2 -mr-4"></div>
@@ -16,19 +18,19 @@ export default function SkillsSection() {
 
       <div class="flex flex-wrap gap-8 justify-around">
         <Skill logo="portfolio/react.svg">
-          <h4 className="font-bold text-2xl tracking-tighter mb-2">React</h4>
+          <h3 className="font-bold text-2xl tracking-tighter mb-2">React</h3>
           <p>
             I use react.js library for building high perfromance user interface.
           </p>
         </Skill>
 
         <Skill logo="portfolio/nodejs.svg">
-          <h4 className="font-bold text-2xl tracking-tighter mb-2">Node.js</h4>
+          <h3 className="font-bold text-2xl tracking-tighter mb-2">Node.js</h3>
           <p>I use node.js for the backend for all of my projects.</p>
         </Skill>
 
         <Skill logo="portfolio/mongodb.svg">
-          <h4 className="font-bold text-2xl tracking-tighter mb-2">MongoDB</h4>
+          <h3 className="font-bold text-2xl tracking-tighter mb-2">MongoDB</h3>
           <p>
             Is my go to database without a second thought because of it's high
             perfromance
@@ -36,7 +38,7 @@ export default function SkillsSection() {
         </Skill>
 
         <Skill logo="portfolio/redux.svg">
-          <h4 className="font-bold text-2xl tracking-tighter mb-2">Redux</h4>
+          <h3 className="font-bold text-2xl tracking-tighter mb-2">Redux</h3>
           <p>
             I only use it when global state in react is a must to acheive the
             goals of the app.
