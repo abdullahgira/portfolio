@@ -14,7 +14,7 @@ This post is a note-taking from Google Chrome Developers video {% youtube 9-6CKC
 - [Transition problem](#transition-problem)
 - [CSS animation](#css-animation)
 - [Animation problem](#animation-problem)
-- [🌟 The tip 🌟](#the-tip)
+- [**🌟 The tip 🌟**](#the-tip)
 
 ## CSS animations background <a name="css-animations-background"></a>
 

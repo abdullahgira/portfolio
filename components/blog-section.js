@@ -20,7 +20,7 @@ export default function BlogSection({lastThreePosts = []}) {
           <h2 className="text-3xl text-center font-bold">My Blog</h2>
         </div>
         <p>
-          These are my latest three blog posts, you can also visit the blog to{" "}
+          These are my recent posts, you can also visit the blog to{" "}
           <Link as="/blog" href="/blog">
             <a className="underline hover:text-black mt-3">
               view all the posts 📖️

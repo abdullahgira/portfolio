@@ -5,11 +5,11 @@ import {getAllPosts} from "lib/posts"
 
 export default function BlogPage({allPosts}) {
   return (
-    <main className="max-w-2xl my-10 mx-auto">
+    <main className="max-w-2xl my-10 mx-auto px-5">
       <Head>
         <title>Abdullah Osama blog</title>
       </Head>
-      <section className="flex items-center">
+      <section className="flex items-start">
         <img
           src="portfolio/me.jpg"
           className="w-16 bg-indigo-400 rounded-full mr-8"

@@ -13,7 +13,7 @@ export default function PostLayout({children, meta: pageMeta}) {
   }
 
   return (
-    <>
+    <div className="px-5">
       <Head>
         <title>{meta.title}</title>
         <meta charSet="utf-8" />
@@ -78,10 +78,7 @@ export default function PostLayout({children, meta: pageMeta}) {
                 <DateFormatter dateString={meta.date} />
               </p>
               <p>•</p>
-              <p className="text-indigo-500">
-                {meta.readTime}{" "}
-                {meta.readTime > 1 ? "Minutes Read" : "Minute Read"}
-              </p>
+              <p className="text-indigo-500">{meta.readTime} Min Read</p>
             </div>
           </div>
 
@@ -91,6 +88,6 @@ export default function PostLayout({children, meta: pageMeta}) {
           />
         </section>
       </div>
-    </>
+    </div>
   )
 }

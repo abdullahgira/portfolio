@@ -14,7 +14,7 @@ export default function PostPreview({title, date, slug, readTime}) {
           <DateFormatter dateString={date} />
         </p>
         <p>•</p>
-        <p className="text-indigo-600">{readTime} Min read</p>
+        <p className="text-indigo-600">{readTime} Min Read</p>
       </div>
     </article>
   )
