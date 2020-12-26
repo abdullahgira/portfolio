@@ -39,7 +39,10 @@ function AboutSection() {
       </div>
 
       <div className="flex flex-col lg:flex-row justify-between">
-        <PortfolioSectionImage src="/portfolio/about.png" />
+        <PortfolioSectionImage
+          src="/portfolio/about.png"
+          alt="developer looking at code"
+        />
         <PortfolioSectionContent>
           <h4 className="text-lg mb-2 text-indigo-700">Who am I?</h4>
           <h3 className="text-3xl mb-5 uppercase font-bold">

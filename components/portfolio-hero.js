@@ -58,7 +58,10 @@ export default function PortfolioHero() {
       </div>
 
       <div className="order-1 lg:order-2 ml-5 md:min-w-max">
-        <img src="portfolio/developer.png" />
+        <img
+          src="portfolio/developer.png"
+          alt="developer setting on his laptop"
+        />
       </div>
     </div>
   )
