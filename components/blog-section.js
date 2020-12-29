@@ -35,18 +35,16 @@ export default function BlogSection({lastThreePosts = []}) {
             key={post.date}
             className="max-w-sm mb-10 p-8 rounded-lg border border-gray-100 relative"
           >
+            <p className="text-gray-500 mb-1">
+              <DateFormatter dateString={post.date} />
+            </p>
             <Link as={`blog/${post.slug}`} href={`blog/${post.slug}`}>
-              <a className="text-3xl font-extrabold tracking-tighter stretched-link hover:underline">
+              <a className="text-2xl font-bold stretched-link hover:underline">
                 {post.title}
               </a>
             </Link>
-            <div className="flex flex-wrap gap-3 mt-4">
-              <p className="text-gray-500">
-                <DateFormatter dateString={post.date} />
-              </p>
-              <p>•</p>
-              <p className="text-indigo-600">{post.readTime} Min Read</p>
-            </div>
+
+            <p className="text-indigo-600 mt-1">{post.readTime} Min Read</p>
           </div>
         ))}
       </div>

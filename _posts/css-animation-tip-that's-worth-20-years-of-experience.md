@@ -1,11 +1,11 @@
 ---
 title: CSS animation tip that's worth 20 years of experience
 date: "2020-12-19T16:50:21.999Z"
-description: Effects are a part of your data flow.
-socialImage: "/media/42-line-bible.jpg" # you have to include the full path
+description: Getting to smooth animation in a neat way
+socialImage: "/blog/css-animation-tip-that's-worth-20-years-of-experience/blur-train.jpg" # you have to include the full path
 ---
 
-This post is a note-taking from Google Chrome Developers video {% youtube 9-6CKCz58A8 %} where Jake and Surma talks about Jake's journey with web animations.
+This post is a note-taking from <a href="https://www.youtube.com/watch?v=9-6CKCz58A8" target="_blank" rel='noopener'>Google Chrome Developers video</a> where Jake and Surma talks about Jake's journey with web animations.
 
 ## Table of content
 
