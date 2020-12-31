@@ -1,6 +1,6 @@
 export default function SkillsSection() {
   return (
-    <div className="my-10">
+    <div className="my-20">
       <div className="relative z-0 mb-36">
         <img
           src="portfolio/elipse.svg"

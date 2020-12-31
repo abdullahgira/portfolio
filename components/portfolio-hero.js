@@ -17,7 +17,7 @@ export default function PortfolioHero() {
 
         <div className="flex justify-center lg:justify-start flex-wrap">
           <Link as="/blog" href="/blog">
-            <a className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-700 hover:bg-indigo-800 hover:text-white font-semibold">
+            <a className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-900 hover:bg-indigo-800 hover:text-white font-semibold">
               Blog
             </a>
           </Link>
@@ -26,7 +26,7 @@ export default function PortfolioHero() {
             href="https://www.linkedin.com/in/abdullah97/"
           >
             <a
-              className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-700 hover:bg-indigo-800 hover:text-white font-semibold"
+              className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-900 hover:bg-indigo-800 hover:text-white font-semibold"
               target="_blank"
               rel="noopener"
             >
@@ -35,7 +35,7 @@ export default function PortfolioHero() {
           </Link>
           <Link as="https://github.com/xayden" href="https://github.com/xayden">
             <a
-              className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-700 hover:bg-indigo-800 hover:text-white font-semibold"
+              className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-900 hover:bg-indigo-800 hover:text-white font-semibold"
               target="_blank"
               rel="noopener"
             >
@@ -47,7 +47,7 @@ export default function PortfolioHero() {
             href="mailto:abdullah.osama.abdelmajeed@gmail.com"
           >
             <a
-              className="py-2 px-3 rounded-lg mb-4 text-indigo-900 border border-indigo-700 hover:bg-indigo-800 hover:text-white font-semibold"
+              className="py-2 px-3 rounded-lg mb-4 text-indigo-900 border border-indigo-900 hover:bg-indigo-800 hover:text-white font-semibold"
               onClick={() => setShowEmail(true)}
             >
               Email
