@@ -11,7 +11,7 @@ export default function Home({lastThreePosts}) {
   return (
     <div className="mb-10">
       <Head>
-        <title>Abdullah Osama portfolio</title>
+        <title>Abdullah Gira portfolio</title>
         <meta
           content="This portfolio shows my recent skills, projects and blog posts."
           name="description"

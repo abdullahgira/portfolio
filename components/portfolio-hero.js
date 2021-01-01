@@ -9,9 +9,9 @@ export default function PortfolioHero() {
       <div className="order-2 lg:order-1 text-center lg:text-left mt-10 lg:mt-0">
         <h3 className="text-lg mb-2 text-indigo-700">Hello 👋️</h3>
         <h1 className="text-3xl md:text-4xl font-bold mb-5">
-          I'm Abdullah Osama
+          I'm Abdullah Gira
         </h1>
-        <h2 className="text-1xl md:text-2xl mb-10 lg:w-2/3 text-gray-500">
+        <h2 className="text-1xl md:text-2xl mb-10 lg:w-4/5 text-gray-500">
           I create full stack web applications using React and Node.js
         </h2>
 
@@ -33,7 +33,10 @@ export default function PortfolioHero() {
               Linkedin
             </a>
           </Link>
-          <Link as="https://github.com/xayden" href="https://github.com/xayden">
+          <Link
+            as="https://github.com/abdullahgira"
+            href="https://github.com/abdullahgira"
+          >
             <a
               className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-900 hover:bg-indigo-800 hover:text-white font-semibold"
               target="_blank"

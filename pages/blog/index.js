@@ -7,7 +7,7 @@ export default function BlogPage({allPosts}) {
   return (
     <main className="max-w-2xl my-10 mx-auto px-5">
       <Head>
-        <title>Abdullah Osama blog</title>
+        <title>Abdullah Gira blog</title>
       </Head>
       <section className="flex items-start">
         <img
@@ -19,7 +19,7 @@ export default function BlogPage({allPosts}) {
             Personal blog by{" "}
             <strong>
               <Link as="/" href="/">
-                <a className="underline text-indigo-800">Abdullah Osama</a>
+                <a className="underline text-indigo-800">Abdullah Gira</a>
               </Link>
             </strong>
           </h3>
