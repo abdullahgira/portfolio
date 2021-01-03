@@ -19,7 +19,7 @@ export default function WorkSection() {
       </div>
 
       <div className="flex justify-center flex-wrap gap-8">
-        <div className="max-w-xs mb-10 bg-indigo-900 p-8 text-white rounded-lg shadow-md border border-gray-50">
+        <div className="max-w-xs bg-indigo-900 p-8 text-white rounded-lg shadow-md border border-gray-50">
           <h3 className="text-3xl font-bold tracking-tighter mb-8">
             Bug Tracker System
           </h3>
@@ -44,7 +44,7 @@ export default function WorkSection() {
           </Link>
         </div>
 
-        <div className="max-w-xs mb-10 p-8 rounded-lg border border-gray-100">
+        <div className="max-w-xs p-8 rounded-lg border border-gray-300">
           <h3 className="text-3xl font-bold tracking-tighter mb-8">
             7odor - Attendance tracking system
           </h3>
