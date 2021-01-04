@@ -5,11 +5,10 @@ import {useRouter} from "next/router"
 
 export default function Navbar() {
   const router = useRouter()
-  console.log(router)
 
   return (
-    <nav className="mb-10 bg-white">
-      <div className="max-w-5xl mx-auto px-2 md:px-8">
+    <nav className="mb-10">
+      <div className="max-w-5xl mx-auto px-5 md:px-8">
         <div className="flex justify-between items-center">
           <div className="py-2 mr-auto">
             <Link as="/" href="/">
@@ -21,7 +20,7 @@ export default function Navbar() {
               </a>
             </Link>
           </div>
-          <ul className="flex text-sm">
+          <ul className="flex text-sm font-bold">
             <ActiveLink href="/" className="mr-8">
               <li>Home</li>
             </ActiveLink>

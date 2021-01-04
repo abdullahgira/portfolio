@@ -5,30 +5,22 @@ import {getAllPosts} from "lib/posts"
 
 export default function BlogPage({allPosts}) {
   return (
-    <main className="max-w-2xl my-10 mx-auto px-5">
+    <main className="max-w-2xl mt-16 mb-10 mx-auto px-5">
       <Head>
         <title>Abdullah Gira blog</title>
       </Head>
-      <section className="flex items-start">
+      <section className="flex flex-col items-center justify-center">
         <img
           src="portfolio/me.jpg"
-          className="w-16 bg-indigo-400 rounded-full mr-8"
+          className="w-28 bg-indigo-400 rounded-full mr-8"
         />
         <div>
-          <h3 className="text-md">
-            Personal blog by{" "}
-            <strong>
-              <Link as="/" href="/">
-                <a className="underline text-indigo-800">Abdullah Gira</a>
-              </Link>
-            </strong>
-          </h3>
-          <p className="text-sm mt-1 text-gray-700">
-            I talk about the web, mostly about react.
+          <p className="mt-2 text-center text-md w-96">
+            I talk about the web and it's latest technologies and challenges.
           </p>
         </div>
       </section>
-      <section className="mt-10">
+      <section className="mt-16">
         {allPosts.length > 0
           ? allPosts.map((post) => <PostPreview key={post.date} {...post} />)
           : null}

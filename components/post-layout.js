@@ -42,33 +42,6 @@ export default function PostLayout({children, meta: pageMeta}) {
           rel="stylesheet"
         />
       </Head>
-      <nav>
-        <a href="#skip" className="sr-only focus:not-sr-only">
-          Skip to content
-        </a>
-        <div className="flex justify-around items-center mt-8 mb-5 sm:-mb-5">
-          <Link href="/blog">
-            <a className="no-underline font-semibold flex items-center justify-center ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                className="mr-2"
-              >
-                <line x1="19" y1="12" x2="5" y2="12"></line>
-                <polyline points="12 19 5 12 12 5"></polyline>
-              </svg>
-              <span>Back to blog</span>
-            </a>
-          </Link>
-        </div>
-      </nav>
       <div id="skip">
         <section className="max-w-2xl m-auto my-4 sm:my-16">
           <div className="mb-10">

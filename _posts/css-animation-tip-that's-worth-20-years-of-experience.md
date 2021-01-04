@@ -1,6 +1,6 @@
 ---
 title: CSS animation tip that's worth 20 years of experience
-date: "2020-12-19T16:50:21.999Z"
+date: "2021-01-02T09:57:34.439Z"
 description: Getting to smooth animation in a neat way
 socialImage: "/blog/css-animation-tip-that's-worth-20-years-of-experience/blur-train.jpg" # you have to include the full path
 ---
