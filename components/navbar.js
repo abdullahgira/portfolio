@@ -20,13 +20,15 @@ export default function Navbar() {
               </a>
             </Link>
           </div>
-          <ul className="flex text-sm font-bold">
-            <ActiveLink href="/" className="mr-8">
-              <li>Home</li>
-            </ActiveLink>
-            <ActiveLink href="/blog">
-              <li>Blog</li>
-            </ActiveLink>
+          <ul className="flex text-sm">
+            <li>
+              <ActiveLink href="/" className="mr-8">
+                Home
+              </ActiveLink>
+            </li>
+            <li>
+              <ActiveLink href="/blog">Blog</ActiveLink>
+            </li>
           </ul>
         </div>
       </div>

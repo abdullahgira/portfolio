@@ -11,7 +11,7 @@ export default function Home({lastThreePosts}) {
   return (
     <div className="mb-10">
       <Head>
-        <title>Abdullah Gira portfolio</title>
+        <title>Abdullah Gira</title>
         <meta
           content="This portfolio shows my recent skills, projects and blog posts."
           name="description"
@@ -27,7 +27,7 @@ export default function Home({lastThreePosts}) {
         <AboutSection />
       </div>
 
-      <div className="bg-gray-50 skills-section">
+      <div className="bg-gray-50">
         <div className="max-w-6xl mx-auto py-28 px-2 md:px-8">
           <SkillsSection />
         </div>
@@ -44,7 +44,7 @@ export default function Home({lastThreePosts}) {
       <div className="flex flex-col items-center justify-center">
         <div>
           <img
-            src="portfolio/me.jpg"
+            src="portfolio/me.webp"
             alt="my picture"
             className="w-20 rounded-full mb-3"
           />

@@ -11,7 +11,7 @@ export default function PortfolioHero() {
         <h1 className="text-3xl md:text-4xl font-bold mb-5">
           I'm Abdullah Gira
         </h1>
-        <h2 className="text-1xl md:text-2xl mb-10 lg:w-4/5 text-gray-500">
+        <h2 className="text-lg md:text-xl mb-10 lg:w-4/5 text-gray-500 uppercase">
           I create full stack web applications using React and Node.js
         </h2>
 
@@ -64,7 +64,7 @@ export default function PortfolioHero() {
 
       <div className="order-1 lg:order-2 ml-5 md:min-w-max">
         <img
-          src="portfolio/developer.png"
+          src="portfolio/developer.svg"
           alt="developer setting on his laptop"
         />
       </div>

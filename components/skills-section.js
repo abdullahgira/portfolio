@@ -52,7 +52,7 @@ export default function SkillsSection() {
 function Skill({logo, children}) {
   return (
     <div className="bg-white rounded-xl flex items-start p-5 shadow-xl max-w-lg">
-      <div className="p-6 rounded-xl bg-purple-900 shadow-xl inline-block mr-5 flex-none">
+      <div className="p-6 rounded-xl bg-indigo-900 shadow-xl inline-block mr-5 flex-none">
         <img className="w-20" src={logo} alt="skill logo" />
       </div>
       <div className="mt-2 inline-block">{children}</div>
