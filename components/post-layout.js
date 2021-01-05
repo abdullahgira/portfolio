@@ -51,7 +51,7 @@ export default function PostLayout({children, meta: pageMeta}) {
                 <DateFormatter dateString={meta.date} />
               </p>
               <p>•</p>
-              <p className="text-indigo-500">{meta.readTime} Min Read</p>
+              <p className="text-indigo-700">{meta.readTime} Min Read</p>
             </div>
           </div>
 

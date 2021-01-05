@@ -18,8 +18,8 @@ export default function PortfolioHero() {
 
         <div className="flex items-center gap-8  justify-center lg:justify-start flex-wrap">
           <Link
-            as="https://www.linkedin.com/in/abdullah97/"
-            href="https://www.linkedin.com/in/abdullah97/"
+            as="https://www.linkedin.com/in/abdullahgira/"
+            href="https://www.linkedin.com/in/abdullahgira/"
           >
             <a target="_blank" rel="noopener">
               <LinkedInIcon size="30" />

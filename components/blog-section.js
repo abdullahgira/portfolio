@@ -44,7 +44,7 @@ export default function BlogSection({lastThreePosts = []}) {
               </a>
             </Link>
 
-            <p className="text-indigo-600 mt-1">{post.readTime} Min Read</p>
+            <p className="text-indigo-700 mt-1">{post.readTime} Min Read</p>
           </div>
         ))}
       </div>
