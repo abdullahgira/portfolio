@@ -1,9 +1,10 @@
-import React from "react"
 import Link from "next/link"
+import LinkedInIcon from "./icons/linkedin-icon"
+import GithubIcon from "./icons/github-icon"
+import EnvelopeIcon from "./icons/envelope-icon"
+import PhoneIcon from "./icons/phone-icon"
 
 export default function PortfolioHero() {
-  const [showEmail, setShowEmail] = React.useState(false)
-
   return (
     <div className="flex flex-col items-center lg:flex-row lg:justify-between my-28">
       <div className="order-2 lg:order-1 text-center lg:text-left mt-10 lg:mt-0">
@@ -15,51 +16,37 @@ export default function PortfolioHero() {
           I create full stack web applications using React and Node.js
         </h2>
 
-        <div className="flex justify-center lg:justify-start flex-wrap">
-          <Link as="/blog" href="/blog">
-            <a className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-900 hover:bg-indigo-800 hover:text-white font-semibold">
-              Blog
-            </a>
-          </Link>
+        <div className="flex items-center gap-8  justify-center lg:justify-start flex-wrap">
           <Link
             as="https://www.linkedin.com/in/abdullah97/"
             href="https://www.linkedin.com/in/abdullah97/"
           >
-            <a
-              className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-900 hover:bg-indigo-800 hover:text-white font-semibold"
-              target="_blank"
-              rel="noopener"
-            >
-              Linkedin
+            <a target="_blank" rel="noopener">
+              <LinkedInIcon size="30" />
             </a>
           </Link>
           <Link
             as="https://github.com/abdullahgira"
             href="https://github.com/abdullahgira"
           >
-            <a
-              className="py-2 px-3 rounded-lg mr-4 mb-4 text-indigo-900 border border-indigo-900 hover:bg-indigo-800 hover:text-white font-semibold"
-              target="_blank"
-              rel="noopener"
-            >
-              Github
+            <a target="_blank" rel="noopener">
+              <GithubIcon size="36" />
             </a>
           </Link>
           <Link
-            as="mailto:abdullah.osama.abdelmajeed@gmail.com"
-            href="mailto:abdullah.osama.abdelmajeed@gmail.com"
+            as="mailto:abdullaho.gira@gmail.com"
+            href="mailto:abdullaho.gira@gmail.com"
           >
-            <a
-              className="py-2 px-3 rounded-lg mb-4 text-indigo-900 border border-indigo-900 hover:bg-indigo-800 hover:text-white font-semibold"
-              onClick={() => setShowEmail(true)}
-            >
-              Email
+            <a onClick={() => setShowEmail(true)}>
+              <EnvelopeIcon size="36" />
+            </a>
+          </Link>
+          <Link as="tel:+201115477547" href="tel:+201115477547">
+            <a>
+              <PhoneIcon size="36" />
             </a>
           </Link>
         </div>
-        {showEmail ? (
-          <p className="my-4">abdullah.osama.abdelmajeed@gmail.com</p>
-        ) : null}
       </div>
 
       <div className="order-1 lg:order-2 ml-5 md:min-w-max">
