@@ -19,25 +19,25 @@ export default function Home({lastThreePosts}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="max-w-5xl mx-auto px-2 md:px-8">
+      <div className="max-w-5xl mx-auto px-4 md:px-8">
         <PortfolioHero />
       </div>
 
-      <div className="max-w-5xl mx-auto py-28 px-2 md:px-8">
+      <div className="max-w-5xl mx-auto py-28 px-4 md:px-8">
         <AboutSection />
       </div>
 
       <div className="bg-gray-50">
-        <div className="max-w-6xl mx-auto py-28 px-2 md:px-8">
+        <div className="max-w-5xl mx-auto py-28 px-4 md:px-8">
           <SkillsSection />
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto py-28 px-2 md:px-8">
+      <div className="max-w-6xl mx-auto py-28 px-4 md:px-8">
         <WorkSection />
       </div>
 
-      <div className="max-w-5xl mx-auto py-28 px-2 md:px-8">
+      <div className="max-w-5xl mx-auto py-28 px-4 md:px-8">
         <BlogSection lastThreePosts={lastThreePosts} />
       </div>
 

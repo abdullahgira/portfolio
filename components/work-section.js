@@ -18,7 +18,7 @@ export default function WorkSection() {
         <h2 className="text-3xl text-center font-bold">My Work</h2>
       </div>
 
-      <div className="flex justify-center flex-wrap gap-8">
+      {/* <div className="flex justify-center flex-wrap gap-8">
         <div className="max-w-xs bg-indigo-900 p-8 text-white rounded-lg shadow-md border border-gray-50">
           <h3 className="text-3xl font-bold tracking-tighter mb-8">
             Bug Tracker System
@@ -65,7 +65,87 @@ export default function WorkSection() {
             </a>
           </Link>
         </div>
-      </div>
+      </div> */}
+      <ProjectContainer>
+        <ProjectImage
+          src="/portfolio/macbook-itracker.png"
+          alt="issue tracker dashboard"
+          className="lg:mr-20"
+        />
+        <div className="max-w-xs sm:max-w-sm">
+          <ProjectTitle>iTracker - Issue Tracking System</ProjectTitle>
+          <ProjectDescription>
+            Project planning system that helps manage teams and keep them on
+            track, similar to Jira, Trello & Github Projects.
+          </ProjectDescription>
+          <ProjectUtilized>
+            React, Node.js, MongoDB, JWT, Firebase Storage, Email service
+          </ProjectUtilized>
+        </div>
+      </ProjectContainer>
     </section>
+  )
+}
+
+function ProjectContainer({children}) {
+  return (
+    <div className="flex flex-col content-center items-center lg:items-start lg:flex-row ">
+      {children}
+    </div>
+  )
+}
+
+function ProjectImage({src, alt, className}) {
+  return (
+    <div className={`max-w-xl mx-auto lg:max-w-none lg:w-3/5 ${className}`}>
+      <img src={src} alt={alt} />
+    </div>
+  )
+}
+
+function ProjectTitle({children}) {
+  return (
+    <h3 className="text-3xl font-bold tracking-tighter mb-14 lg:w-96 mt-10 lg:mt-0">
+      {children}
+    </h3>
+  )
+}
+
+function ProjectDescription({children}) {
+  return (
+    <div className="mb-8">
+      <h4 className="text-indigo-700 font-bold tracking-widest mb-3">
+        Description
+      </h4>
+      <p className="text-gray-700 tracking-wide leading-relaxed">{children}</p>
+    </div>
+  )
+}
+
+function ProjectUtilized({children}) {
+  return (
+    <div className="mb-8">
+      <h4 className="text-indigo-700 font-bold tracking-widest mb-3">
+        Utilized
+      </h4>
+      <p className="text-gray-700 tracking-wide leading-relaxed">{children}</p>
+    </div>
+  )
+}
+
+function ProjectLinks({videoLink, projectLink}) {
+  return (
+    <div>
+      {videoLink ? (
+        <Link as={videoLink} href={videoLink}>
+          <a>Watch the demo</a>
+        </Link>
+      ) : null}
+      {projectLink ? (
+        <Link as={projectLink} href={projectLink}>
+          <a>Visit the project</a>
+        </Link>
+      ) : null}
+    </div>
   )
 }
