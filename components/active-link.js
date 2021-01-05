@@ -4,7 +4,7 @@ export default function ActiveLink({className, children, href, ...props}) {
   const router = useRouter()
   const styleClassName = `py-2 hover:text-gray-700 ${className} ${
     router?.pathname === href
-      ? "text-gray-700 border-b-2 border-blue-700 font-bold"
+      ? "text-gray-700 border-b-2 border-blue-700 font-bold px-2"
       : "text-gray-500"
   }`
 

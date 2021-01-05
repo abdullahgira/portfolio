@@ -37,7 +37,7 @@ export default function PortfolioHero() {
             as="mailto:abdullaho.gira@gmail.com"
             href="mailto:abdullaho.gira@gmail.com"
           >
-            <a onClick={() => setShowEmail(true)}>
+            <a>
               <EnvelopeIcon size="36" />
             </a>
           </Link>
