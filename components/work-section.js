@@ -3,7 +3,7 @@ import Link from "next/link"
 export default function WorkSection() {
   return (
     <section className="my-10">
-      <div className="relative z-0 mb-36">
+      <div className="relative z-0 mb-48">
         <img
           src="portfolio/elipse.svg"
           alt="decorating elipse"
@@ -18,54 +18,6 @@ export default function WorkSection() {
         <h2 className="text-3xl text-center font-bold">My Work</h2>
       </div>
 
-      {/* <div className="flex justify-center flex-wrap gap-8">
-        <div className="max-w-xs bg-indigo-900 p-8 text-white rounded-lg shadow-md border border-gray-50">
-          <h3 className="text-3xl font-bold tracking-tighter mb-8">
-            Bug Tracker System
-          </h3>
-          <h4 className="text-yellow-300 font-bold tracking-widest mb-2">
-            Description
-          </h4>
-          <p className="mb-10 text-gray-100">
-            Project planning system that helps manage teams and keep them on
-            track, similar to Jira, Trello & Github Projects.
-          </p>
-          <Link
-            as="https://itracker.netlify.app"
-            href="https://itracker.netlify.app"
-          >
-            <a
-              className="underline hover:text-black"
-              target="_blank"
-              rel="noopener"
-            >
-              🔗️ Visit the project
-            </a>
-          </Link>
-        </div>
-
-        <div className="max-w-xs p-8 rounded-lg border border-gray-300">
-          <h3 className="text-3xl font-bold tracking-tighter mb-8">
-            7odor - Attendance tracking system
-          </h3>
-          <h4 className="text-gray-500 font-bold tracking-widest mb-2">
-            Description
-          </h4>
-          <p className="mb-10 text-gray-800">
-            Keeps track of employees attendance in an automated way that doesn't
-            require the intervention of employees
-          </p>
-          <Link as="https://7odor.com" href="https://7odor.com">
-            <a
-              className="underline hover:text-black"
-              target="_blank"
-              rel="noopener"
-            >
-              🔗️ Visit the project
-            </a>
-          </Link>
-        </div>
-      </div> */}
       <ProjectContainer>
         <ProjectImage
           src="/portfolio/macbook-itracker.png"
@@ -83,13 +35,52 @@ export default function WorkSection() {
           </ProjectUtilized>
         </div>
       </ProjectContainer>
+
+      <ProjectContainer>
+        <ProjectImage
+          src="/portfolio/macbook-7odor.png"
+          alt="7odor dashboard"
+          className="lg:ml-20 order-1 lg:order-2"
+        />
+        <div className="max-w-xs sm:max-w-sm order-2 lg:order-1">
+          <ProjectTitle>7odor - Attendance Tracking System (WIP)</ProjectTitle>
+          <ProjectDescription>
+            Multilingual application that tracks employees attendance and
+            estimate their salaries and overtime hours.
+          </ProjectDescription>
+          <ProjectUtilized>React, Tailwind CSS, Jest</ProjectUtilized>
+        </div>
+      </ProjectContainer>
+
+      <ProjectContainer noMarginBottom>
+        <ProjectImage
+          src="/portfolio/macbook-portfolio.png"
+          alt="my portfolio"
+          className="lg:mr-20"
+        />
+        <div className="max-w-xs sm:max-w-sm">
+          <ProjectTitle>This Portfolio</ProjectTitle>
+          <ProjectDescription>
+            My personal portfolio where I share my latest works and blog about
+            web technologies.
+          </ProjectDescription>
+          <ProjectUtilized>
+            React, Next.js, Tailwind CSS, Github pages, Cloudflare CDN, Google
+            AMP Optimizated, Image Optimizations, Markdown
+          </ProjectUtilized>
+        </div>
+      </ProjectContainer>
     </section>
   )
 }
 
-function ProjectContainer({children}) {
+function ProjectContainer({children, noMarginBottom}) {
   return (
-    <div className="flex flex-col content-center items-center lg:items-start lg:flex-row ">
+    <div
+      className={`flex flex-col content-center items-center lg:items-start lg:flex-row ${
+        noMarginBottom ? "" : "mb-32 lg:mb-48"
+      }`}
+    >
       {children}
     </div>
   )
