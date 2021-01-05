@@ -8,7 +8,7 @@ export default function PortfolioHero() {
   return (
     <div className="flex flex-col items-center lg:flex-row lg:justify-between my-28">
       <div className="order-2 lg:order-1 text-center lg:text-left mt-10 lg:mt-0">
-        <h3 className="text-lg mb-2 text-indigo-700">Hello 👋️</h3>
+        <h3 className="text-lg mb-2 text-blue-700">Hello 👋️</h3>
         <h1 className="text-3xl md:text-4xl font-bold mb-5">
           I'm Abdullah Gira
         </h1>
@@ -16,7 +16,7 @@ export default function PortfolioHero() {
           I create full stack web applications using React and Node.js
         </h2>
 
-        <div className="flex items-center gap-8  justify-center lg:justify-start flex-wrap">
+        <div className="flex items-center gap-8 justify-center lg:justify-start flex-wrap text-blue-700">
           <Link
             as="https://www.linkedin.com/in/abdullahgira/"
             href="https://www.linkedin.com/in/abdullahgira/"

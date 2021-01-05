@@ -12,7 +12,7 @@ export default function SkillsSection() {
           alt="decorating small circles"
           className="absolute w-16 -top-5 right-1/2 mr-20 -z-1"
         />
-        <div className="w-20 h-1 bg-indigo-700 absolute -bottom-3 right-1/2 -mr-4"></div>
+        <div className="w-20 h-1 bg-blue-700 absolute -bottom-3 right-1/2 -mr-4"></div>
         <h2 className="text-3xl text-center font-bold">My Skills</h2>
       </div>
 
@@ -52,7 +52,7 @@ export default function SkillsSection() {
 function Skill({logo, children}) {
   return (
     <div className="bg-white rounded-xl flex items-start p-5 shadow-xl max-w-md">
-      <div className="p-6 rounded-xl bg-indigo-900 shadow-xl inline-block mr-5 flex-none">
+      <div className="p-6 rounded-xl bg-blue-900 shadow-xl inline-block mr-5 flex-none">
         <img className="w-20" src={logo} alt="skill logo" />
       </div>
       <div className="mt-2 inline-block">{children}</div>

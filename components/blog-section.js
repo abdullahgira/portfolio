@@ -16,7 +16,7 @@ export default function BlogSection({lastThreePosts = []}) {
             alt="decorating small circles"
             className="absolute w-16 -top-3 left-1/2 ml-10 -z-10"
           />
-          <div className="w-20 h-1 bg-indigo-700 absolute -bottom-3 right-1/2 -mr-5"></div>
+          <div className="w-20 h-1 bg-blue-700 absolute -bottom-3 right-1/2 -mr-5"></div>
           <h2 className="text-3xl text-center font-bold">My Blog</h2>
         </div>
         <p>
@@ -44,7 +44,7 @@ export default function BlogSection({lastThreePosts = []}) {
               </a>
             </Link>
 
-            <p className="text-indigo-700 mt-1">{post.readTime} Min Read</p>
+            <p className="text-blue-700 mt-1">{post.readTime} Min Read</p>
           </div>
         ))}
       </div>

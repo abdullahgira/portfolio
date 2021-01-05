@@ -7,7 +7,7 @@ export default function Navbar() {
   const router = useRouter()
 
   return (
-    <nav className="mb-10 border-t-4 border-indigo-700">
+    <nav className="mb-10 border-t-4 border-blue-700">
       <div className="max-w-5xl mx-auto px-5 md:px-8">
         <div className="flex justify-between items-center">
           <div className="py-2 mr-auto">
@@ -16,7 +16,7 @@ export default function Navbar() {
                 <span className="text-lg font-bold tracking-tight">
                   Abdullah Gira
                 </span>
-                <span className="text-3xl text-indigo-700">.</span>
+                <span className="text-3xl text-blue-700">.</span>
               </a>
             </Link>
           </div>

@@ -11,7 +11,7 @@ export default function BlogPage({allPosts}) {
       <section className="flex flex-col items-center justify-center1">
         <img
           src="portfolio/me.webp"
-          className="w-28 bg-indigo-700 rounded-full mr-8"
+          className="w-20 bg-blue-700 rounded-full"
         />
         <div>
           <p className="mt-5 text-gray-500 text-center text-md">
