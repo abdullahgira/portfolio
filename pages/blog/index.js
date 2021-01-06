@@ -14,8 +14,9 @@ export default function BlogPage({allPosts}) {
           className="w-20 bg-blue-700 rounded-full"
         />
         <div>
-          <p className="mt-5 text-gray-500 text-center text-md">
-            I talk about the latest technologies and challenges of the web.
+          <p className="mt-5 text-gray-500 text-center text-md md:w-3/4 mx-auto">
+            I talk about the web and its latest technologies and the challenges
+            it solves
           </p>
         </div>
       </section>
