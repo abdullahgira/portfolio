@@ -36,7 +36,7 @@ function AboutSection() {
           alt="decorating small circles"
           className="absolute w-16 -top-3 left-1/2 ml-10 -z-10"
         />
-        <div className="w-20 h-1 bg-blue-700 absolute -bottom-3 right-1/2 -mr-2"></div>
+        <div className="w-20 h-1 bg-blue-700 absolute -bottom-3 right-1/2 -mr-3 md:-mr-2"></div>
         <h2 className="text-3xl text-center font-bold">About Me</h2>
       </div>
 
