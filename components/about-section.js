@@ -48,14 +48,14 @@ function AboutSection() {
         <PortfolioSectionContent>
           <p className="text-lg mb-2 text-blue-700">Who am I?</p>
           <h3 className="text-3xl mb-10 font-bold">
-            I create full stack applications using the MERN Stack
+            I create high performance full stack web applications
           </h3>
           <p>
             I graduated from college with a BSc in computer science. I started
-            programming in Node.js 3+ years ago and then jumped to React 2+
-            years ago to help me create user interfaces for my projects. I
-            usually do my projects using the MERN stack (MongoDB, Express,
-            React, Node.js).
+            programming in Node.js 3+ years ago, where I've learned how to build
+            RESTful APIs, then jumped to React 2+ years ago to create user
+            interfaces for my projects. I usually do my projects using the MERN
+            stack (MongoDB, Express, React, Node.js).
           </p>
         </PortfolioSectionContent>
       </div>
