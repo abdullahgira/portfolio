@@ -6,10 +6,11 @@ import SkillsSection from "components/skills-section"
 import WorkSection from "components/work-section"
 import BlogSection from "components/blog-section"
 import {getAllPosts} from "lib/posts"
+import PortfolioFooter from "components/portfolio-footer"
 
 export default function Home({lastThreePosts}) {
   return (
-    <div className="mb-10">
+    <div>
       <Head>
         <title>Abdullah Gira</title>
         <meta
@@ -41,16 +42,7 @@ export default function Home({lastThreePosts}) {
         <BlogSection lastThreePosts={lastThreePosts} />
       </div>
 
-      <div className="flex flex-col items-center justify-center">
-        <div>
-          <img
-            src="portfolio/me.webp"
-            alt="my picture"
-            className="w-20 rounded-full mb-3"
-          />
-        </div>
-        <p>Abdullah Osama</p>
-      </div>
+      <PortfolioFooter />
     </div>
   )
 }
