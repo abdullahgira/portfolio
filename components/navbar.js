@@ -22,12 +22,21 @@ export default function Navbar() {
           </div>
           <ul className="flex text-sm">
             <li>
-              <ActiveLink href="/" className="mr-8">
+              <ActiveLink
+                href="/"
+                className="mr-8"
+                activeRegExp={new RegExp("/$")}
+              >
                 Home
               </ActiveLink>
             </li>
             <li>
-              <ActiveLink href="/blog">Blog</ActiveLink>
+              <ActiveLink
+                href="/blog"
+                activeRegExp={new RegExp("blog/*.*", "gm")}
+              >
+                Blog
+              </ActiveLink>
             </li>
           </ul>
         </div>
