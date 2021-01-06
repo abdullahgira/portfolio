@@ -19,10 +19,10 @@ export default function BlogSection({lastThreePosts = []}) {
           <div className="w-20 h-1 bg-blue-700 absolute -bottom-3 right-1/2 -mr-6 md:-mr-5"></div>
           <h2 className="text-3xl text-center font-bold">My Blog</h2>
         </div>
-        <p>
-          These are my recent posts, you can also visit the blog to{" "}
+        <p className="md:w-2/5 mx-auto">
+          These are my recent posts, you can also visit my blog page to{" "}
           <Link as="/blog" href="/blog">
-            <a className="underline hover:text-black mt-3">
+            <a className="text-blue-700 hover:text-blue-900 mt-3 pb-1 border-b-2 border-blue-700">
               view all the posts 📖️
             </a>
           </Link>
@@ -33,7 +33,7 @@ export default function BlogSection({lastThreePosts = []}) {
         {lastThreePosts.map((post) => (
           <div
             key={post.date}
-            className="max-w-sm mb-10 p-8 rounded-lg border border-gray-100 relative"
+            className="max-w-sm shadow-lg px-8 py-5 rounded-lg border border-gray-200 relative"
           >
             <p className="text-gray-500 mb-1">
               <DateFormatter dateString={post.date} />
