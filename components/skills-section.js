@@ -16,7 +16,7 @@ export default function SkillsSection() {
         <h2 className="text-3xl text-center font-bold">My Skills</h2>
       </div>
 
-      <div class="flex flex-wrap gap-8 justify-around">
+      <div className="flex flex-wrap gap-8 justify-around">
         <Skill logo="portfolio/react.svg">
           <h3 className="font-bold text-2xl tracking-tighter mb-2">React</h3>
           <p>
