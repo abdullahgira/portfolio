@@ -17,7 +17,9 @@ export default function WorkSection() {
           className="absolute w-16 -top-5 left-1/2 ml-10 -z-1"
         />
         <div className="w-20 h-1 bg-blue-700 absolute -bottom-3 right-1/2 -mr-6 md:-mr-4"></div>
-        <h2 className="text-3xl text-center font-bold">My Work</h2>
+        <h2 className="text-3xl text-center font-bold heading" id="MyWork">
+          My Work
+        </h2>
       </div>
 
       <ProjectContainer>

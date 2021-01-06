@@ -16,7 +16,13 @@ export default function PortfolioHero() {
           I create full stack web applications using React and Node.js
         </h2>
 
-        <div className="flex items-center gap-8 justify-center lg:justify-start flex-wrap text-blue-700">
+        <Link as="/#MyWork" href="/#MyWork">
+          <a className="bg-blue-700 text-white font-semibold shadow-md rounded-full py-2 px-10">
+            My Work
+          </a>
+        </Link>
+
+        {/* <div className="flex items-center gap-8 justify-center lg:justify-start flex-wrap text-blue-700">
           <Link
             as="https://www.linkedin.com/in/abdullahgira/"
             href="https://www.linkedin.com/in/abdullahgira/"
@@ -46,7 +52,7 @@ export default function PortfolioHero() {
               <PhoneIcon size="36" />
             </a>
           </Link>
-        </div>
+        </div> */}
       </div>
 
       <div className="order-1 lg:order-2 ml-5 md:min-w-max">

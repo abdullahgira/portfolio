@@ -1,19 +1,9 @@
-img {
+.prose img {
   max-width: 100%;
 }
 
-.portfolio-section + .portfolio-section > img {
-  order: 1;
-}
-
-.blur-bg {
-  background: rgba(251, 251, 251, 0.7);
-  border: 1px solid #dcdcdc;
-  box-sizing: border-box;
-  backdrop-filter: blur(50px);
-  /* Note: backdrop-filter has minimal browser support */
-
-  border-radius: 3px;
+.heading {
+  scroll-margin-top: 82px;
 }
 
 .stretched-link::after {
