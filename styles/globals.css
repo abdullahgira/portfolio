@@ -177,3 +177,27 @@ pre[class*="language-"] {
   padding-left: 0.9em;
   border-left: 0.3em solid #9CCC65;
 }
+
+/* Scrollbar */
+/* width */
+pre::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+}
+
+/* Track */
+pre::-webkit-scrollbar-track {
+  background: #011627;
+  border-radius: 10px;
+}
+
+/* Handle */
+pre::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #1d3a50;
+}
+
+/* Handle on hover */
+pre::-webkit-scrollbar-thumb:hover {
+  background: #264f6d;
+}

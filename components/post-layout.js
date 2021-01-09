@@ -1,10 +1,7 @@
-import Link from "next/link"
 import Head from "next/head"
-import {useState} from "react"
 import DateFormatter from "./date-formatter"
 
 export default function PostLayout({children, meta: pageMeta}) {
-  const [theme, setTheme] = useState("okaidia")
   const meta = {
     title: "",
     description: "",
@@ -32,15 +29,6 @@ export default function PostLayout({children, meta: pageMeta}) {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.description} />
         <meta name="twitter:image" content={meta.socialImage} />
-        <link
-          rel="preload"
-          href="https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css"
-          as="script"
-        />
-        <link
-          href="https://unpkg.com/prismjs@0.0.1/themes/prism-okaidia.css"
-          rel="stylesheet"
-        />
       </Head>
       <div id="skip">
         <section className="max-w-2xl m-auto my-4 sm:my-16">
