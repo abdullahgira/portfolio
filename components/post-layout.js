@@ -33,7 +33,7 @@ export default function PostLayout({children, meta: pageMeta}) {
       <div id="skip">
         <section className="max-w-2xl m-auto my-4 sm:my-16">
           <div className="mb-10">
-            <h1 className="text-4xl font-extrabold mb-4">{meta.title}</h1>
+            <h1 className="text-5xl font-bold mb-4">{meta.title}</h1>
             <div className="flex gap-3 font-semibold">
               <p>
                 <DateFormatter dateString={meta.date} />
