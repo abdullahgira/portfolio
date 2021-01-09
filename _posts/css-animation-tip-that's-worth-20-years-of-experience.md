@@ -20,6 +20,27 @@ This post is a note-taking from <a href="https://www.youtube.com/watch?v=9-6CKCz
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
 
+```jsx{6-9}
+import React, {useState, useEffect, useRef} from "react"
+
+function Counter() {
+  let [count, setCount] = useState(0)
+
+  useInterval(() => {
+    // Your custom logic here
+    setCount(count + 1)
+  }, 1000)
+
+  return (
+    <h1>
+      {count}
+      lorem lkdfie jlksdjfie lkdjfoiwjeflksdj iwejflksdj fowiejflksdj fiowejfksjdlkfj
+      eijsldkjf oiejflskjdf j
+    </h1>
+  )
+}
+```
+
 ## CSS transition <a name="css-transition"></a>
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
