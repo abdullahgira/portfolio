@@ -6,7 +6,10 @@ import PhoneIcon from "./icons/phone-icon"
 
 export default function PortfolioFooter() {
   return (
-    <div className="flex flex-col items-center justify-center py-24 bg-gray-50">
+    <div
+      className="flex flex-col items-center justify-center py-24 bg-gray-50"
+      id="ContactMe"
+    >
       <div>
         <img
           src="portfolio/me.webp"

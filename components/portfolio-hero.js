@@ -16,11 +16,18 @@ export default function PortfolioHero() {
           I create full stack web applications using React and Node.js
         </h2>
 
-        <Link as="/#MyWork" href="/#MyWork">
-          <a className="bg-blue-700 text-white font-semibold shadow-md rounded-full py-2 px-10">
-            My Work
-          </a>
-        </Link>
+        <div className="flex justify-center lg:justify-start flex-wrap gap-4">
+          <Link as="/#MyWork" href="/#MyWork">
+            <a className="bg-blue-700 text-white font-semibold shadow-md rounded-full py-2 px-8">
+              My Work
+            </a>
+          </Link>
+          <Link as="/#ContactMe" href="/#ContactMe">
+            <a className="border border-gray-400 text-gray-500 rounded-full py-2 px-8">
+              Contact Me
+            </a>
+          </Link>
+        </div>
 
         {/* <div className="flex items-center gap-8 justify-center lg:justify-start flex-wrap text-blue-700">
           <Link
