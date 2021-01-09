@@ -28,38 +28,6 @@ export default function PortfolioHero() {
             </a>
           </Link>
         </div>
-
-        {/* <div className="flex items-center gap-8 justify-center lg:justify-start flex-wrap text-blue-700">
-          <Link
-            as="https://www.linkedin.com/in/abdullahgira/"
-            href="https://www.linkedin.com/in/abdullahgira/"
-          >
-            <a target="_blank" rel="noopener">
-              <LinkedInIcon size="30" />
-            </a>
-          </Link>
-          <Link
-            as="https://github.com/abdullahgira"
-            href="https://github.com/abdullahgira"
-          >
-            <a target="_blank" rel="noopener">
-              <GithubIcon size="36" />
-            </a>
-          </Link>
-          <Link
-            as="mailto:abdullaho.gira@gmail.com"
-            href="mailto:abdullaho.gira@gmail.com"
-          >
-            <a>
-              <EnvelopeIcon size="36" />
-            </a>
-          </Link>
-          <Link as="tel:+201115477547" href="tel:+201115477547">
-            <a>
-              <PhoneIcon size="36" />
-            </a>
-          </Link>
-        </div> */}
       </div>
 
       <div className="order-1 lg:order-2 ml-5 md:min-w-max">

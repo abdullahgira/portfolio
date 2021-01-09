@@ -25,6 +25,7 @@ export default function PortfolioFooter() {
           href="https://www.linkedin.com/in/abdullahgira/"
         >
           <a target="_blank" rel="noopener" className="hover:text-gray-700">
+            <span className="sr-only">LinkedIn</span>
             <LinkedInIcon size="30" />
           </a>
         </Link>
@@ -33,6 +34,7 @@ export default function PortfolioFooter() {
           href="https://github.com/abdullahgira"
         >
           <a target="_blank" rel="noopener" className="hover:text-gray-700">
+            <span className="sr-only">Github</span>
             <GithubIcon size="36" />
           </a>
         </Link>
@@ -41,11 +43,13 @@ export default function PortfolioFooter() {
           href="mailto:abdullaho.gira@gmail.com"
         >
           <a className="hover:text-gray-700">
+            <span className="sr-only">Email</span>
             <EnvelopeIcon size="36" />
           </a>
         </Link>
         <Link as="tel:+201115477547" href="tel:+201115477547">
           <a className="hover:text-gray-700">
+            <span className="sr-only">Phone</span>
             <PhoneIcon size="36" />
           </a>
         </Link>
