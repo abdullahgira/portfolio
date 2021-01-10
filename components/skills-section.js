@@ -20,28 +20,29 @@ export default function SkillsSection() {
         <Skill logo="portfolio/react.svg">
           <h3 className="font-bold text-2xl tracking-tighter mb-2">React</h3>
           <p>
-            I use react.js library for building high perfromance user interface.
+            I use react.js library for building scalable, high performance user
+            interfaces.
           </p>
         </Skill>
 
         <Skill logo="portfolio/nodejs.svg">
           <h3 className="font-bold text-2xl tracking-tighter mb-2">Node.js</h3>
-          <p>I use node.js for the backend for all of my projects.</p>
+          <p>I use node.js with express for building RESTful APIs.</p>
         </Skill>
 
         <Skill logo="portfolio/mongodb.svg">
           <h3 className="font-bold text-2xl tracking-tighter mb-2">MongoDB</h3>
           <p>
-            Is my go to database without a second thought because of it's high
-            perfromance
+            MongoDB is my go to database because of it's clarity, easiness &
+            it's high perfromance.
           </p>
         </Skill>
 
         <Skill logo="portfolio/redux.svg">
           <h3 className="font-bold text-2xl tracking-tighter mb-2">Redux</h3>
           <p>
-            I only use it when global state in react is a must to acheive the
-            goals of the app.
+            I only use it when a large global state in react is a must to
+            acheive the goals of the application.
           </p>
         </Skill>
       </div>
