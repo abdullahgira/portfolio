@@ -7,11 +7,7 @@ function PortfolioSection({children}) {
 }
 
 function PortfolioSectionContent({children}) {
-  return (
-    <div className="lg:w-1/2 text-lg" data-aos="fade-up" data-aos-delay="200">
-      {children}
-    </div>
-  )
+  return <div className="lg:w-1/2 text-lg">{children}</div>
 }
 
 function PortfolioSectionTitle({children}) {
@@ -20,11 +16,7 @@ function PortfolioSectionTitle({children}) {
 
 function PortfolioSectionImage({src, alt}) {
   return (
-    <div
-      className="sm:min-w-max mx-auto lg:ml-0 mb-10 lg:mb-0 xl:w-1/3 lg:mr-10"
-      data-aos="fade-up"
-      data-aos-delay="100"
-    >
+    <div className="sm:min-w-max mx-auto lg:ml-0 mb-10 lg:mb-0 xl:w-1/3 lg:mr-10">
       <img src={src} alt={alt} />
     </div>
   )
@@ -38,24 +30,14 @@ function AboutSection() {
           src="portfolio/triangle.svg"
           alt="decorating triangle"
           className="absolute w-40 -top-20 left-1/2 -ml-8 -z-10"
-          data-aos="fade-up"
-          data-aos-delay="50"
         />
         <img
           src="portfolio/fewer-circles.svg"
           alt="decorating small circles"
           className="absolute w-16 -top-3 left-1/2 ml-10 -z-10"
-          data-aos="fade-up"
-          data-aos-delay="200"
         />
-        <div
-          className="w-20 h-1 bg-blue-700 absolute -bottom-3 right-1/2 -mr-3 md:-mr-2"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        ></div>
-        <h2 className="text-3xl text-center font-bold" data-aos="fade-up">
-          About Me
-        </h2>
+        <div className="w-20 h-1 bg-blue-700 absolute -bottom-3 right-1/2 -mr-3 md:-mr-2"></div>
+        <h2 className="text-3xl text-center font-bold">About Me</h2>
       </div>
 
       <div className="flex flex-col lg:flex-row justify-between">
