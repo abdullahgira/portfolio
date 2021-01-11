@@ -10,26 +10,14 @@ export default function WorkSection() {
           src="portfolio/elipse.svg"
           alt="decorating elipse"
           className="absolute w-32 -top-12 left-1/2 -ml-12 -z-1"
-          data-aos="fade-up"
-          data-aos-delay="50"
         />
         <img
           src="portfolio/fewer-circles.svg"
           alt="decorating small circles"
           className="absolute w-16 -top-5 left-1/2 ml-10 -z-1"
-          data-aos="fade-up"
-          data-aos-delay="200"
         />
-        <div
-          className="w-20 h-1 bg-blue-700 absolute -bottom-3 right-1/2 -mr-6 md:-mr-4"
-          data-aos="fade-up"
-          data-aos-delay="100"
-        ></div>
-        <h2
-          className="text-3xl text-center font-bold heading"
-          data-aos="fade-up"
-          id="MyWork"
-        >
+        <div className="w-20 h-1 bg-blue-700 absolute -bottom-3 right-1/2 -mr-6 md:-mr-4"></div>
+        <h2 className="text-3xl text-center font-bold heading" id="MyWork">
           My Work
         </h2>
       </div>
@@ -40,11 +28,7 @@ export default function WorkSection() {
           alt="issue tracker dashboard"
           className="lg:mr-20"
         />
-        <div
-          className="max-w-xs sm:max-w-sm"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
+        <div className="max-w-xs sm:max-w-sm">
           <ProjectTitle>iTracker - Issue Tracking System</ProjectTitle>
           <ProjectDescription>
             Project planning system that helps manage teams and keep them on
@@ -66,11 +50,7 @@ export default function WorkSection() {
           alt="7odor dashboard"
           className="lg:ml-20 order-1 lg:order-2"
         />
-        <div
-          className="max-w-xs sm:max-w-sm order-2 lg:order-1"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
+        <div className="max-w-xs sm:max-w-sm order-2 lg:order-1">
           <ProjectTitle>7odor - Attendance Tracking System (WIP)</ProjectTitle>
           <ProjectDescription>
             Multilingual application that tracks employees attendance and
@@ -86,11 +66,7 @@ export default function WorkSection() {
           alt="my portfolio"
           className="lg:mr-20"
         />
-        <div
-          className="max-w-xs sm:max-w-sm"
-          data-aos="fade-up"
-          data-aos-delay="200"
-        >
+        <div className="max-w-xs sm:max-w-sm">
           <ProjectTitle>My Portfolio</ProjectTitle>
           <ProjectDescription>
             My personal portfolio where I share my latest works and blog about
@@ -120,10 +96,7 @@ function ProjectContainer({children, noMarginBottom}) {
 
 function ProjectImage({src, alt, className}) {
   return (
-    <div
-      className={`max-w-xl mx-auto lg:max-w-none lg:w-3/5 ${className}`}
-      data-aos="fade-up"
-    >
+    <div className={`max-w-xl mx-auto lg:max-w-none lg:w-3/5 ${className}`}>
       <img src={src} alt={alt} />
     </div>
   )
