@@ -32,10 +32,13 @@ export default function WorkSection() {
           <ProjectTitle>iTracker - Issue Tracking System</ProjectTitle>
           <ProjectDescription>
             Project planning system that helps manage teams and keep them on
-            track, similar to Jira, Trello & Github Projects.
+            track, similar to Jira, Trello & Github Projects. I talk more about
+            the details of each feature in the demo video.
           </ProjectDescription>
           <ProjectUtilized>
-            React, Node.js, MongoDB, JWT, Firebase Storage, Email service
+            <strong>React</strong>, <strong>Node.js</strong>, MongoDB, JWT,
+            Firebase Storage, <strong>Express</strong>, React Lazy Loading,{" "}
+            <strong>Jest</strong>, Bootstrap, Email service
           </ProjectUtilized>
           <ProjectLinks
             projectLink="https://itracker.netlify.app"
