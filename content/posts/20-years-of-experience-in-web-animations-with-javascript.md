@@ -241,6 +241,4 @@ function animateTo(element, keframes, options) {
 
 Note the highlighted lines, `anim.commitStyles()` will commit the last styles applied to the element, but this doesn't happen, because at this point the animation has ended and returned to its original state, so `commitStyles()` doesn't have any effect. In order for `anim.commitStyles()` we have to use `fill: 'both'`. With `anim.cancel()` we can feel safe about the `fill: 'both'` because once the animation is finished, it's gonna be removed.
 
----
-
-These are my takings from <a href="https://www.youtube.com/watch?v=9-6CKCz58A8" target="_blank" rel='noopener'>Jake and Surma's video</a>, I hope you have enjoyed it.
+That's it for this post, I hope you've enjoyed it.
