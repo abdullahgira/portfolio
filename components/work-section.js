@@ -135,7 +135,7 @@ function ProjectUtilized({children}) {
 
 function ProjectLinks({videoLink, projectLink}) {
   return (
-    <div className="flex flex-wrap gap-5 lg:gap-10">
+    <div className="flex flex-wrap gap-4 lg:gap-10">
       {videoLink ? (
         <Link as={videoLink} href={videoLink}>
           <a className="text-blue-700 border-b-2 border-blue-700 hover:text-blue-900 flex items-center gap-3">

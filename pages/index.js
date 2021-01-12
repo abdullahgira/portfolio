@@ -14,7 +14,7 @@ export default function Home({lastThreePosts}) {
       <Head>
         <title>Abdullah Gira</title>
         <meta
-          content="This portfolio shows my recent skills, projects and blog posts."
+          content="Full stack web developer using React and Node.js"
           name="description"
         />
         <link rel="icon" href="/favicon.ico" />
