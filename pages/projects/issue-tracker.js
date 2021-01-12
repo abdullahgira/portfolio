@@ -3,7 +3,7 @@ import "plyr-react/dist/plyr.css"
 
 export default function IssueTracker() {
   return (
-    <div className="max-w-3xl m-auto my-4 sm:my-16">
+    <div className="max-w-3xl m-auto my-4 sm:my-16 px-8">
       <h1 className="text-4xl font-bold text-center my-20">
         iTracker - Issue Tracking System
       </h1>
@@ -117,17 +117,24 @@ export default function IssueTracker() {
         Obstacles I overcame
       </h2>
 
-      <div className="flex flex-wrap flex-col md:flex-row gap-5 items-start">
-        <div className="max-w-sm p-5 bg-indigo-100 rounded-lg shadow-lg">
+      <div>
+        <div className="p-5 bg-indigo-100 rounded-lg shadow-md mb-5">
           <h3 className="text-xl">Auto refreshing the access token</h3>
         </div>
 
-        <div className="max-w-sm p-5 bg-yellow-100 rounded-lg shadow-lg">
+        <div className="p-5 bg-yellow-100 rounded-lg shadow-md mb-5">
           <h3 className="text-xl">Building the backend for scalability</h3>
         </div>
 
-        <div className="max-w-sm p-5 bg-red-100 rounded-lg shadow-lg">
+        <div className="p-5 bg-red-100 rounded-lg shadow-md mb-5">
           <h3 className="text-xl">Making of the editable header</h3>
+        </div>
+
+        <div className="p-5 bg-green-100 rounded-lg shadow-md">
+          <h3 className="text-xl">
+            Architecting the frontend for minimum re-rendering of the
+            components.
+          </h3>
         </div>
       </div>
     </div>
