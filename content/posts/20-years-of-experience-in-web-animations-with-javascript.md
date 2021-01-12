@@ -2,7 +2,7 @@
 title: 20 years of experience in web animations with JavaScript
 date: "2021-01-02T09:57:34.439Z"
 description: Exploring CSS transition, CSS animation, and web animations API gotchas, and how to overcome a hug gotcha in web animations API.
-socialImage: "/blog/20-years-of-experience-in-web-animations-with-javascript/blur-train.jpg" # you have to include the full path
+socialImage: /blog/20-years-of-experience-in-web-animations-with-javascript/blur-train.jpg
 ---
 
 This post is a note-taking from <a href="https://www.youtube.com/watch?v=9-6CKCz58A8" target="_blank" rel='noopener'>Google Chrome Developers video</a> where Jake and Surma talks about Jake's journey with web animations.
