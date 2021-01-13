@@ -24,7 +24,7 @@ export default function WorkSection() {
 
       <ProjectContainer>
         <ProjectImage
-          src="/portfolio/macbook-itracker.png"
+          src="/portfolio/macbook-itracker.webp"
           alt="issue tracker dashboard"
           className="lg:mr-20"
         />
@@ -36,9 +36,10 @@ export default function WorkSection() {
             the details of each feature in the demo video.
           </ProjectDescription>
           <ProjectUtilized>
-            <strong>React</strong>, <strong>Node.js</strong>, MongoDB, JWT,
-            Firebase Storage, <strong>Express</strong>, React Lazy Loading,{" "}
-            <strong>Jest</strong>, Bootstrap, Email service
+            <strong>React</strong>, <strong>Node.js</strong>,{" "}
+            <strong>MongoDB</strong>, JWT, Firebase Storage,{" "}
+            <strong>Express</strong>, React Lazy Loading, <strong>Jest</strong>,
+            Bootstrap, Email service
           </ProjectUtilized>
           <ProjectLinks
             projectLink="https://itracker.netlify.app"
@@ -49,7 +50,7 @@ export default function WorkSection() {
 
       <ProjectContainer>
         <ProjectImage
-          src="/portfolio/macbook-7odor.png"
+          src="/portfolio/macbook-7odor.webp"
           alt="7odor dashboard"
           className="lg:ml-20 order-1 lg:order-2"
         />
@@ -65,7 +66,7 @@ export default function WorkSection() {
 
       <ProjectContainer noMarginBottom>
         <ProjectImage
-          src="/portfolio/macbook-portfolio.png"
+          src="/portfolio/macbook-portfolio.webp"
           alt="my portfolio"
           className="lg:mr-20"
         />

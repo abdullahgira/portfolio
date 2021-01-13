@@ -4,9 +4,9 @@ export default function PortfolioHero() {
   return (
     <div className="flex flex-col items-center lg:flex-row lg:justify-between my-28">
       <div className="order-2 lg:order-1 text-center lg:text-left mt-10 lg:mt-0">
-        <h2 className="text-3xl md:text-4xl font-bold mb-5">
+        <h1 className="text-3xl md:text-4xl font-bold mb-5">
           Hi, I'm Abdullah Gira
-        </h2>
+        </h1>
         <h2 className="text-lg md:text-xl mb-10 lg:w-4/5 text-gray-500 uppercase">
           I create quality full stack web applications using React and Node.js
         </h2>
