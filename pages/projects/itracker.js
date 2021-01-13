@@ -12,6 +12,41 @@ export default function IssueTracker() {
           track"
           name="description"
         />
+
+        {/* <!-- Open Graph / Facebook --> */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://abdullahgira.com/projects/itracker"
+        />
+        <meta property="og:title" content="iTracker - Issue Tracking System" />
+        <meta
+          property="og:description"
+          content="A project planning system that helps manage teams and keep them on track"
+        />
+        <meta
+          property="og:image"
+          content="https://abdullahgira.com/projects/itracker/macbook-itracker-social.webp"
+        />
+
+        {/* <!-- Twitter -->   */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+          property="twitter:url"
+          content="https://abdullahgira.com/projects/itracker"
+        />
+        <meta
+          property="twitter:title"
+          content="iTracker - Issue Tracking System"
+        />
+        <meta
+          property="twitter:description"
+          content="A project planning system that helps manage teams and keep them on track"
+        />
+        <meta
+          property="twitter:image"
+          content="https://abdullahgira.com/projects/itracker/macbook-itracker-social.webp"
+        />
       </Head>
       <div className="max-w-3xl m-auto my-4 sm:my-16 px-8">
         <h1 className="text-4xl font-bold text-center my-20">

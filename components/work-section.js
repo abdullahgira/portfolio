@@ -43,7 +43,7 @@ export default function WorkSection() {
           </ProjectUtilized>
           <ProjectLinks
             projectLink="https://itracker.netlify.app"
-            videoLink="/projects/issue-tracker"
+            videoLink="/projects/itracker"
           />
         </div>
       </ProjectContainer>
