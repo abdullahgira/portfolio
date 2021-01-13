@@ -77,8 +77,7 @@ export default function WorkSection() {
             web technologies.
           </ProjectDescription>
           <ProjectUtilized>
-            React, Next.js, Tailwind CSS, Github pages, Cloudflare CDN, Google
-            AMP Optimizated, Markdown
+            React, Next.js, Tailwind CSS, Github pages, Cloudflare CDN, Markdown
           </ProjectUtilized>
         </div>
       </ProjectContainer>
