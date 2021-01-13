@@ -1,4 +1,6 @@
+import LinkIcon from "components/icons/link-icon"
 import Head from "next/head"
+import Link from "next/link"
 import Plyr from "plyr-react"
 import "plyr-react/dist/plyr.css"
 
@@ -57,10 +59,22 @@ export default function IssueTracker() {
           key="twitter:image"
         />
       </Head>
-      <div className="max-w-3xl m-auto my-4 sm:my-16 px-8">
-        <h1 className="text-4xl font-bold text-center my-20">
+      <div className="max-w-3xl m-auto mt-4 mb-10 px-8">
+        <h1 className="text-4xl font-bold text-center mt-20">
           iTracker - Issue Tracking System
         </h1>
+        <div className="flex justify-center">
+          <Link href="https://itracker.netlify.app">
+            <a
+              className="mt-5 mb-10 text-blue-700 border-b-2 border-blue-700 hover:text-blue-900 flex gap-3"
+              target="_blank"
+              rel="noopener"
+            >
+              <LinkIcon size="24" />
+              <span>Visit the project</span>
+            </a>
+          </Link>
+        </div>
         <Plyr
           source={{
             title: "itracker demo",
