@@ -8,6 +8,26 @@ export default function BlogPage({allPosts}) {
       <Head>
         <title key="title">Blog | Abdullah Gira</title>
         <meta content="All my blog posts live here" name="description" />
+        <meta
+          property="og:url"
+          content="https://abdullahgira.com/blog"
+          key="og:url"
+        />
+        <meta
+          property="og:title"
+          content="Blog | Abdullah Gira"
+          key="og:title"
+        />
+        <meta
+          property="twitter:url"
+          content="https://abdullahgira.com/blog"
+          key="twitter:url"
+        />
+        <meta
+          property="twitter:title"
+          content="Blog | Abdullah Gira"
+          key="twitter:title"
+        />
       </Head>
       <section className="flex flex-col items-center justify-center1">
         <img
