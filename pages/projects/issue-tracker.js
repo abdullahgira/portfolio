@@ -6,7 +6,7 @@ export default function IssueTracker() {
   return (
     <div>
       <Head>
-        <title>iTracker - Issue Tracking System</title>
+        <title key="title">iTracker - Issue Tracking System</title>
         <meta
           content="A project planning system that helps manage teams and keep them on
           track"
@@ -49,7 +49,7 @@ export default function IssueTracker() {
             />
           </ProjectSectionImg>
           <ProjectSectionDescription>
-            <h3 className="text-xl font-semibold mb-10 lg:w-96 mt-10 lg:mt-0">
+            <h3 className="text-xl font-semibold mb-5 text-center">
               Your work at a glance
             </h3>
 
@@ -70,7 +70,7 @@ export default function IssueTracker() {
             />
           </ProjectSectionImg>
           <ProjectSectionDescription isOdd>
-            <h3 className="text-xl font-semibold mb-10 lg:w-96 mt-10 lg:mt-0">
+            <h3 className="text-xl font-semibold mb-5 text-center">
               Overall progress of the project and the team members
             </h3>
 
@@ -92,7 +92,7 @@ export default function IssueTracker() {
             />
           </ProjectSectionImg>
           <ProjectSectionDescription>
-            <h3 className="text-xl font-semibold mb-10 lg:w-96 mt-10 lg:mt-0">
+            <h3 className="text-xl font-semibold mb-5 text-center">
               Comments and history of changes for each issue
             </h3>
 
@@ -104,15 +104,15 @@ export default function IssueTracker() {
         </ProjectSection>
 
         <ProjectSection>
-          <ProjectSectionImg isOdd>
+          <ProjectSectionImg>
             <img
               className="shadow-sm rounded-lg"
               src="/projects/itracker/role-management.png"
               alt="project general information and progress"
             />
           </ProjectSectionImg>
-          <ProjectSectionDescription isOdd>
-            <h3 className="text-xl font-semibold mb-10 lg:w-96 mt-10 lg:mt-0">
+          <ProjectSectionDescription>
+            <h3 className="text-xl font-semibold mb-5 text-center">
               Role management system
             </h3>
 
@@ -125,10 +125,10 @@ export default function IssueTracker() {
         </ProjectSection>
 
         <h2 className="text-2xl font-bold text-center my-20">
-          Obstacles I overcame
+          Obstacles I Overcame
         </h2>
 
-        <div>
+        <div className="max-w-lg flex flex-col mx-auto">
           <div className="p-5 bg-indigo-100 rounded-lg shadow-md mb-5">
             <h3 className="text-xl">Auto refreshing the access token</h3>
           </div>
@@ -154,21 +154,15 @@ export default function IssueTracker() {
 }
 
 const ProjectSection = ({children}) => (
-  <div className="flex flex-col content-center items-center lg:items-start lg:flex-row mb-32">
+  <div className="flex flex-col content-center items-center mb-32">
     {children}
   </div>
 )
 
 const ProjectSectionImg = ({children, isOdd}) => (
-  <div
-    className={`max-w-xl mx-auto lg:max-w-none lg:w-3/4 ${
-      isOdd ? "lg:ml-20 order-1 lg:order-2" : "lg:mr-20"
-    }`}
-  >
-    {children}
-  </div>
+  <div className={`max-w-xl mx-auto lg:max-w-none lg:w-3/4`}>{children}</div>
 )
 
 const ProjectSectionDescription = ({children, isOdd}) => (
-  <div className={`max-w-xs ${isOdd && "order-2 lg:order-1"}`}>{children}</div>
+  <div className={`max-w-lg mt-10`}>{children}</div>
 )
