@@ -12,6 +12,7 @@ export default function BlogPage({allPosts}) {
         <img
           src="portfolio/me.webp"
           className="w-20 bg-blue-700 rounded-full"
+          alt="my profile picture"
         />
         <div>
           <p className="mt-5 text-gray-500 text-center text-md md:w-3/4 mx-auto">
