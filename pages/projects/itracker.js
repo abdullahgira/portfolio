@@ -14,38 +14,47 @@ export default function IssueTracker() {
         />
 
         {/* <!-- Open Graph / Facebook --> */}
-        <meta property="og:type" content="website" />
         <meta
           property="og:url"
           content="https://abdullahgira.com/projects/itracker"
+          key="og:url"
         />
-        <meta property="og:title" content="iTracker - Issue Tracking System" />
+        <meta
+          property="og:title"
+          content="iTracker - Issue Tracking System"
+          key="og:title"
+        />
         <meta
           property="og:description"
           content="A project planning system that helps manage teams and keep them on track"
+          key="og:description"
         />
         <meta
           property="og:image"
           content="https://abdullahgira.com/projects/itracker/macbook-itracker-social.webp"
+          key="og:image"
         />
 
         {/* <!-- Twitter -->   */}
-        <meta property="twitter:card" content="summary_large_image" />
         <meta
           property="twitter:url"
           content="https://abdullahgira.com/projects/itracker"
+          key="twitter:url"
         />
         <meta
           property="twitter:title"
           content="iTracker - Issue Tracking System"
+          key="twitter:title"
         />
         <meta
           property="twitter:description"
           content="A project planning system that helps manage teams and keep them on track"
+          key="twitter:description"
         />
         <meta
           property="twitter:image"
           content="https://abdullahgira.com/projects/itracker/macbook-itracker-social.webp"
+          key="twitter:image"
         />
       </Head>
       <div className="max-w-3xl m-auto my-4 sm:my-16 px-8">

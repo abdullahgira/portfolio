@@ -26,29 +26,49 @@ function MyApp({Component, pageProps}) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
         {/* <!-- Open Graph / Facebook --> */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://abdullahgira.com/" />
-        <meta property="og:title" content="Abdullah Gira" />
+        <meta property="og:type" content="website" key="og:type" />
+        <meta
+          property="og:url"
+          content="https://abdullahgira.com/"
+          key="og:url"
+        />
+        <meta property="og:title" content="Abdullah Gira" key="og:title" />
         <meta
           property="og:description"
           content="I’m a full-stack web developer who loves to build quality software"
+          key="og:description"
         />
         <meta
           property="og:image"
           content="https://abdullahgira.com/social-media-profile-img.jpg"
+          key="og:image"
         />
 
         {/* <!-- Twitter -->   */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://abdullahgira.com/" />
-        <meta property="twitter:title" content="Abdullah Gira" />
+        <meta
+          property="twitter:card"
+          content="summary_large_image"
+          key="twitter:type"
+        />
+        <meta
+          property="twitter:url"
+          content="https://abdullahgira.com/"
+          key="twitter:url"
+        />
+        <meta
+          property="twitter:title"
+          content="Abdullah Gira"
+          key="twitter:title"
+        />
         <meta
           property="twitter:description"
           content="I’m a full-stack web developer who loves to build quality software"
+          key="twitter:description"
         />
         <meta
           property="twitter:image"
           content="https://abdullahgira.com/social-media-profile-img.jpg"
+          key="twitter:image"
         />
 
         <link rel="icon" href="/favicon.ico" />
