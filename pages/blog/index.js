@@ -7,6 +7,7 @@ export default function BlogPage({allPosts}) {
     <main className="max-w-2xl mt-16 mb-10 mx-auto px-5">
       <Head>
         <title key="title">Blog | Abdullah Gira</title>
+        <meta content="All my blog posts" name="description" />
       </Head>
       <section className="flex flex-col items-center justify-center1">
         <img
