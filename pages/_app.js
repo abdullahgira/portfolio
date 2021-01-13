@@ -27,17 +27,7 @@ function MyApp({Component, pageProps}) {
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" key="og:type" />
-        <meta
-          property="og:url"
-          content="https://abdullahgira.com/"
-          key="og:url"
-        />
         <meta property="og:title" content="Abdullah Gira" key="og:title" />
-        <meta
-          property="og:description"
-          content="I’m a full-stack web developer who loves to build quality software"
-          key="og:description"
-        />
         <meta
           property="og:image"
           content="https://abdullahgira.com/social-media-profile-img.jpg"
@@ -51,19 +41,9 @@ function MyApp({Component, pageProps}) {
           key="twitter:type"
         />
         <meta
-          property="twitter:url"
-          content="https://abdullahgira.com/"
-          key="twitter:url"
-        />
-        <meta
           property="twitter:title"
           content="Abdullah Gira"
           key="twitter:title"
-        />
-        <meta
-          property="twitter:description"
-          content="I’m a full-stack web developer who loves to build quality software"
-          key="twitter:description"
         />
         <meta
           property="twitter:image"

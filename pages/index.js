@@ -17,6 +17,27 @@ export default function Home({lastThreePosts}) {
           content="I’m a full-stack web developer who loves to build quality software"
           name="description"
         />
+
+        <meta
+          property="og:url"
+          content="https://abdullahgira.com/"
+          key="og:url"
+        />
+        <meta
+          property="og:description"
+          content="I’m a full-stack web developer who loves to build quality software"
+          key="og:description"
+        />
+        <meta
+          property="twitter:url"
+          content="https://abdullahgira.com/"
+          key="twitter:url"
+        />
+        <meta
+          property="twitter:description"
+          content="I’m a full-stack web developer who loves to build quality software"
+          key="twitter:description"
+        />
       </Head>
 
       <div className="max-w-5xl mx-auto px-4 md:px-8">
