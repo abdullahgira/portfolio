@@ -19,6 +19,16 @@ export default function BlogPage({allPosts}) {
           key="og:title"
         />
         <meta
+          property="og:description"
+          content="All my blog posts live here"
+          key="og:description"
+        />
+        <meta
+          property="twitter:description"
+          content="All my blog posts live here"
+          key="twitter:description"
+        />
+        <meta
           property="twitter:url"
           content="https://abdullahgira.com/blog"
           key="twitter:url"
