@@ -6,7 +6,7 @@ export default function BlogPage({allPosts}) {
   return (
     <main className="max-w-2xl mt-16 mb-10 mx-auto px-5">
       <Head>
-        <title>Abdullah Gira blog</title>
+        <title key="title">Blog | Abdullah Gira</title>
       </Head>
       <section className="flex flex-col items-center justify-center1">
         <img

@@ -47,7 +47,7 @@ function AboutSection() {
         />
         <PortfolioSectionContent>
           <p className="text-lg mb-2 text-blue-700">Who am I?</p>
-          <h3 className="text-3xl mb-10 font-bold">
+          <h3 className="text-3xl mb-10 font-bold uppercase">
             I create high performance full stack web applications
           </h3>
           <p>
