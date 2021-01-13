@@ -17,7 +17,7 @@ export default function Home({lastThreePosts}) {
           content="I’m a full-stack web developer who loves to build quality software"
           name="description"
         />
-
+        <meta property="og:title" content="Abdullah Gira" key="og:title" />
         <meta
           property="og:url"
           content="https://abdullahgira.com/"
@@ -27,6 +27,11 @@ export default function Home({lastThreePosts}) {
           property="og:description"
           content="I’m a full-stack web developer who loves to build quality software"
           key="og:description"
+        />
+        <meta
+          property="twitter:title"
+          content="Abdullah Gira"
+          key="twitter:title"
         />
         <meta
           property="twitter:url"
