@@ -31,7 +31,7 @@ export default function IssueTracker() {
         />
         <meta
           property="og:image"
-          content="https://abdullahgira.com/projects/itracker/macbook-itracker-social.webp"
+          content="https://abdullahgira.com/projects/itracker/macbook-itracker-social.jpg"
           key="og:image"
         />
 
