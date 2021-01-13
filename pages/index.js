@@ -17,34 +17,6 @@ export default function Home({lastThreePosts}) {
           content="I’m a full-stack web developer who loves to build quality software"
           name="description"
         />
-
-        {/* <!-- Open Graph / Facebook --> */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://abdullahgira.com/" />
-        <meta property="og:title" content="Abdullah Gira" />
-        <meta
-          property="og:description"
-          content="I’m a full-stack web developer who loves to build quality software"
-        />
-        <meta
-          property="og:image"
-          content="https://abdullahgira.com/social-media-profile-img.jpg"
-        />
-
-        {/* <!-- Twitter -->   */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content="https://abdullahgira.com/" />
-        <meta property="twitter:title" content="Abdullah Gira" />
-        <meta
-          property="twitter:description"
-          content="I’m a full-stack web developer who loves to build quality software"
-        />
-        <meta
-          property="twitter:image"
-          content="https://abdullahgira.com/social-media-profile-img.jpg"
-        />
-
-        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className="max-w-5xl mx-auto px-4 md:px-8">
