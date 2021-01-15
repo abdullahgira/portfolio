@@ -230,7 +230,10 @@ This does nothing! Because the animation has a higher priority than the style an
 
 ```js{4,7-8}
 function animateTo(element, keframes, options) {
-  const anim = element.animate(keyframes, {...options, fill: "both"})
+  const anim = element.animate(keyframes, {
+    ...options,
+    fill: "both",
+  })
   anim.addEventListener("finish", () => {
     anim.commitStyles()
     anim.cancel()
