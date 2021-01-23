@@ -1,7 +1,7 @@
 ---
 title: React useLayoutEffect vs useEffect
 date: "2021-01-23T15:14:27.226Z"
-description: Exploring CSS transition, animation, and web animations API gotchas, and how to overcome them 💪.
+description: Elaborating the difference between these two hooks
 socialImage: /blog/react-uselayouteffect-vs-useeffect/surface.jpg
 ---
 
