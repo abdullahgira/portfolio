@@ -142,6 +142,26 @@ export default function IssueTracker() {
         </ProjectSection>
 
         <ProjectSection>
+          <ProjectSectionImg isOdd>
+            <img
+              className="shadow-sm rounded-lg"
+              src="/projects/itracker/filter-issues.png"
+              alt="filter all the issues in the project with all of it's properties"
+            />
+          </ProjectSectionImg>
+          <ProjectSectionDescription isOdd>
+            <h3 className="text-xl font-semibold mb-5 text-center">
+              Search and filter issues
+            </h3>
+
+            <p className="text-gray-500">
+              Narrow the set of results by applying the search and filters you
+              need to easily reach the set of issues you need to work on.
+            </p>
+          </ProjectSectionDescription>
+        </ProjectSection>
+
+        <ProjectSection>
           <ProjectSectionImg>
             <img
               className="shadow-sm rounded-lg"
