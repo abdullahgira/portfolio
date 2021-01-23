@@ -33,7 +33,7 @@ export default function BlogSection({lastThreePosts = []}) {
         {lastThreePosts.map((post) => (
           <div
             key={post.date}
-            className="max-w-sm shadow-lg px-8 py-5 rounded-xl border border-gray-200 relative"
+            className="max-w-sm shadow-lg px-8 py-5 rounded-xl border border-gray-200 relative flex flex-col"
           >
             <p className="text-gray-500 mb-1">
               <DateFormatter dateString={post.date} />
@@ -44,7 +44,7 @@ export default function BlogSection({lastThreePosts = []}) {
               </a>
             </Link>
 
-            <p className="text-blue-700 mt-1">{post.readTime} Min Read</p>
+            <p className="text-blue-700 mt-auto">{post.readTime} Min Read</p>
           </div>
         ))}
       </div>
