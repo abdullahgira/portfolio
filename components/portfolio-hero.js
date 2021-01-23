@@ -11,9 +11,9 @@ export default function PortfolioHero() {
           I create quality full stack web applications using React and Node.js
         </h2>
 
-        <div className="flex justify-center lg:justify-start flex-wrap gap-4">
+        <div className="flex justify-center lg:justify-start flex-wrap">
           <Link as="/#MyWork" href="/#MyWork">
-            <a className="bg-blue-700 text-white font-semibold shadow-md rounded-full py-2 px-8">
+            <a className="bg-blue-700 text-white font-semibold shadow-md rounded-full py-2 px-8 mr-1 sm:mr-4">
               My Work
             </a>
           </Link>

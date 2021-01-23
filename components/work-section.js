@@ -135,11 +135,11 @@ function ProjectUtilized({children}) {
 
 function ProjectLinks({videoLink, projectLink}) {
   return (
-    <div className="flex flex-wrap gap-4 lg:gap-10">
+    <div className="flex flex-wrap">
       {videoLink ? (
         <Link as={videoLink} href={videoLink}>
-          <a className="text-blue-700 border-b-2 border-blue-700 hover:text-blue-900 flex items-center gap-3">
-            <MoviePlayIcon size="24" />
+          <a className="text-blue-700 mb-5 mr-5 border-b-2 border-blue-700 hover:text-blue-900 flex items-center">
+            <MoviePlayIcon className="mr-3" size="24" />
             <span>Watch the demo</span>
           </a>
         </Link>
@@ -147,11 +147,11 @@ function ProjectLinks({videoLink, projectLink}) {
       {projectLink ? (
         <Link as={projectLink} href={projectLink}>
           <a
-            className="text-blue-700 border-b-2 border-blue-700 hover:text-blue-900 flex items-center gap-3"
+            className="text-blue-700 mb-5 border-b-2 border-blue-700 hover:text-blue-900 flex items-center"
             target="_blank"
             rel="noopener"
           >
-            <LinkIcon size="24" />
+            <LinkIcon className="mr-3" size="24" />
             <span>Visit the project</span>
           </a>
         </Link>

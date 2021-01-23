@@ -19,7 +19,7 @@ export default function PortfolioFooter() {
       </div>
       <p className="text-lg font-semibold">Abdullah Osama</p>
 
-      <div className="flex items-center justify-center gap-10 flex-wrap mt-8 text-gray-500">
+      <div className="flex items-center justify-center flex-wrap mt-8 text-gray-500">
         <Link
           as="https://www.linkedin.com/in/abdullahgira/"
           href="https://www.linkedin.com/in/abdullahgira/"
@@ -33,7 +33,11 @@ export default function PortfolioFooter() {
           as="https://github.com/abdullahgira"
           href="https://github.com/abdullahgira"
         >
-          <a target="_blank" rel="noopener" className="hover:text-gray-700">
+          <a
+            target="_blank"
+            rel="noopener"
+            className="hover:text-gray-700 ml-10"
+          >
             <span className="sr-only">Github</span>
             <GithubIcon size="36" />
           </a>
@@ -42,13 +46,13 @@ export default function PortfolioFooter() {
           as="mailto:abdullaho.gira@gmail.com"
           href="mailto:abdullaho.gira@gmail.com"
         >
-          <a className="hover:text-gray-700">
+          <a className="hover:text-gray-700 ml-10">
             <span className="sr-only">Email</span>
             <EnvelopeIcon size="36" />
           </a>
         </Link>
         <Link as="tel:+201115477547" href="tel:+201115477547">
-          <a className="hover:text-gray-700">
+          <a className="hover:text-gray-700 ml-10">
             <span className="sr-only">Phone</span>
             <PhoneIcon size="36" />
           </a>

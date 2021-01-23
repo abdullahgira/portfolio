@@ -29,11 +29,11 @@ export default function BlogSection({lastThreePosts = []}) {
         </p>
       </div>
 
-      <div className="flex justify-center flex-wrap gap-8">
+      <div className="flex justify-center flex-wrap">
         {lastThreePosts.map((post) => (
           <div
             key={post.date}
-            className="max-w-sm shadow-lg px-8 py-5 rounded-xl border border-gray-200 relative flex flex-col"
+            className="max-w-sm shadow-lg mb-8 md:mr-8 px-8 py-5 rounded-xl border border-gray-200 relative flex flex-col"
           >
             <p className="text-gray-500 mb-1">
               <DateFormatter dateString={post.date} />

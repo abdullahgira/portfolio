@@ -66,11 +66,11 @@ export default function IssueTracker() {
         <div className="flex justify-center">
           <Link href="https://itracker.netlify.app">
             <a
-              className="mt-5 mb-10 text-blue-700 border-b-2 border-blue-700 hover:text-blue-900 flex gap-3"
+              className="mt-5 mb-10 text-blue-700 border-b-2 border-blue-700 hover:text-blue-900 flex"
               target="_blank"
               rel="noopener"
             >
-              <LinkIcon size="24" />
+              <LinkIcon size="24" className="mr-3" />
               <span>Visit the project</span>
             </a>
           </Link>

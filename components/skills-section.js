@@ -16,7 +16,7 @@ export default function SkillsSection() {
         <h2 className="text-3xl text-center font-bold">My Skills</h2>
       </div>
 
-      <div className="flex flex-wrap gap-8 justify-around">
+      <div className="flex flex-wrap justify-around">
         <Skill logo="portfolio/react.svg">
           <h3 className="font-bold text-2xl tracking-tighter mb-2">React</h3>
           <p>
@@ -52,9 +52,9 @@ export default function SkillsSection() {
 
 function Skill({logo, children}) {
   return (
-    <div className="bg-white rounded-xl flex items-start p-5 shadow-xl max-w-md">
+    <div className="bg-white rounded-xl sm:flex sm:items-start p-5 shadow-xl max-w-md mb-4 lg:mr-4">
       <div className="p-6 rounded-xl bg-blue-900 shadow-xl inline-block mr-5 flex-none">
-        <img className="w-20" src={logo} alt="skill logo" />
+        <img className="sm:w-20 w-12" src={logo} alt="skill logo" />
       </div>
       <div className="mt-2 inline-block">{children}</div>
     </div>

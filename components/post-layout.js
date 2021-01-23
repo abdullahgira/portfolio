@@ -46,11 +46,11 @@ export default function PostLayout({children, meta: pageMeta}) {
         <section className="max-w-2xl m-auto my-4 sm:my-16">
           <div className="mb-10">
             <h1 className="text-5xl font-bold mb-4">{meta.title}</h1>
-            <div className="flex gap-3">
-              <p>
+            <div className="flex ">
+              <p className="mr-2">
                 <DateFormatter dateString={meta.date} />
               </p>
-              <p>•</p>
+              <p className="mr-2">•</p>
               <p className="text-blue-700">{meta.readTime} Min Read</p>
             </div>
           </div>
