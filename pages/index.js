@@ -63,10 +63,6 @@ export default function Home({lastThreePosts}) {
         <WorkSection />
       </div>
 
-      <div className="max-w-5xl mx-auto py-28 px-4 md:px-8">
-        <BlogSection lastThreePosts={lastThreePosts} />
-      </div>
-
       <PortfolioFooter />
     </div>
   )

@@ -51,12 +51,12 @@ export default function PortfolioFooter() {
             <EnvelopeIcon size="36" />
           </a>
         </Link>
-        <Link as="tel:+201115477547" href="tel:+201115477547">
+        {/* <Link as="tel:+201115477547" href="tel:+201115477547">
           <a className="hover:text-gray-700 ml-10">
             <span className="sr-only">Phone</span>
             <PhoneIcon size="36" />
           </a>
-        </Link>
+        </Link> */}
       </div>
     </div>
   )

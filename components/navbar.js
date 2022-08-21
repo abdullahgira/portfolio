@@ -8,7 +8,7 @@ export default function Navbar() {
 
   return (
     <nav className="mb-10 border-t-4 border-blue-700">
-      <div className="max-w-5xl mx-auto px-5 md:px-8">
+      {/* <div className="max-w-5xl mx-auto px-5 md:px-8">
         <div className="flex justify-between items-center">
           <div className="py-2 mr-auto -mt-1">
             <Link as="/" href="/">
@@ -40,7 +40,7 @@ export default function Navbar() {
             </li>
           </ul>
         </div>
-      </div>
+      </div> */}
     </nav>
   )
 }

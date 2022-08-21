@@ -55,16 +55,17 @@ export default function WorkSection() {
           className="lg:ml-20 order-1 lg:order-2"
         />
         <div className="max-w-xs sm:max-w-sm order-2 lg:order-1">
-          <ProjectTitle>7odor - Attendance Tracking System (WIP)</ProjectTitle>
+          <ProjectTitle>7odor - Attendance Tracking System</ProjectTitle>
           <ProjectDescription>
             Multilingual application that tracks employees attendance and
             estimate their salaries and overtime hours.
           </ProjectDescription>
           <ProjectUtilized>React, Tailwind CSS, Jest</ProjectUtilized>
+          <div className="italic">Showcase (WIP)</div>
         </div>
       </ProjectContainer>
 
-      <ProjectContainer noMarginBottom>
+      {/* <ProjectContainer noMarginBottom>
         <ProjectImage
           src="/portfolio/macbook-portfolio.webp"
           alt="my portfolio"
@@ -80,7 +81,7 @@ export default function WorkSection() {
             React, Next.js, Tailwind CSS, Github pages, Cloudflare CDN, Markdown
           </ProjectUtilized>
         </div>
-      </ProjectContainer>
+      </ProjectContainer> */}
     </section>
   )
 }
@@ -140,7 +141,7 @@ function ProjectLinks({videoLink, projectLink}) {
         <Link as={videoLink} href={videoLink}>
           <a className="text-blue-700 mb-5 mr-5 border-b-2 border-blue-700 hover:text-blue-900 flex items-center">
             <MoviePlayIcon className="mr-3" size="24" />
-            <span>Watch the demo</span>
+            <span>Showcase</span>
           </a>
         </Link>
       ) : null}
