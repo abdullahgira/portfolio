@@ -1,14 +1,13 @@
 import Head from "next/head"
-import PortfolioHero from "components/portfolio-hero"
-import {AboutSection} from "components/about-section"
-
-import SkillsSection from "components/skills-section"
-import WorkSection from "components/work-section"
-import BlogSection from "components/blog-section"
 import {getAllPosts} from "lib/posts"
-import PortfolioFooter from "components/portfolio-footer"
+import React from "react"
+import router from "next/router"
 
 export default function Home({lastThreePosts}) {
+  React.useEffect(() => {
+    router.push(`/blog`)
+  }, [])
+
   return (
     <div>
       <Head>
@@ -44,26 +43,6 @@ export default function Home({lastThreePosts}) {
           key="twitter:description"
         />
       </Head>
-
-      <div className="max-w-5xl mx-auto px-4 md:px-8">
-        <PortfolioHero />
-      </div>
-
-      <div className="max-w-5xl mx-auto py-28 px-4 md:px-8">
-        <AboutSection />
-      </div>
-
-      <div className="bg-gray-50">
-        <div className="max-w-5xl mx-auto py-28 px-4 md:px-8">
-          <SkillsSection />
-        </div>
-      </div>
-
-      <div className="max-w-6xl mx-auto pt-28 px-4 md:px-8">
-        <WorkSection />
-      </div>
-
-      <PortfolioFooter />
     </div>
   )
 }

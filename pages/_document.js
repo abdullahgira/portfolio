@@ -6,6 +6,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+          {/* Setup google analytics */}
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
@@ -24,6 +25,7 @@ class MyDocument extends Document {
             }}
           />
         </Head>
+
         <body>
           <Main />
           <NextScript />

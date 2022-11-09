@@ -2,18 +2,21 @@ import {useEffect, Fragment} from "react"
 import Head from "next/head"
 import {useRouter} from "next/router"
 import * as gtag from "../lib/gtag"
-import Navbar from "components/navbar"
 
 import "tailwindcss/tailwind.css"
-import "styles/globals.css"
+import "styles/code.css"
 
 function MyApp({Component, pageProps}) {
   const router = useRouter()
+
   useEffect(() => {
+    // record the new page in google analytics
     const handleRouteChange = (url) => {
       gtag.pageview(url)
     }
+
     router.events.on("routeChangeComplete", handleRouteChange)
+
     return () => {
       router.events.off("routeChangeComplete", handleRouteChange)
     }
@@ -47,7 +50,7 @@ function MyApp({Component, pageProps}) {
 
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
+
       <Component {...pageProps} />
     </Fragment>
   )
