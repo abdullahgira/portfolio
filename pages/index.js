@@ -1,9 +1,8 @@
 import Head from "next/head"
-import {getAllPosts} from "lib/posts"
 import React from "react"
 import router from "next/router"
 
-export default function Home({lastThreePosts}) {
+export default function Home() {
   React.useEffect(() => {
     router.push(`/blog`)
   }, [])
@@ -45,17 +44,4 @@ export default function Home({lastThreePosts}) {
       </Head>
     </div>
   )
-}
-
-export async function getStaticProps() {
-  const lastThreePosts = getAllPosts([
-    "title",
-    "date",
-    "slug",
-    "readTime",
-  ]).slice(0, 3)
-
-  return {
-    props: {lastThreePosts},
-  }
 }

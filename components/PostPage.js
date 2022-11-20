@@ -1,5 +1,5 @@
 import Head from "next/head"
-import DateFormatter from "./date-formatter"
+import DateFormatter from "./DateFormatter"
 
 export default function PostLayout({children, meta: pageMeta}) {
   const meta = {

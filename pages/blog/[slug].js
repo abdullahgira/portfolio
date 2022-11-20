@@ -1,4 +1,4 @@
-import PostLayout from "../../components/post-layout"
+import PostLayout from "../../components/PostPage"
 import markdownToHtml from "../../lib/markdown"
 import {getAllPosts, getPostBySlug} from "../../lib/posts"
 
