@@ -5,6 +5,7 @@ import * as gtag from "../lib/gtag"
 
 import "tailwindcss/tailwind.css"
 import "styles/code.css"
+import Navbar from "components/Navbar"
 
 function MyApp({Component, pageProps}) {
   const router = useRouter()
@@ -51,6 +52,7 @@ function MyApp({Component, pageProps}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar />
       <Component {...pageProps} />
     </Fragment>
   )
