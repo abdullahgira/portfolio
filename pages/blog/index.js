@@ -1,11 +1,14 @@
 import Head from "next/head"
-import PostPreview from "components/PostPreview"
-import {getAllPosts} from "lib/posts"
-import markdownToHtml from "lib/markdown"
-import EnvelopeIcon from "components/icons/envelope-icon"
 import Link from "next/link"
+
+import PostPreview from "components/PostPreview"
+import EnvelopeIcon from "components/icons/envelope-icon"
 import GithubIcon from "components/icons/github-icon"
 import LinkedIn from "components/icons/linkedin-icon"
+import Avatar from "components/Avatar"
+
+import {getAllPosts} from "lib/posts"
+import markdownToHtml from "lib/markdown"
 
 import style from "../../styles/backdrop.module.css"
 
@@ -53,11 +56,7 @@ export default function BlogPage({allPosts}) {
 
       <section>
         <div className="border border-black p-1 rounded-full shadow-md inline-block">
-          <img
-            src="portfolio/me.webp"
-            className="w-24 bg-black rounded-full border"
-            alt="my profile picture"
-          />
+          <Avatar />
         </div>
 
         <div className="mt-4">
@@ -85,7 +84,7 @@ export default function BlogPage({allPosts}) {
           </div>
         </div>
 
-        <div id="revue-embed" className="mt-8 pb-5 border-b border-gray-300">
+        <div id="revue-embed" className="mt-8 pb-5 border-b border-black">
           <p className="font-bold mb-2">Newsletter</p>
           <form
             action="https://www.getrevue.co/profile/abdullahgira/add_subscriber"
@@ -97,7 +96,7 @@ export default function BlogPage({allPosts}) {
             <div className="flex items-center gap-4 mb-2">
               <div class="revue-form-group">
                 <input
-                  className="bg-white shadow-lg rounded-full px-5 py-3"
+                  className="bg-white shadow-md rounded-full px-5 py-3"
                   placeholder="Your email address..."
                   type="email"
                   name="member[email]"
@@ -107,7 +106,7 @@ export default function BlogPage({allPosts}) {
 
               <div class="revue-form-actions">
                 <input
-                  className="bg-black text-white rounded-full px-8 py-3 shadow-lg"
+                  className="bg-black text-white rounded-full px-8 py-3 shadow-md"
                   type="submit"
                   value="Subscribe"
                   name="member[subscribe]"
