@@ -6,7 +6,7 @@
   top: 0;
   transform: translateX(-50%);
 
-  background: rgba(130, 255, 247, 0.7);
+  background: rgba(130, 255, 247, 0.3);
   filter: blur(250px);
   z-index: -999;
 }
@@ -19,7 +19,7 @@
   top: 5%;
   transform: translateX(50%);
 
-  background: rgba(255, 190, 130, 0.7);
+  background: rgba(255, 190, 130, 0.5);
   filter: blur(250px);
   z-index: -999;
 }

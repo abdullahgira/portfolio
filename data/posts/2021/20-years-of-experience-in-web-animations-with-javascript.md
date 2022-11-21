@@ -1,6 +1,6 @@
 ---
 title: 20 years of experience in web animations with JavaScript
-date: "2021-01-02T09:57:34.439Z"
+date: "2021-01-02"
 description: Exploring CSS transition, animation, and web animations API gotchas, and how to overcome them 💪.
 socialImage: /blog/20-years-of-experience-in-web-animations-with-javascript/blur-train.jpg
 ---

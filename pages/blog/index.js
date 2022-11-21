@@ -1,26 +1,28 @@
+import React from "react"
 import Head from "next/head"
 import Link from "next/link"
+
+import {getAllPosts} from "lib/posts"
 
 import PostPreview from "components/PostPreview"
 import EnvelopeIcon from "components/icons/envelope-icon"
 import GithubIcon from "components/icons/github-icon"
 import LinkedIn from "components/icons/linkedin-icon"
 import Avatar from "components/Avatar"
-
-import {getAllPosts} from "lib/posts"
-import markdownToHtml from "lib/markdown"
-
-import style from "../../styles/backdrop.module.css"
-import React from "react"
 import Button from "components/Button"
 
-export default function BlogPage({allPosts}) {
-  React.useEffect(() => {
-    const body = document.getElementsByTagName("body")[0]
-    body.classList.add("bg-gray-50")
-    return () => body.classList.remove("bg-gray-50")
-  }, [])
+import style from "../../styles/backdrop.module.css"
 
+export async function getStaticProps() {
+  const allPosts = await getAllPosts()
+
+  return {
+    props: {allPosts: allPosts},
+  }
+}
+
+export default function BlogPage({allPosts}) {
+  console.log(allPosts)
   return (
     <main className="max-w-3xl mx-auto px-5 mt-16 mb-10 relative">
       <Head>
@@ -57,33 +59,27 @@ export default function BlogPage({allPosts}) {
           key="twitter:title"
         />
       </Head>
-
       {/* Backdrop colors */}
       <div className={style.backdrop1} />
       <div className={style.backdrop2} />
-
       <section>
         <div className="border border-black p-1 rounded-full shadow-md inline-block">
           <Avatar />
         </div>
-
         <div className="mt-4">
           <h3 className="text-xl font-bold">ABDULLAH GIRA</h3>
           <p>Software Engineer who loves to talk about business.</p>
-
           <div className="mt-4 flex gap-4">
             <Link href="mailto:abdullaho.gira@gmail.com">
               <a href="mailto:abdullaho.gira@gmail.com">
                 <EnvelopeIcon className="w-6" />
               </a>
             </Link>
-
             <Link href="mailto:abdullaho.gira@gmail.com">
               <a href="mailto:abdullaho.gira@gmail.com">
                 <GithubIcon className="w-6" />
               </a>
             </Link>
-
             <Link href="mailto:abdullaho.gira@gmail.com">
               <a href="mailto:abdullaho.gira@gmail.com">
                 <LinkedIn className="w-6" />
@@ -91,7 +87,6 @@ export default function BlogPage({allPosts}) {
             </Link>
           </div>
         </div>
-
         <div id="revue-embed" className="mt-8 pb-5 border-b border-black">
           <p className="font-bold mb-2">Newsletter</p>
           <form
@@ -111,7 +106,6 @@ export default function BlogPage({allPosts}) {
                   id="member_email"
                 />
               </div>
-
               <div class="revue-form-actions">
                 <Button filled type="submit">
                   Subscribe
@@ -132,7 +126,6 @@ export default function BlogPage({allPosts}) {
           </form>
         </div>
       </section>
-
       <section className="mt-10">
         {allPosts.length > 0
           ? allPosts.map((post) => <PostPreview key={post.date} {...post} />)
@@ -140,22 +133,4 @@ export default function BlogPage({allPosts}) {
       </section>
     </main>
   )
-}
-
-export async function getStaticProps() {
-  const allPosts = getAllPosts(["title", "date", "slug", "content"])
-
-  const result = []
-  for (let post of allPosts) {
-    let content = await markdownToHtml(post.content || "")
-
-    result.push({
-      ...post,
-      content,
-    })
-  }
-
-  return {
-    props: {allPosts: result},
-  }
 }

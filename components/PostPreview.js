@@ -10,7 +10,7 @@ export default function PostPreview({title, date, slug, content}) {
       </p>
 
       <h2 className="text-3xl font-bold mb-2">
-        <Link as={`/blog/${slug}`} href="/blog/[slug]">
+        <Link href={`/blog/${slug}`}>
           <a className="hover:underline">{title}</a>
         </Link>
       </h2>

@@ -1,38 +1,34 @@
 import PostLayout from "../../components/PostPage"
-import markdownToHtml from "../../lib/markdown"
-import {getAllPosts, getPostBySlug} from "../../lib/posts"
+import {formatSlug, getAllPosts} from "../../lib/posts"
 
 export default function Doc({content, ...meta}) {
   return <PostLayout meta={meta}>{content}</PostLayout>
 }
 
 export async function getStaticProps({params}) {
-  const doc = getPostBySlug(params.slug, [
-    "title",
-    "description",
-    "socialImage",
-    "content",
-    "readTime",
-    "date",
-  ])
-  let content = await markdownToHtml(doc.content || "")
-  content = mapImagesToPublicSlug(content, params.slug)
+  const allPosts = await getAllPosts()
+  const postIndex = allPosts.findIndex(
+    (post) => formatSlug(post.slug) === params.slug.join("/")
+  )
+  const post = allPosts[postIndex]
+  const content = mapImagesToPublicSlug(post.content, params.slug.join("/"))
+
   return {
     props: {
-      ...doc,
+      ...post,
       content,
     },
   }
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(["slug"])
+  const posts = await getAllPosts()
 
   return {
-    paths: posts.map((post) => {
+    paths: posts.map((p) => {
       return {
         params: {
-          slug: post.slug,
+          slug: formatSlug(p.slug).split("/"),
         },
       }
     }),
@@ -44,7 +40,7 @@ function mapImagesToPublicSlug(content, slug) {
   const re = /<img\s*src="([\w\W]+?)"/gm
   let match
   while ((match = re.exec(content)) !== null) {
-    content = content.replace(match[1], `/blog/${slug}${match[1]}`)
+    content = content.replace(match[1], `/blog/${slug}/${match[1]}`)
   }
   return content
 }
