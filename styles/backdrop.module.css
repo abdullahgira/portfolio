@@ -1,0 +1,23 @@
+.backdrop1 {
+  position: absolute;
+  width: 415px;
+  height: 415px;
+  left: -281px;
+  top: -90px;
+
+  background: rgba(130, 255, 247, 0.7);
+  filter: blur(250px);
+  z-index: -999;
+}
+
+.backdrop2 {
+  position: absolute;
+  width: 516px;
+  height: 474px;
+  left: 570px;
+  top: 211px;
+
+  background: rgba(255, 190, 130, 0.7);
+  filter: blur(250px);
+  z-index: -999;
+}

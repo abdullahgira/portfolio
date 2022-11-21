@@ -7,9 +7,11 @@ import Link from "next/link"
 import GithubIcon from "components/icons/github-icon"
 import LinkedIn from "components/icons/linkedin-icon"
 
+import style from "../../styles/backdrop.module.css"
+
 export default function BlogPage({allPosts}) {
   return (
-    <main className="max-w-3xl mt-16 mb-10 mx-auto px-5">
+    <main className="max-w-3xl mx-auto px-5 mt-48 mb-10 relative">
       <Head>
         <title key="title">Blog | Abdullah Gira</title>
         <meta content="All my blog posts live here" name="description" />
@@ -45,20 +47,24 @@ export default function BlogPage({allPosts}) {
         />
       </Head>
 
-      <section className="">
-        <div className="border-2 border-black p-1 rounded-full shadow-md inline-block">
+      {/* Backdrop colors */}
+      <div className={style.backdrop1} />
+      <div className={style.backdrop2} />
+
+      <section>
+        <div className="border border-black p-1 rounded-full shadow-md inline-block">
           <img
             src="portfolio/me.webp"
-            className="w-20 bg-black rounded-full border"
+            className="w-24 bg-black rounded-full border"
             alt="my profile picture"
           />
         </div>
 
         <div className="mt-4">
-          <h3 className="text-xl font-bold">Abdullah Gira</h3>
+          <h3 className="text-xl font-bold">ABDULLAH GIRA</h3>
           <p>Software Engineer who loves to talk about business.</p>
 
-          <div className="mt-2 flex gap-4">
+          <div className="mt-4 flex gap-4">
             <Link href="mailto:abdullaho.gira@gmail.com">
               <a href="mailto:abdullaho.gira@gmail.com">
                 <EnvelopeIcon className="w-6" />
