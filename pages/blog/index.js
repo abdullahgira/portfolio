@@ -11,10 +11,18 @@ import {getAllPosts} from "lib/posts"
 import markdownToHtml from "lib/markdown"
 
 import style from "../../styles/backdrop.module.css"
+import React from "react"
+import Button from "components/Button"
 
 export default function BlogPage({allPosts}) {
+  React.useEffect(() => {
+    const body = document.getElementsByTagName("body")[0]
+    body.classList.add("bg-gray-50")
+    return () => body.classList.remove("bg-gray-50")
+  }, [])
+
   return (
-    <main className="max-w-3xl mx-auto px-5 mt-48 mb-10 relative">
+    <main className="max-w-3xl mx-auto px-5 mt-16 mb-10 relative">
       <Head>
         <title key="title">Blog | Abdullah Gira</title>
         <meta content="All my blog posts live here" name="description" />
@@ -93,7 +101,7 @@ export default function BlogPage({allPosts}) {
             name="revue-form"
             target="_blank"
           >
-            <div className="flex items-center gap-4 mb-2">
+            <div className="flex items-center gap-4 mb-2 flex-wrap">
               <div class="revue-form-group">
                 <input
                   className="bg-white shadow-md rounded-full px-5 py-3"
@@ -105,13 +113,9 @@ export default function BlogPage({allPosts}) {
               </div>
 
               <div class="revue-form-actions">
-                <input
-                  className="bg-black text-white rounded-full px-8 py-3 shadow-md"
-                  type="submit"
-                  value="Subscribe"
-                  name="member[subscribe]"
-                  id="member_submit"
-                />
+                <Button filled type="submit">
+                  Subscribe
+                </Button>
               </div>
             </div>
             <div class="text-xs text-gray-500 mt-4">
