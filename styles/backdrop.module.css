@@ -16,7 +16,7 @@
   width: 415px;
   height: 415px;
   right: 5%;
-  top: 5%;
+  top: 40%;
   transform: translateX(50%);
 
   background: rgba(255, 190, 130, 0.5);
@@ -28,6 +28,6 @@
   .backdrop2 {
     width: 200px;
     height: 400px;
-    right: 20%;
+    right: 35%;
   }
 }
