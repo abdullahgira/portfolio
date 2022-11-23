@@ -1,6 +1,6 @@
 import {useEffect, Fragment} from "react"
-import Head from "next/head"
 import {useRouter} from "next/router"
+
 import * as gtag from "../lib/gtag"
 
 import Navbar from "components/Navbar"
@@ -27,36 +27,9 @@ function MyApp({Component, pageProps}) {
 
   return (
     <Fragment>
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-
-        {/* <!-- Open Graph / Facebook --> */}
-        <meta property="og:type" content="website" key="og:type" />
-        <meta
-          property="og:image"
-          content="https://abdullahgira.com/social-media-profile-img.jpg"
-          key="og:image"
-        />
-
-        {/* <!-- Twitter -->   */}
-        <meta
-          property="twitter:card"
-          content="summary_large_image"
-          key="twitter:type"
-        />
-        <meta
-          property="twitter:image"
-          content="https://abdullahgira.com/social-media-profile-img.jpg"
-          key="twitter:image"
-        />
-
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <Navbar />
 
-                <div className={style.backdrop1} />
+      <div className={style.backdrop1} />
       <div className={style.backdrop2} />
 
       <Component {...pageProps} />
