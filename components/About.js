@@ -2,9 +2,11 @@ import Link from "next/link"
 import React from "react"
 
 import Avatar from "./Avatar"
-import EnvelopeIcon from "./icons/envelope-icon"
-import GithubIcon from "./icons/github-icon"
-import LinkedIn from "./icons/linkedin-icon"
+import EmailIcon from "./IconEmail"
+import IconGithub from "./IconGithub"
+import IconLinkedIn from "./IconLinkedIn"
+import IconTwitter from "./IconTwitter"
+import IconWrapper from "./IconWrapper"
 
 const About = () => {
   return (
@@ -15,22 +17,23 @@ const About = () => {
       <div className="mt-4">
         <h3 className="text-xl font-bold">ABDULLAH GIRA</h3>
         <p>Software Engineer who loves to talk about business.</p>
-        <div className="mt-4 flex gap-4">
-          <Link href="mailto:abdullaho.gira@gmail.com">
-            <a href="mailto:abdullaho.gira@gmail.com">
-              <EnvelopeIcon className="w-6" />
-            </a>
-          </Link>
-          <Link href="mailto:abdullaho.gira@gmail.com">
-            <a href="mailto:abdullaho.gira@gmail.com">
-              <GithubIcon className="w-6" />
-            </a>
-          </Link>
-          <Link href="mailto:abdullaho.gira@gmail.com">
-            <a href="mailto:abdullaho.gira@gmail.com">
-              <LinkedIn className="w-6" />
-            </a>
-          </Link>
+
+        <div className="mt-4 flex items-end gap-6">
+          <IconWrapper link="mailto:abdullaho.gira@gmail.com">
+            <EmailIcon />
+          </IconWrapper>
+
+          <IconWrapper link="https://linkedin.com/in/abdullahgira">
+            <IconLinkedIn />
+          </IconWrapper>
+
+          <IconWrapper link="https://twitter.com/abdullah_gira">
+            <IconTwitter />
+          </IconWrapper>
+
+          <IconWrapper link="https://github.com/abdullahgira">
+            <IconGithub />
+          </IconWrapper>
         </div>
       </div>
     </>
