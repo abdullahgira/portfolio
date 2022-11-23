@@ -55,10 +55,8 @@ export default function BlogPage({allPosts}) {
 
       <section>
         <About />
-
-        <div className="border-b border-black">
-          <Subscribe />
-        </div>
+        <Subscribe />
+        <hr />
       </section>
 
       <section className="mt-10">
