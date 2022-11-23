@@ -1,8 +1,8 @@
-import PostLayout from "../../components/PostPage"
+import PostLayout from "../../components/PostLayout"
 import {formatSlug, getAllPosts} from "../../lib/posts"
 
-export default function Doc({content, ...meta}) {
-  return <PostLayout meta={meta}>{content}</PostLayout>
+export default function Doc({post, next, prev}) {
+  return <PostLayout post={post} next={next} prev={prev} /> // {post.content}</PostLayout>
 }
 
 export async function getStaticProps({params}) {
@@ -10,13 +10,16 @@ export async function getStaticProps({params}) {
   const postIndex = allPosts.findIndex(
     (post) => formatSlug(post.slug) === params.slug.join("/")
   )
+  const prev = allPosts[postIndex + 1] || null
+  const next = allPosts[postIndex - 1] || null
   const post = allPosts[postIndex]
   const content = mapImagesToPublicSlug(post.content, params.slug.join("/"))
 
   return {
     props: {
-      ...post,
-      content,
+      post: {...post, content},
+      next,
+      prev,
     },
   }
 }

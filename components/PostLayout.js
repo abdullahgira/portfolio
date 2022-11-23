@@ -1,16 +1,21 @@
 import Head from "next/head"
+import Link from "next/link"
+
+import Button from "./Button"
 import DateFormatter from "./DateFormatter"
 
-export default function PostLayout({children, meta: pageMeta}) {
+export default function PostLayout({post, next, prev}) {
+  const {content, ...postMeta} = post
+
   const meta = {
     title: "",
     description: "",
     socialImage: "",
-    ...pageMeta,
+    ...postMeta,
   }
 
   return (
-    <div className="px-5">
+    <main className="px-5">
       <Head>
         <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
         <meta name="robots" content="follow, index" />
@@ -54,25 +59,44 @@ export default function PostLayout({children, meta: pageMeta}) {
         ) : null}
       </Head>
 
-      <div>
-        <section className="max-w-2xl m-auto my-4 sm:my-16">
+      <div className="max-w-3xl mx-auto">
+        <section className="my-4 sm:my-16">
+          <div className="inline-block">
+            <Link href="/blog">
+              <a className="flex items-center gap-2 mb-2">
+                <span className="pb-1">&larr;</span> <span>Back to blog</span>
+              </a>
+            </Link>
+          </div>
+
           <div className="mb-10">
-            <h1 className="text-5xl font-bold mb-4">{meta.title}</h1>
-            <div className="flex ">
-              <p className="mr-2">
-                <DateFormatter dateString={meta.date} />
-              </p>
-              <p className="mr-2">•</p>
-              <p className="text-blue-700">{meta.readTime} Min Read</p>
-            </div>
+            <h1 className="text-3xl font-bold mb-2">{meta.title}</h1>
+
+            <p className="text-gray-400 mr-2 text-sm font-bold">
+              <DateFormatter dateString={meta.date} />
+            </p>
           </div>
 
           <article
             className="prose"
-            dangerouslySetInnerHTML={{__html: children}}
+            dangerouslySetInnerHTML={{__html: content}}
           />
         </section>
+
+        <section className="my-16 flex items-center gap-4">
+          {prev && (
+            <Button className="flex items-center gap-2">
+              <span className="pb-1">&larr;</span> Previous post
+            </Button>
+          )}
+
+          {next && (
+            <Button className="flex items-center gap-2">
+              Next post <span className="pb-1">&rarr;</span>
+            </Button>
+          )}
+        </section>
       </div>
-    </div>
+    </main>
   )
 }
