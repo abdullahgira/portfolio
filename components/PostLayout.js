@@ -1,11 +1,13 @@
 import Head from "next/head"
 import Link from "next/link"
+import {useRouter} from "next/router"
 
 import Button from "./Button"
 import DateFormatter from "./DateFormatter"
 
 export default function PostLayout({post, next, prev}) {
   const {content, ...postMeta} = post
+  const router = useRouter()
 
   const meta = {
     title: "",
@@ -85,13 +87,19 @@ export default function PostLayout({post, next, prev}) {
 
         <section className="my-16 flex items-center gap-4">
           {prev && (
-            <Button className="flex items-center gap-2">
+            <Button
+              className="flex items-center gap-2"
+              onClick={() => router.push(prev.slug)}
+            >
               <span className="pb-1">&larr;</span> Previous post
             </Button>
           )}
 
           {next && (
-            <Button className="flex items-center gap-2">
+            <Button
+              className="flex items-center gap-2"
+              onClick={() => router.push(next.slug)}
+            >
               Next post <span className="pb-1">&rarr;</span>
             </Button>
           )}
