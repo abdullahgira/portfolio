@@ -1,10 +1,10 @@
-import Head from "next/head"
 import Link from "next/link"
 import {useRouter} from "next/router"
-import About from "./About"
 
+import About from "./About"
 import Button from "./Button"
 import DateFormatter from "./DateFormatter"
+import {PageSEO} from "./SEO"
 import Subscribe from "./Subscribe"
 
 export default function PostLayout({post, next, prev}) {
@@ -19,51 +19,10 @@ export default function PostLayout({post, next, prev}) {
   }
 
   return (
-    <main className="px-5">
-      <Head>
-        <meta content="IE=edge" httpEquiv="X-UA-Compatible" />
-        <meta name="robots" content="follow, index" />
-        <link href="/favicon.ico" rel="shortcut icon" />
+    <>
+      <PageSEO title={meta.title} />
 
-        <title key="title">{meta.title}</title>
-        <meta property="og:site_name" content={meta.title} />
-        <meta property="og:title" content={meta.title} key="og:title" />
-        <meta name="twitter:site" content={meta.title} />
-        <meta name="twitter:title" content={meta.title} key="twitter:title" />
-
-        {meta.description ? (
-          <>
-            <meta content={meta.description} name="description" />
-            <meta
-              property="og:description"
-              content={meta.description}
-              key="og:description"
-            />
-            <meta
-              name="twitter:description"
-              content={meta.description}
-              key="twitter:description"
-            />
-          </>
-        ) : null}
-
-        {meta.socialImage ? (
-          <>
-            <meta
-              property="og:image"
-              content={`https://abdullahgira.com${meta.socialImage}`}
-              key="og:image"
-            />
-            <meta
-              name="twitter:image"
-              content={`https://abdullahgira.com${meta.socialImage}`}
-              key="twitter:image"
-            />
-          </>
-        ) : null}
-      </Head>
-
-      <div className="max-w-3xl mx-auto">
+      <main className="max-w-3xl mx-auto px-5">
         <section className="my-4 sm:my-16">
           <div className="inline-block mb-4">
             <Link href="/blog">
@@ -86,7 +45,7 @@ export default function PostLayout({post, next, prev}) {
           />
         </section>
 
-        <section className="my-16 flex items-center gap-4">
+        <aside className="my-16 flex items-center gap-4">
           {prev && (
             <Button
               className="flex items-center gap-2"
@@ -104,14 +63,14 @@ export default function PostLayout({post, next, prev}) {
               Next post <span className="pb-1">&rarr;</span>
             </Button>
           )}
-        </section>
+        </aside>
 
         <footer>
           <hr className="mb-10" />
           <About />
           <Subscribe />
         </footer>
-      </div>
-    </main>
+      </main>
+    </>
   )
 }
