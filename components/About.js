@@ -10,7 +10,7 @@ import IconWrapper from "./IconWrapper"
 const About = () => {
   return (
     <>
-      <div className="border border-black p-1 rounded-full shadow-md inline-block">
+      <div className="border border-black p-1.5 rounded-full shadow-md inline-block">
         <Avatar />
       </div>
       <div className="mt-4">

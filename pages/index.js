@@ -1,47 +1,21 @@
-import Head from "next/head"
-import React from "react"
-import router from "next/router"
+import {PageSEO} from "components/SEO"
+import Link from "next/link"
 
 export default function Home() {
-  React.useEffect(() => {
-    router.push(`/blog`)
-  }, [])
-
   return (
     <div>
-      <Head>
-        <title key="title">Abdullah Gira</title>
-        <meta
-          content="I’m a full-stack web developer who loves to build quality software"
-          name="description"
-        />
-        <meta property="og:title" content="Abdullah Gira" key="og:title" />
-        <meta
-          property="og:url"
-          content="https://abdullahgira.com/"
-          key="og:url"
-        />
-        <meta
-          property="og:description"
-          content="I’m a full-stack web developer who loves to build quality software"
-          key="og:description"
-        />
-        <meta
-          property="twitter:title"
-          content="Abdullah Gira"
-          key="twitter:title"
-        />
-        <meta
-          property="twitter:url"
-          content="https://abdullahgira.com/"
-          key="twitter:url"
-        />
-        <meta
-          property="twitter:description"
-          content="I’m a full-stack web developer who loves to build quality software"
-          key="twitter:description"
-        />
-      </Head>
+      <PageSEO title="Abdullah Gira" description="Software Engineer" />
+
+      <main className="w-screen h-80 md:h-96 flex items-end justify-center px-5">
+        <div className="pb-0">
+          <h1 className="text-5xl text-black mb-4">Abdullah Gira</h1>
+          <p className="mb-10 text-gray-500">Software Engineer</p>
+
+          <Link href="/blog">
+            <a>Go to blog &rarr;</a>
+          </Link>
+        </div>
+      </main>
     </div>
   )
 }
