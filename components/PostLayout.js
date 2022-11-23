@@ -1,9 +1,11 @@
 import Head from "next/head"
 import Link from "next/link"
 import {useRouter} from "next/router"
+import About from "./About"
 
 import Button from "./Button"
 import DateFormatter from "./DateFormatter"
+import Subscribe from "./Subscribe"
 
 export default function PostLayout({post, next, prev}) {
   const {content, ...postMeta} = post
@@ -63,9 +65,9 @@ export default function PostLayout({post, next, prev}) {
 
       <div className="max-w-3xl mx-auto">
         <section className="my-4 sm:my-16">
-          <div className="inline-block">
+          <div className="inline-block mb-4">
             <Link href="/blog">
-              <a className="flex items-center gap-2 mb-2">
+              <a className="flex items-center gap-2">
                 <span className="pb-1">&larr;</span> <span>Back to blog</span>
               </a>
             </Link>
@@ -73,7 +75,6 @@ export default function PostLayout({post, next, prev}) {
 
           <div className="mb-10">
             <h1 className="text-3xl font-bold mb-2">{meta.title}</h1>
-
             <p className="text-gray-400 mr-2 text-sm font-bold">
               <DateFormatter dateString={meta.date} />
             </p>
@@ -104,6 +105,12 @@ export default function PostLayout({post, next, prev}) {
             </Button>
           )}
         </section>
+
+        <footer>
+          <hr className="mb-10" />
+          <About />
+          <Subscribe />
+        </footer>
       </div>
     </main>
   )
