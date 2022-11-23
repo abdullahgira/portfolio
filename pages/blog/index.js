@@ -1,15 +1,11 @@
 import React from "react"
 import Head from "next/head"
-import Link from "next/link"
 
 import {getAllPosts} from "lib/posts"
 
 import PostPreview from "components/PostPreview"
-import EnvelopeIcon from "components/icons/envelope-icon"
-import GithubIcon from "components/icons/github-icon"
-import LinkedIn from "components/icons/linkedin-icon"
-import Avatar from "components/Avatar"
-import Button from "components/Button"
+import Subscribe from "components/Subscribe"
+import About from "components/About"
 
 export async function getStaticProps() {
   const allPosts = await getAllPosts()
@@ -20,7 +16,6 @@ export async function getStaticProps() {
 }
 
 export default function BlogPage({allPosts}) {
-  console.log(allPosts)
   return (
     <main className="max-w-3xl mx-auto px-5 mt-16 mb-10 relative">
       <Head>
@@ -59,69 +54,13 @@ export default function BlogPage({allPosts}) {
       </Head>
 
       <section>
-        <div className="border border-black p-1 rounded-full shadow-md inline-block">
-          <Avatar />
-        </div>
-        <div className="mt-4">
-          <h3 className="text-xl font-bold">ABDULLAH GIRA</h3>
-          <p>Software Engineer who loves to talk about business.</p>
-          <div className="mt-4 flex gap-4">
-            <Link href="mailto:abdullaho.gira@gmail.com">
-              <a href="mailto:abdullaho.gira@gmail.com">
-                <EnvelopeIcon className="w-6" />
-              </a>
-            </Link>
-            <Link href="mailto:abdullaho.gira@gmail.com">
-              <a href="mailto:abdullaho.gira@gmail.com">
-                <GithubIcon className="w-6" />
-              </a>
-            </Link>
-            <Link href="mailto:abdullaho.gira@gmail.com">
-              <a href="mailto:abdullaho.gira@gmail.com">
-                <LinkedIn className="w-6" />
-              </a>
-            </Link>
-          </div>
-        </div>
-        <div id="revue-embed" className="mt-8 pb-5 border-b border-black">
-          <p className="font-bold mb-2">Newsletter</p>
-          <form
-            action="https://www.getrevue.co/profile/abdullahgira/add_subscriber"
-            method="post"
-            id="revue-form"
-            name="revue-form"
-            target="_blank"
-          >
-            <div className="flex items-center gap-4 mb-2 flex-wrap">
-              <div class="revue-form-group">
-                <input
-                  className="bg-white shadow-md rounded-full px-5 py-3"
-                  placeholder="Your email address..."
-                  type="email"
-                  name="member[email]"
-                  id="member_email"
-                />
-              </div>
-              <div class="revue-form-actions">
-                <Button filled type="submit">
-                  Subscribe
-                </Button>
-              </div>
-            </div>
-            <div class="text-xs text-gray-500 mt-4">
-              By subscribing, you agree with Revue’s{" "}
-              <a target="_blank" href="https://www.getrevue.co/terms">
-                Terms of Service
-              </a>{" "}
-              and{" "}
-              <a target="_blank" href="https://www.getrevue.co/privacy">
-                Privacy Policy
-              </a>
-              .
-            </div>
-          </form>
+        <About />
+
+        <div className="border-b border-black">
+          <Subscribe />
         </div>
       </section>
+
       <section className="mt-10">
         {allPosts.length > 0
           ? allPosts.map((post) => <PostPreview key={post.date} {...post} />)
