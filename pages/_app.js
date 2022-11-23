@@ -3,9 +3,11 @@ import Head from "next/head"
 import {useRouter} from "next/router"
 import * as gtag from "../lib/gtag"
 
+import Navbar from "components/Navbar"
+
 import "tailwindcss/tailwind.css"
 import "styles/code.css"
-import Navbar from "components/Navbar"
+import style from "../styles/backdrop.module.css"
 
 function MyApp({Component, pageProps}) {
   const router = useRouter()
@@ -53,6 +55,10 @@ function MyApp({Component, pageProps}) {
       </Head>
 
       <Navbar />
+
+                <div className={style.backdrop1} />
+      <div className={style.backdrop2} />
+
       <Component {...pageProps} />
     </Fragment>
   )

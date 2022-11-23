@@ -11,8 +11,6 @@ import LinkedIn from "components/icons/linkedin-icon"
 import Avatar from "components/Avatar"
 import Button from "components/Button"
 
-import style from "../../styles/backdrop.module.css"
-
 export async function getStaticProps() {
   const allPosts = await getAllPosts()
 
@@ -59,9 +57,7 @@ export default function BlogPage({allPosts}) {
           key="twitter:title"
         />
       </Head>
-      {/* Backdrop colors */}
-      <div className={style.backdrop1} />
-      <div className={style.backdrop2} />
+
       <section>
         <div className="border border-black p-1 rounded-full shadow-md inline-block">
           <Avatar />
