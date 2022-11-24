@@ -37,12 +37,3 @@ export async function getStaticPaths() {
     fallback: false,
   }
 }
-
-function mapImagesToPublicSlug(content, slug) {
-  const re = /<img\s*src="([\w\W]+?)"/gm
-  let match
-  while ((match = re.exec(content)) !== null) {
-    content = content.replace(match[1], `/blog/${slug}/${match[1]}`)
-  }
-  return content
-}

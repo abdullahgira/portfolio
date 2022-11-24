@@ -2,7 +2,7 @@ import React from "react"
 
 import {getAllPosts} from "lib/posts"
 
-import PostPreview from "components/PostPreview"
+import Post from "components/Post"
 import Subscribe from "components/Subscribe"
 import About from "components/About"
 import {PageSEO} from "components/SEO"
@@ -29,7 +29,7 @@ export default function BlogPage({allPosts}) {
 
         <section className="mt-10">
           {allPosts.length > 0
-            ? allPosts.map((post) => <PostPreview key={post.date} {...post} />)
+            ? allPosts.map((post) => <Post key={post.date} {...post} />)
             : null}
         </section>
       </main>

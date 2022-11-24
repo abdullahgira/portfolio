@@ -4,6 +4,7 @@ import {useRouter} from "next/router"
 import About from "./About"
 import Button from "./Button"
 import DateFormatter from "./DateFormatter"
+import Post from "./Post"
 import {PageSEO} from "./SEO"
 import Subscribe from "./Subscribe"
 
@@ -32,16 +33,11 @@ export default function PostLayout({post, next, prev}) {
             </Link>
           </div>
 
-          <div className="mb-10">
-            <h1 className="text-3xl font-bold mb-2">{meta.title}</h1>
-            <p className="text-gray-400 mr-2 text-sm font-bold">
-              <DateFormatter dateString={meta.date} />
-            </p>
-          </div>
-
-          <article
-            className="prose"
-            dangerouslySetInnerHTML={{__html: content}}
+          <Post
+            title={meta.title}
+            date={meta.date}
+            slug={post.slug}
+            content={content}
           />
         </section>
 
