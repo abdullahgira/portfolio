@@ -13,11 +13,10 @@ export async function getStaticProps({params}) {
   const prev = allPosts[postIndex + 1] || null
   const next = allPosts[postIndex - 1] || null
   const post = allPosts[postIndex]
-  const content = mapImagesToPublicSlug(post.content, params.slug.join("/"))
 
   return {
     props: {
-      post: {...post, content},
+      post,
       next,
       prev,
     },
