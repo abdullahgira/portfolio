@@ -15,7 +15,7 @@ const About = () => {
       </div>
       <div className="mt-4">
         <h3 className="text-xl font-bold">ABDULLAH GIRA</h3>
-        <p>Software Engineer who loves to talk about business.</p>
+        <p>Software Engineer {/* who loves to talk about business. */}</p>
 
         <div className="mt-4 flex items-end gap-6">
           <IconWrapper link="mailto:abdullaho.gira@gmail.com">
