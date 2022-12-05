@@ -1,5 +1,6 @@
 import {useEffect, Fragment} from "react"
 import {useRouter} from "next/router"
+import CookieConsent from "react-cookie-consent"
 
 import * as gtag from "../lib/gtag"
 
@@ -33,6 +34,19 @@ function MyApp({Component, pageProps}) {
       <div className={style.backdrop2} />
 
       <Component {...pageProps} />
+      <CookieConsent
+        style={{
+          backgroundColor: 'black'
+        }}
+        buttonStyle={{
+          backgroundColor: "white",
+          borderRadius: "50px",
+          padding: ".75rem 2rem",
+          text: "black",
+        }}
+      >
+        This website uses cookies to enhance the user experience.
+      </CookieConsent>
     </Fragment>
   )
 }
