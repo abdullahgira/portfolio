@@ -2,7 +2,7 @@ import PostLayout from "../../components/PostLayout"
 import {formatSlug, getAllPosts} from "../../lib/posts"
 
 export default function Doc({post, next, prev}) {
-  return <PostLayout post={post} next={next} prev={prev} /> // {post.content}</PostLayout>
+  return <PostLayout post={post} next={next} prev={prev} />
 }
 
 export async function getStaticProps({params}) {

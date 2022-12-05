@@ -10,12 +10,12 @@ import IconWrapper from "./IconWrapper"
 const About = () => {
   return (
     <>
-      <div className="border border-black p-1.5 rounded-full shadow-md inline-block">
+      <div className="border-black p-1.5 rounded-full inline-block" style={{border: '2px solid'}}>
         <Avatar />
       </div>
       <div className="mt-4">
         <h3 className="text-xl font-bold">ABDULLAH GIRA</h3>
-        <p>Software Engineer {/* who loves to talk about business. */}</p>
+        <p>A software engineer who loves to talk about business.</p>
 
         <div className="mt-4 flex items-end gap-6">
           <IconWrapper link="mailto:abdullaho.gira@gmail.com">
@@ -30,9 +30,9 @@ const About = () => {
             <IconTwitter />
           </IconWrapper>
 
-          <IconWrapper link="https://github.com/abdullahgira">
+          {/* <IconWrapper link="https://github.com/abdullahgira">
             <IconGithub />
-          </IconWrapper>
+          </IconWrapper> */}
         </div>
       </div>
     </>

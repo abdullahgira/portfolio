@@ -18,7 +18,7 @@ export async function getStaticProps() {
 export default function BlogPage({allPosts}) {
   return (
     <>
-      <PageSEO title="Blog | Abdullah Gira" description="Personal Blog" />
+      <PageSEO title="Blog | Abdullah Gira" description="A software engineer who loves to talk about business." />
 
       <main className="max-w-3xl mx-auto px-5 mt-16 mb-10 relative">
         <section>
