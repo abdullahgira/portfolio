@@ -16,7 +16,7 @@ const Subscribe = () => {
         <div className="flex items-center gap-4 mb-2 flex-wrap">
           <div>
             <input
-              className="bg-white shadow-md rounded-full px-5 py-3"
+              className="bg-white shadow-md rounded-full px-5 py-3 w-60 md:w-auto"
               placeholder="Your email address..."
               type="email"
               name="member[email]"

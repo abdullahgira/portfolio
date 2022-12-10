@@ -15,24 +15,24 @@ const ShareButtons = ({slug}) => {
   const url = `${siteMetadata.siteUrl}/blog/${slug}`
 
   return (
-    <div className="flex items-center gap-4">
-      <p className="mb-2">Share</p>
+    <div className="flex items-center justify-end gap-4 mt-5">
+      <p className="mb-2">Share:</p>
 
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-4">
         <TwitterShareButton url={url}>
-          <IconWrapper>
+          <IconWrapper className='w-4'>
             <IconTwitter />
           </IconWrapper>
         </TwitterShareButton>
 
         <FacebookShareButton url={url}>
-          <IconWrapper>
+          <IconWrapper className='w-4'>
             <IconFacebook />
           </IconWrapper>
         </FacebookShareButton>
 
         <LinkedinShareButton url={url}>
-          <IconWrapper>
+          <IconWrapper className='w-4'>
             <IconLinkedIn />
           </IconWrapper>
         </LinkedinShareButton>

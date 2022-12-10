@@ -25,7 +25,7 @@ export default function PostLayout({post, next, prev}) {
 
       <main className="max-w-3xl mx-auto px-5">
         <section className="my-4 sm:my-16">
-          <div className="inline-block mb-4">
+          <div className="inline-block">
             <Link href="/blog">
               <a className="flex items-center gap-2">
                 <span className="pb-1">&larr;</span> <span>Back to blog</span>
