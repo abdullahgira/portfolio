@@ -15,7 +15,7 @@ export default function Post({title, date, slug, content}) {
         </Link>
       </h2>
 
-      <article className="prose" dangerouslySetInnerHTML={{__html: content}} />
+      <article className="prose max-w-none" dangerouslySetInnerHTML={{__html: content}} />
       <ShareButtons slug={slug} />
     </article>
   )

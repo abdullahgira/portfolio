@@ -1,5 +1,5 @@
 import PostLayout from "../../components/PostLayout"
-import {formatSlug, getAllPosts} from "../../lib/posts"
+import {formatSlug, getAllPosts, getPostBySlug} from "../../lib/posts"
 
 export default function Doc({post, next, prev}) {
   return <PostLayout post={post} next={next} prev={prev} />
@@ -13,10 +13,11 @@ export async function getStaticProps({params}) {
   const prev = allPosts[postIndex + 1] || null
   const next = allPosts[postIndex - 1] || null
   const post = allPosts[postIndex]
+  const postContent = await getPostBySlug(post.slug)
 
   return {
     props: {
-      post,
+      post: postContent,
       next,
       prev,
     },

@@ -1,18 +1,38 @@
 import React from "react"
 
-import {getAllPosts, getPostBySlug} from "lib/posts"
-
-import Post from "components/Post"
-import Subscribe from "components/Subscribe"
 import About from "components/About"
-import {PageSEO} from "components/SEO"
 import Pagination from "components/Pagination"
+import Post from "components/Post"
+import {PageSEO} from "components/SEO"
+import Subscribe from "components/Subscribe"
 
-export const POSTS_PER_PAGE = 6
+import {getAllPosts, getPostBySlug} from "lib/posts"
+import {POSTS_PER_PAGE} from ".."
 
-export async function getStaticProps() {
+export async function getStaticPaths() {
+  const totalPosts = await getAllPosts()
+  const totalPages = Math.ceil(totalPosts.length / POSTS_PER_PAGE)
+  const paths = Array.from({length: totalPages}, (_, i) => ({
+    params: {page: (i + 1).toString()},
+  }))
+
+  return {
+    paths,
+    fallback: false,
+  }
+}
+
+export async function getStaticProps(context) {
+  const {
+    params: {page},
+  } = context
+  const pageNumber = parseInt(page)
+
   const posts = await getAllPosts()
-  const perPage = posts.slice(0, POSTS_PER_PAGE)
+  const perPage = posts.slice(
+    POSTS_PER_PAGE * (pageNumber - 1),
+    POSTS_PER_PAGE * pageNumber
+  )
   let postsWithContent = []
 
   for (let post of perPage) {
@@ -21,7 +41,7 @@ export async function getStaticProps() {
   }
 
   const pagination = {
-    currentPage: 1,
+    currentPage: pageNumber,
     totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
   }
 
@@ -30,7 +50,7 @@ export async function getStaticProps() {
   }
 }
 
-export default function BlogPage({posts, pagination}) {
+const Page = ({posts, pagination}) => {
   return (
     <>
       <PageSEO
@@ -56,3 +76,5 @@ export default function BlogPage({posts, pagination}) {
     </>
   )
 }
+
+export default Page

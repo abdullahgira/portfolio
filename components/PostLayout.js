@@ -3,13 +3,12 @@ import {useRouter} from "next/router"
 
 import About from "./About"
 import Button from "./Button"
-import DateFormatter from "./DateFormatter"
 import Post from "./Post"
 import {PageSEO} from "./SEO"
 import Subscribe from "./Subscribe"
 
 export default function PostLayout({post, next, prev}) {
-  const {content, ...postMeta} = post
+  const {...postMeta} = post
   const router = useRouter()
 
   const meta = {
@@ -37,7 +36,7 @@ export default function PostLayout({post, next, prev}) {
             title={meta.title}
             date={meta.date}
             slug={post.slug}
-            content={content}
+            content={post.content}
           />
         </section>
 
