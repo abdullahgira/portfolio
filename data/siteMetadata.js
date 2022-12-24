@@ -13,6 +13,7 @@ const siteMetadata = {
   twitter: "https://twitter.com/abdullah_gira",
   linkedin: "https://www.linkedin.com/in/abdullahgira",
   locale: "en-US",
+  pubDate: "2022-12-20",
   analytics: {
     googleAnalyticsId: "", // e.g. UA-000000-2 or G-XXXXXXX
   },
