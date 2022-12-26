@@ -4,7 +4,6 @@ import Post from "components/Post"
 import Subscribe from "components/Subscribe"
 import About from "components/About"
 import {PageSEO} from "components/SEO"
-import Pagination from "components/Pagination"
 import {fetchAPI} from "lib/strapi"
 import Button from "components/Button"
 
@@ -67,13 +66,10 @@ export default function BlogPage({
           ))}
         </section>
 
-        {/* <Pagination {...pagination} /> */}
-        {page < pageCount ? (
+        {page < pageCount && (
           <Button onClick={loadMore} loading={loading}>
             Load more
           </Button>
-        ) : (
-          `You've reached the end`
         )}
       </main>
     </>

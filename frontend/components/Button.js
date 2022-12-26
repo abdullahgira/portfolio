@@ -5,10 +5,10 @@ const Button = ({filled, className, loading, children, ...props}) => {
   const bg = filled ? "bg-black text-white shadow-md" : "border border-black"
   return (
     <button
-      className={`rounded-full px-6 md:px-8 py-3 ${bg} ${className}`}
+      className={`rounded-full w-28 md:w-32 py-3 ${bg} ${className}`}
       {...props}
     >
-      {loading ? <PulseLoader color="black" size={6} className='px-6 md:px-8' /> : children}
+      {loading ? <PulseLoader color="black" size={6} /> : children}
     </button>
   )
 }
