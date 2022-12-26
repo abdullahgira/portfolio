@@ -1,36 +1,46 @@
 import React from "react"
 
-import {getAllPosts, getPostBySlug} from "lib/posts"
-
 import Post from "components/Post"
 import Subscribe from "components/Subscribe"
 import About from "components/About"
 import {PageSEO} from "components/SEO"
 import Pagination from "components/Pagination"
-
-export const POSTS_PER_PAGE = 6
+import {fetchAPI} from "lib/strapi"
+import Button from "components/Button"
 
 export async function getStaticProps() {
-  const posts = await getAllPosts()
-  const perPage = posts.slice(0, POSTS_PER_PAGE)
-  let postsWithContent = []
-
-  for (let post of perPage) {
-    let content = await getPostBySlug(post.slug)
-    postsWithContent.push(content)
-  }
-
-  const pagination = {
-    currentPage: 1,
-    totalPages: Math.ceil(posts.length / POSTS_PER_PAGE),
-  }
+  const {
+    data: posts,
+    meta: {pagination},
+  } = await fetchAPI("/blogs", {
+    pagination: {pageSize: 10},
+    sort: "createdAt:desc",
+  })
 
   return {
-    props: {posts: postsWithContent, pagination},
+    props: {posts, pagination},
+    revalidate: 60,
   }
 }
 
-export default function BlogPage({posts, pagination}) {
+export default function BlogPage({
+  posts: initPosts,
+  pagination: initPagination,
+}) {
+  const [posts, setPosts] = React.useState(initPosts)
+  const [pagination, setPagination] = React.useState(initPagination)
+  const {page, pageCount} = pagination
+
+  const loadMore = async () => {
+    fetchAPI("/blogs", {
+      pagination: {page: page + 1, pageSize: 10},
+      sort: "createdAt:desc",
+    }).then((res) => {
+      setPosts([...posts, ...res.data])
+      setPagination(res.meta.pagination)
+    })
+  }
+
   return (
     <>
       <PageSEO
@@ -46,12 +56,17 @@ export default function BlogPage({posts, pagination}) {
         </section>
 
         <section className="mt-10">
-          {posts.map((post, i) => (
-            <Post key={post.date + i} {...post} />
+          {posts.map((post) => (
+            <Post key={post.id} post={post} />
           ))}
         </section>
 
-        <Pagination {...pagination} />
+        {/* <Pagination {...pagination} /> */}
+        {page < pageCount ? (
+          <Button onClick={loadMore}>Load more</Button>
+        ) : (
+          `You've reached the end`
+        )}
       </main>
     </>
   )

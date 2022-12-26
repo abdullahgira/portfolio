@@ -1,21 +1,28 @@
 import Link from "next/link"
+
 import DateFormatter from "./DateFormatter"
+import Markdown from "./Markdown"
 import ShareButtons from "./ShareButtons"
 
-export default function Post({title, date, slug, content}) {
+export default function Post({post}) {
+  const {title, publishedAt: date, content, slug: postSlug} = post.attributes
+  const slug = `/blog/${postSlug}`
+
   return (
     <article className="pb-5 mt-10">
       <p className="text-gray-400 mr-2 text-sm font-bold">
         <DateFormatter dateString={date} />
       </p>
 
-      <h2 className="text-3xl font-bold mb-2">
-        <Link href={`/blog/${slug}`}>
+      <h2 className="text-2xl font-bold mb-4">
+        <Link href={slug}>
           <a className="hover:underline">{title}</a>
         </Link>
       </h2>
 
-      <article className="prose max-w-none" dangerouslySetInnerHTML={{__html: content}} />
+      <article className="prose prose-sm max-w-none">
+        <Markdown content={content} />
+      </article>
       <ShareButtons slug={slug} />
     </article>
   )

@@ -6,7 +6,6 @@ module.exports = {
     "./lib/**/*.js",
     "./data/**/*.mdx",
   ],
-  darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
       xs: "320px",
