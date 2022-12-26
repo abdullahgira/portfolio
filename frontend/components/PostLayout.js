@@ -8,21 +8,13 @@ import {PageSEO} from "./SEO"
 import Subscribe from "./Subscribe"
 
 export default function PostLayout({post, next, prev}) {
-  const {...postMeta} = post
   const router = useRouter()
-
-  const meta = {
-    title: "",
-    description: "",
-    socialImage: "",
-    ...postMeta,
-  }
 
   return (
     <>
-      <PageSEO title={meta.title} />
+      <PageSEO title={post.attributes.title} />
 
-      <main className="max-w-3xl mx-auto px-5">
+      <main className="max-w-3xl mx-auto px-5 pb-10">
         <section className="my-4 sm:my-16">
           <div className="inline-block">
             <Link href="/blog">
@@ -32,12 +24,7 @@ export default function PostLayout({post, next, prev}) {
             </Link>
           </div>
 
-          <Post
-            title={meta.title}
-            date={meta.date}
-            slug={post.slug}
-            content={post.content}
-          />
+          <Post post={post} />
         </section>
 
         <aside className="my-16 flex items-center gap-4">
