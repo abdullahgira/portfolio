@@ -1,8 +1,8 @@
 import {fetchAPI} from "lib/strapi"
 import PostLayout from "../../components/PostLayout"
 
-export default function Doc({post, next, prev}) {
-  return <PostLayout post={post} next={false} prev={false} />
+export default function Doc({post}) {
+  return <PostLayout post={post} />
 }
 
 export async function getStaticPaths() {

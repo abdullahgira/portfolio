@@ -2,12 +2,11 @@ import Link from "next/link"
 import {useRouter} from "next/router"
 
 import About from "./About"
-import Button from "./Button"
 import Post from "./Post"
 import {PageSEO} from "./SEO"
 import Subscribe from "./Subscribe"
 
-export default function PostLayout({post, next, prev}) {
+export default function PostLayout({post}) {
   const router = useRouter()
 
   return (
@@ -26,26 +25,6 @@ export default function PostLayout({post, next, prev}) {
 
           <Post post={post} />
         </section>
-
-        <aside className="my-16 flex items-center gap-4">
-          {prev && (
-            <Button
-              className="flex items-center gap-2"
-              onClick={() => router.push(prev.slug)}
-            >
-              <span className="pb-1">&larr;</span> Previous post
-            </Button>
-          )}
-
-          {next && (
-            <Button
-              className="flex items-center gap-2"
-              onClick={() => router.push(next.slug)}
-            >
-              Next post <span className="pb-1">&rarr;</span>
-            </Button>
-          )}
-        </aside>
 
         <footer>
           <hr className="mb-10" />
