@@ -9,7 +9,7 @@ export default function Post({post}) {
   const slug = `/blog/${postSlug}`
 
   return (
-    <article className="pb-5 mt-10">
+    <article className="pb-5 mb-20">
       <p className="text-gray-400 mr-2 text-sm font-bold">
         <DateFormatter dateString={date} />
       </p>
@@ -20,7 +20,7 @@ export default function Post({post}) {
         </Link>
       </h2>
 
-      <article className="prose prose-sm max-w-none">
+      <article className="prose prose-pre:py-2 prose-pre:shadow-md max-w-none">
         <Markdown content={content} />
       </article>
       <ShareButtons slug={slug} />

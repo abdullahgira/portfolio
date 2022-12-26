@@ -1,18 +1,6 @@
-.prose img {
-  max-width: 100%;
-}
-
-.prose code {
-  font-weight: normal;
-  color: rgb(214, 222, 235);
-}
-
-.prose code::after, .prose code::before {
+.prose code::after,
+.prose code::before {
   content: "";
-}
-
-.heading {
-  scroll-margin-top: 82px;
 }
 
 .stretched-link::after {
@@ -27,9 +15,13 @@
   background-color: rgba(0, 0, 0, 0);
 }
 
+/* .prose :where(pre):not(:where([class~="not-prose"] *)) {
+  background-color: #0d1117
+} */
+
 code,
 pre[class*="language-"] {
-  color: #d6deeb;
+  color: white;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono medium", monospace;
   text-align: left;
   white-space: pre;
@@ -76,12 +68,6 @@ pre[class*="language-"] {
   padding: 1em;
   margin: 0.5em 0;
   overflow: auto;
-}
-
-:not(pre) > code,
-pre[class*="language-"] {
-  color: white;
-  background: #011627;
 }
 
 :not(pre) > code {
