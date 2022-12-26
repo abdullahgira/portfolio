@@ -8,7 +8,7 @@ export default function Doc({post, next, prev}) {
 export async function getStaticPaths() {
   const articlesRes = await fetchAPI("/blogs", {
     fields: ["slug"],
-    pagination: {pageSize: 10},
+    pagination: {pageSize: 5}, // only prerender the first 5 posts
     sort: "createdAt:desc",
   })
 
@@ -18,7 +18,7 @@ export async function getStaticPaths() {
         slug: article.attributes.slug,
       },
     })),
-    fallback: 'blocking',
+    fallback: "blocking",
   }
 }
 

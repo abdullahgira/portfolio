@@ -27,18 +27,24 @@ export default function BlogPage({
   posts: initPosts,
   pagination: initPagination,
 }) {
+  const [loading, setLoading] = React.useState(false)
   const [posts, setPosts] = React.useState(initPosts)
   const [pagination, setPagination] = React.useState(initPagination)
   const {page, pageCount} = pagination
 
   const loadMore = async () => {
+    setLoading(true)
     fetchAPI("/blogs", {
       pagination: {page: page + 1, pageSize: 10},
       sort: "createdAt:desc",
-    }).then((res) => {
-      setPosts([...posts, ...res.data])
-      setPagination(res.meta.pagination)
     })
+      .then((res) => {
+        setPosts([...posts, ...res.data])
+        setPagination(res.meta.pagination)
+      })
+      .finally(() => {
+        setLoading(false)
+      })
   }
 
   return (
@@ -63,7 +69,9 @@ export default function BlogPage({
 
         {/* <Pagination {...pagination} /> */}
         {page < pageCount ? (
-          <Button onClick={loadMore}>Load more</Button>
+          <Button onClick={loadMore} loading={loading}>
+            Load more
+          </Button>
         ) : (
           `You've reached the end`
         )}
