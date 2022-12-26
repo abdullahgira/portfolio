@@ -53,7 +53,7 @@ export default function BlogPage({
         description="A software engineer who loves to talk about business."
       />
 
-      <main className="max-w-3xl mx-auto px-5 mt-16 mb-10 relative">
+      <main className="max-w-prose mx-auto px-5 mt-16 mb-10 relative">
         <section>
           <About />
           <Subscribe />
@@ -66,11 +66,15 @@ export default function BlogPage({
           ))}
         </section>
 
-        {page < pageCount && (
-          <Button onClick={loadMore} loading={loading}>
-            Load more
-          </Button>
-        )}
+        <div className="text-center">
+          {page < pageCount ? (
+            <Button onClick={loadMore} loading={loading}>
+              Load more
+            </Button>
+          ) : (
+            "You have reached the end."
+          )}
+        </div>
       </main>
     </>
   )
