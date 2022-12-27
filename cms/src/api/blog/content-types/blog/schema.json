@@ -26,6 +26,12 @@
       "required": true,
       "unique": true,
       "regex": "\\d{4}-\\d{2}-\\d{2}-[\\dA-Za-z-]+"
+    },
+    "collection": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::collection.collection",
+      "inversedBy": "blogs"
     }
   }
 }
