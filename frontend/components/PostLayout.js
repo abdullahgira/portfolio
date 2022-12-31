@@ -13,7 +13,7 @@ export default function PostLayout({post}) {
     <>
       <PageSEO title={post.attributes.title} />
 
-      <main className="max-w-3xl mx-auto px-5 pb-10">
+      <main className="max-w-prose mx-auto px-5 pb-10">
         <section className="my-4 sm:my-16">
           <div className="inline-block">
             <Link href="/blog">

@@ -6,13 +6,14 @@ import About from "components/About"
 import {PageSEO} from "components/SEO"
 import {fetchAPI} from "lib/strapi"
 import Button from "components/Button"
+import InfiniteScroll from "react-infinite-scroll-component"
 
 export async function getStaticProps() {
   const {
     data: posts,
     meta: {pagination},
   } = await fetchAPI("/blogs", {
-    pagination: {pageSize: 10},
+    pagination: {pageSize: 6},
     sort: "createdAt:desc",
   })
 
@@ -29,12 +30,12 @@ export default function BlogPage({
   const [loading, setLoading] = React.useState(false)
   const [posts, setPosts] = React.useState(initPosts)
   const [pagination, setPagination] = React.useState(initPagination)
-  const {page, pageCount} = pagination
+  const {page, pageCount: totalPages} = pagination
 
   const loadMore = async () => {
     setLoading(true)
     fetchAPI("/blogs", {
-      pagination: {page: page + 1, pageSize: 10},
+      pagination: {page: page + 1, pageSize: 6},
       sort: "createdAt:desc",
     })
       .then((res) => {
@@ -61,20 +62,30 @@ export default function BlogPage({
         </section>
 
         <section className="mt-10">
-          {posts.map((post) => (
-            <Post key={post.id} post={post} />
-          ))}
+          <InfiniteScroll
+            dataLength={posts.length}
+            hasMore={page < totalPages}
+            next={loadMore}
+            loader="Loading..."
+            endMessage={
+              <div className="text-center">You've reached the end</div>
+            }
+          >
+            {posts.map((post) => (
+              <Post key={post.id} post={post} />
+            ))}
+          </InfiniteScroll>
         </section>
 
-        <div className="text-center">
-          {page < pageCount ? (
+        {/* <div className="text-center">
+          {page < totalPages ? (
             <Button onClick={loadMore} loading={loading}>
               Load more
             </Button>
           ) : (
             "You have reached the end."
           )}
-        </div>
+        </div> */}
       </main>
     </>
   )
