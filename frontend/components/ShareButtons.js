@@ -12,10 +12,10 @@ import IconTwitter from "./IconTwitter"
 import IconWrapper from "./IconWrapper"
 
 const ShareButtons = ({slug}) => {
-  const url = `${siteMetadata.siteUrl}/blog/${slug}`
+  const url = `${siteMetadata.siteUrl}${slug}`
 
   return (
-    <div className="flex items-center justify-end gap-4 mt-5 text-gray-500">
+    <div className="flex items-center justify-end gap-4 text-gray-600">
       <p className="text-sm">Share:</p>
 
       <div className="flex items-center gap-4">
