@@ -2,7 +2,6 @@ import Link from "next/link"
 import {useRouter} from "next/router"
 
 import DateFormatter from "./DateFormatter"
-import Markdown from "./Markdown"
 import ShareButtons from "./ShareButtons"
 
 export default function Post({post}) {
@@ -35,9 +34,7 @@ export default function Post({post}) {
       </h2>
 
       {renderMarkdown ? (
-        <article className="prose prose-pre:py-2 prose-pre:shadow-md max-w-none">
-          <Markdown content={content} />
-        </article>
+        <article className="prose prose-pre:py-2 prose-pre:shadow-md max-w-none" dangerouslySetInnerHTML={{__html: content}} />
       ) : (
         <>
           <p className='mb-2'>{description}</p>

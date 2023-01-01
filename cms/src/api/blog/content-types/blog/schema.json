@@ -17,10 +17,6 @@
       "required": true,
       "unique": true
     },
-    "content": {
-      "type": "richtext",
-      "required": true
-    },
     "slug": {
       "type": "string",
       "required": true,
@@ -46,6 +42,13 @@
     "description": {
       "type": "text",
       "required": true
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "rich"
+      },
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
