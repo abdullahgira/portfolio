@@ -1,19 +1,19 @@
 import React from "react"
 
 import Post from "components/Post"
-import Subscribe from "components/Subscribe"
 import About from "components/About"
 import {PageSEO} from "components/SEO"
 import {fetchAPI} from "lib/strapi"
-import Button from "components/Button"
 import InfiniteScroll from "react-infinite-scroll-component"
+
+const PAGE_SIZE = 6
 
 export async function getStaticProps() {
   const {
     data: posts,
     meta: {pagination},
   } = await fetchAPI("/blogs", {
-    pagination: {pageSize: 6},
+    pagination: {pageSize: PAGE_SIZE},
     sort: "createdAt:desc",
   })
 
@@ -35,7 +35,7 @@ export default function BlogPage({
   const loadMore = async () => {
     setLoading(true)
     fetchAPI("/blogs", {
-      pagination: {page: page + 1, pageSize: 6},
+      pagination: {page: page + 1, pageSize: PAGE_SIZE},
       sort: "createdAt:desc",
     })
       .then((res) => {
@@ -57,7 +57,6 @@ export default function BlogPage({
       <main className="max-w-prose mx-auto px-5 mt-16 mb-10 relative">
         <section>
           <About />
-          <Subscribe />
           <hr />
         </section>
 
@@ -67,25 +66,13 @@ export default function BlogPage({
             hasMore={page < totalPages}
             next={loadMore}
             loader="Loading..."
-            endMessage={
-              <div className="text-center">You've reached the end</div>
-            }
+            endMessage="You've reached the end"
           >
             {posts.map((post) => (
               <Post key={post.id} post={post} />
             ))}
           </InfiniteScroll>
         </section>
-
-        {/* <div className="text-center">
-          {page < totalPages ? (
-            <Button onClick={loadMore} loading={loading}>
-              Load more
-            </Button>
-          ) : (
-            "You have reached the end."
-          )}
-        </div> */}
       </main>
     </>
   )

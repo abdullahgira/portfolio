@@ -6,11 +6,15 @@ import IconGithub from "./IconGithub"
 import IconLinkedIn from "./IconLinkedIn"
 import IconTwitter from "./IconTwitter"
 import IconWrapper from "./IconWrapper"
+import Newsletter from "./Newsletter"
 
 const About = () => {
   return (
-    <>
-      <div className="border-black p-1.5 rounded-full inline-block" style={{border: '2px solid'}}>
+    <section className="pb-5">
+      <div
+        className="border-black p-1.5 rounded-full inline-block"
+        style={{border: "2px solid"}}
+      >
         <Avatar />
       </div>
       <div className="mt-4">
@@ -35,7 +39,8 @@ const About = () => {
           </IconWrapper> */}
         </div>
       </div>
-    </>
+      {/* <Newsletter /> */}
+    </section>
   )
 }
 

@@ -32,6 +32,20 @@
       "relation": "manyToOne",
       "target": "api::collection.collection",
       "inversedBy": "blogs"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "thought",
+        "article",
+        "tutorial"
+      ],
+      "required": true,
+      "default": "thought"
+    },
+    "description": {
+      "type": "text",
+      "required": true
     }
   }
 }

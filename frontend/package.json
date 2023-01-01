@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node ./scripts/generate-sitemap && node ./scripts/generate-rss",
+    "build": "next build",
     "export": "next export",
     "start": "next start"
   },

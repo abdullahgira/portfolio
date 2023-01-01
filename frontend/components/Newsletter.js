@@ -3,9 +3,9 @@ import React from "react"
 
 import Button from "./Button"
 
-const Subscribe = () => {
+const Newsletter = () => {
   return (
-    <div className="mt-8 pb-5">
+    <div className="mt-8">
       <p className="font-bold mb-2">Newsletter</p>
       <form
         action="https://www.getrevue.co/profile/abdullahgira/add_subscriber"
@@ -44,4 +44,4 @@ const Subscribe = () => {
   )
 }
 
-export default Subscribe
+export default Newsletter
