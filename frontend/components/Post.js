@@ -42,7 +42,7 @@ export default function Post({post}) {
         <>
           <p className='mb-2'>{description}</p>
           <Link href={slug}>
-            <a className="underline">Read more &rarr;</a>
+            <a className="underline underline-offset-2">Read more &rarr;</a>
           </Link>
         </>
       )}

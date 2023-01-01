@@ -16,9 +16,7 @@ export default function PostLayout({post}) {
         <section className="my-4 sm:my-16">
           <div className="inline-block">
             <Link href="/blog">
-              <a className="flex items-center gap-2">
-                <span className="pb-1">&larr;</span> <span>Back to blog</span>
-              </a>
+              <a className="underline underline-offset-2">&larr; Back to blog</a>
             </Link>
           </div>
 
@@ -26,7 +24,6 @@ export default function PostLayout({post}) {
         </section>
 
         <footer>
-          <hr className="mb-10" />
           <About />
         </footer>
       </main>
