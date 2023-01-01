@@ -2,6 +2,7 @@ import {fetchAPI} from "lib/strapi"
 import PostLayout from "../../components/PostLayout"
 
 export default function Doc({post}) {
+  console.log({post})
   return <PostLayout post={post} />
 }
 
