@@ -9,6 +9,7 @@
     "build": "strapi build",
     "strapi": "strapi"
   },
+  "workspaces": ["./src/plugins/strapi-plugin-ckeditor"],
   "dependencies": {
     "@strapi/plugin-i18n": "4.5.4",
     "@strapi/plugin-users-permissions": "4.5.4",
