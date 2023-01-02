@@ -5,6 +5,8 @@ import DateFormatter from "./DateFormatter"
 import Markdown from "./Markdown"
 import ShareButtons from "./ShareButtons"
 
+import {titleCase} from "utils/string"
+
 export default function Post({post}) {
   const router = useRouter()
 
@@ -40,7 +42,7 @@ export default function Post({post}) {
         </article>
       ) : (
         <>
-          <p className='mb-2'>{description}</p>
+          <p className="mb-2">{description}</p>
           <Link href={slug}>
             <a className="underline underline-offset-2">Read more &rarr;</a>
           </Link>
@@ -51,7 +53,7 @@ export default function Post({post}) {
 
       <div className="flex items-center justify-between">
         <p className="text-gray-600 mr-2 text-sm">
-          <DateFormatter dateString={date} /> • {type?.toUpperCase()}
+          <DateFormatter dateString={date} /> • {titleCase(type)}
         </p>
         <ShareButtons slug={slug} />
       </div>

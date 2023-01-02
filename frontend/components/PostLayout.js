@@ -4,12 +4,14 @@ import About from "./About"
 import Post from "./Post"
 import {PageSEO} from "./SEO"
 
+import {titleCase} from "utils/string"
+
 export default function PostLayout({post}) {
   return (
     <>
       <PageSEO
         title={post.attributes.title}
-        description={post.attributes.type?.toUpperCase()}
+        description={titleCase(post.attributes.type)}
       />
 
       <main className="max-w-prose mx-auto px-5 pb-10">
