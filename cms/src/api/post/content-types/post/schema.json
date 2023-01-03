@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "blogs",
+  "collectionName": "posts",
   "info": {
-    "singularName": "blog",
-    "pluralName": "blogs",
-    "displayName": "Blog",
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
     "description": ""
   },
   "options": {
@@ -21,13 +21,8 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "regex": "\\d{4}-\\d{2}-\\d{2}-[\\dA-Za-z-]+"
-    },
-    "collection": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::collection.collection",
-      "inversedBy": "blogs"
+      "regex": "\\d{4}-\\d{2}-\\d{2}-[\\dA-Za-z-]+",
+      "default": "Example: 2022-12-31-title-dashed"
     },
     "type": {
       "type": "enumeration",
@@ -35,18 +30,17 @@
         "thought",
         "article",
         "tutorial"
-      ],
-      "required": true,
-      "default": "thought"
+      ]
     },
     "description": {
-      "type": "text",
-      "required": true
+      "type": "string",
+      "required": true,
+      "default": "--"
     },
     "content": {
       "type": "customField",
-      "customField": "plugin::ckeditor.CKEditor",
-      "required": true
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
     }
   }
 }
