@@ -19,7 +19,7 @@
   background-color: #0d1117
 } */
 
-code,
+/* code,
 pre[class*="language-"] {
   color: white;
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono medium", monospace;
@@ -63,7 +63,6 @@ code ::selection {
   }
 }
 
-/* Code blocks */
 pre[class*="language-"] {
   padding: 1em;
   margin: 0.5em 0;
@@ -171,7 +170,7 @@ pre[class*="language-"] {
   padding-right: 2em;
   padding-left: 0.7em;
   border-left: 0.4em solid #ffc711;
-}
+} */
 
 /* Scrollbar */
 /* width */

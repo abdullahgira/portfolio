@@ -6,7 +6,7 @@ export default function Doc({post}) {
 }
 
 export async function getStaticPaths() {
-  const articlesRes = await fetchAPI("/blogs", {
+  const articlesRes = await fetchAPI("/posts", {
     fields: ["slug"],
     pagination: {pageSize: 5}, // only prerender the first 5 posts
     sort: "createdAt:desc",
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({params}) {
-  const articlesRes = await fetchAPI("/blogs", {
+  const articlesRes = await fetchAPI("/posts", {
     filters: {
       slug: params.slug,
     },

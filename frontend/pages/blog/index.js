@@ -12,7 +12,7 @@ export async function getStaticProps() {
   const {
     data: posts,
     meta: {pagination},
-  } = await fetchAPI("/blogs", {
+  } = await fetchAPI("/posts", {
     pagination: {pageSize: PAGE_SIZE},
     sort: "createdAt:desc",
   })
@@ -27,24 +27,18 @@ export default function BlogPage({
   posts: initPosts,
   pagination: initPagination,
 }) {
-  const [loading, setLoading] = React.useState(false)
   const [posts, setPosts] = React.useState(initPosts)
   const [pagination, setPagination] = React.useState(initPagination)
   const {page, pageCount: totalPages} = pagination
 
   const loadMore = async () => {
-    setLoading(true)
-    fetchAPI("/blogs", {
+    fetchAPI("/posts", {
       pagination: {page: page + 1, pageSize: PAGE_SIZE},
       sort: "createdAt:desc",
+    }).then((res) => {
+      setPosts([...posts, ...res.data])
+      setPagination(res.meta.pagination)
     })
-      .then((res) => {
-        setPosts([...posts, ...res.data])
-        setPagination(res.meta.pagination)
-      })
-      .finally(() => {
-        setLoading(false)
-      })
   }
 
   return (
@@ -66,7 +60,7 @@ export default function BlogPage({
             hasMore={page < totalPages}
             next={loadMore}
             loader="Loading..."
-            endMessage="You've reached the end"
+            endMessage="The End."
           >
             {posts.map((post) => (
               <Post key={post.id} post={post} />

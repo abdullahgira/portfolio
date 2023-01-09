@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "regex": "\\d{4}-\\d{2}-\\d{2}-[\\dA-Za-z-]+",
+      "default": "Example: 2022-12-31-title-dashed"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "thought",
+        "article",
+        "tutorial"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "required": true,
+      "default": "--"
+    },
+    "content": {
+      "type": "customField",
+      "required": true,
+      "customField": "plugin::ckeditor.CKEditor"
+    }
+  }
+}

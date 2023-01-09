@@ -36,18 +36,18 @@ export default function Post({post}) {
         )}
       </h2>
 
-      {renderMarkdown ? (
-        <article className="prose prose-pre:py-2 prose-pre:shadow-md max-w-none">
-          <Markdown content={content} />
-        </article>
-      ) : (
-        <>
-          <p className="mb-2">{description}</p>
-          <Link href={slug}>
-            <a className="underline underline-offset-2">Read more &rarr;</a>
-          </Link>
-        </>
-      )}
+      <article className="ck-content">
+        {renderMarkdown ? (
+          <div dangerouslySetInnerHTML={{__html: content}} />
+        ) : (
+          <>
+            <p className="mb-2">{description}</p>
+            <Link href={slug}>
+              <a className="underline underline-offset-2">Read more &rarr;</a>
+            </Link>
+          </>
+        )}
+      </article>
 
       <hr className="mt-5 mb-3" />
 
