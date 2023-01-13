@@ -20,7 +20,7 @@ export default function Post({post}) {
   } = post.attributes
 
   const slug = `/blog/${postSlug}`
-  const isPostPath = router.asPath === slug
+  const isPostPath = router.asPath === slug | router.asPath.startsWith('/preview')
   const renderMarkdown =
     type === "thought" || (type !== "thoguth" && isPostPath)
 
@@ -36,7 +36,7 @@ export default function Post({post}) {
         )}
       </h2>
 
-      <article className="ck-content">
+      <article className="prose prose-p:py-0">
         {renderMarkdown ? (
           <div dangerouslySetInnerHTML={{__html: content}} />
         ) : (
