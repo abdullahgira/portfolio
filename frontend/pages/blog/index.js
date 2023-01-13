@@ -60,7 +60,6 @@ export default function BlogPage({
             hasMore={page < totalPages}
             next={loadMore}
             loader="Loading..."
-            endMessage="The End."
           >
             {posts.map((post) => (
               <Post key={post.id} post={post} />
