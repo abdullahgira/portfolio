@@ -36,7 +36,7 @@ export default function Post({post}) {
         )}
       </h2>
 
-      <article className="prose prose-p:py-0">
+      <article className="prose ck-content">
         {renderMarkdown ? (
           <div dangerouslySetInnerHTML={{__html: content}} />
         ) : (
