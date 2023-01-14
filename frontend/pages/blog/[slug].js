@@ -30,7 +30,8 @@ export async function getStaticProps({params}) {
   })
 
   return {
-    props: {post: articlesRes.data[0]},
+    notFound: !articlesRes.data[0],
+    props: {post: articlesRes.data[0] || null},
     revalidate: 60,
   }
 }

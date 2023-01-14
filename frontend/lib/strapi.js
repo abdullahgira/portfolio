@@ -6,9 +6,7 @@ import qs from "qs"
  * @returns {string} Full Strapi URL
  */
 export function getStrapiURL(path = "") {
-  return `${
-    process.env.NEXT_PUBLIC_STRAPI_API_URL
-  }${path}`
+  return `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${path}`
 }
 
 /**
@@ -41,6 +39,7 @@ export async function fetchAPI(path, urlParamsObject = {}, options = {}) {
     console.error(response.statusText)
     throw new Error(`An error occured please try again`)
   }
+
   const data = await response.json()
   return data
 }
