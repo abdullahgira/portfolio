@@ -12,10 +12,6 @@ module.exports = ({ env }) => ({
       },
     },
   },
-  ckeditor: {
-    enabled: true,
-    resolve: "./src/plugins/strapi-plugin-ckeditor",
-  },
   "preview-button": {
     config: {
       contentTypes: [

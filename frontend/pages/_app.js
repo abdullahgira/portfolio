@@ -12,7 +12,7 @@ import "tailwindcss/tailwind.css"
 import "styles/global.css"
 
 import "styles/code.css"
-import "styles/ckeditor.css"
+import "styles/prose-overwrites.css"
 import style from "styles/backdrop.module.css"
 
 function MyApp({Component, pageProps}) {

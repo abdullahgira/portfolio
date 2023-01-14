@@ -38,9 +38,8 @@
       "default": "--"
     },
     "content": {
-      "type": "customField",
-      "required": true,
-      "customField": "plugin::ckeditor.CKEditor"
+      "type": "richtext",
+      "required": true
     }
   }
 }

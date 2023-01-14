@@ -8,9 +8,6 @@ const Markdown = ({content}) => {
     <ReactMarkdown
       children={content}
       remarkPlugins={[[remarkGfm, {singleTilde: false}]]}
-      components={{
-        input: ({...props}) => <input {...props} className="!my-0" />,
-      }}
     />
   )
 }

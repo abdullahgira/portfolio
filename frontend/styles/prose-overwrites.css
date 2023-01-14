@@ -1,0 +1,17 @@
+.prose img {
+  max-width: 100%;
+}
+
+.prose input {
+  margin: 0;
+  margin-right: 0.45em;
+}
+
+.prose .contains-task-list {
+  list-style: none;
+}
+
+.prose > .contains-task-list {
+  padding-left: 0;
+}
+
