@@ -12,15 +12,15 @@ const Preview = () => {
   const router = useRouter()
 
   React.useEffect(() => {
-    fetchAPI("/posts", {
-      filters: {
-        slug: router.query.slug,
-      },
-      publicationState: "preview",
-    }).then((res) => setPost(res.data[0]))
-  }, [])
+    if (router.query.slug)
+      fetchAPI("/posts", {
+        filters: {
+          slug: router.query.slug,
+        },
+        publicationState: "preview",
+      }).then((res) => setPost(res.data[0]))
+  }, [router.query.slug])
 
-  console.log({post})
   return (
     <>
       <PageSEO
