@@ -34,8 +34,7 @@
     },
     "description": {
       "type": "string",
-      "required": true,
-      "default": "--"
+      "required": false
     },
     "content": {
       "type": "richtext",
